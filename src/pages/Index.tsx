@@ -1,12 +1,196 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Shield, Award, CheckCircle, ArrowRight, Phone, Star, Anchor, Building2, Truck, Grid3X3 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import heroBg from "@/assets/hero-bg.jpg";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const services = [
+  { icon: Anchor, title: "Rope Access", desc: "IRATA-certified technicians for inspection, maintenance, and high-rise works at any height.", href: "/services/rope-access" },
+  { icon: Building2, title: "Scaffolding", desc: "Design, erection, hire, and compliance management for commercial and industrial projects.", href: "/services/scaffolding" },
+  { icon: Truck, title: "Mobile Access Platforms", desc: "EWP and boom lift hire with operator support for safe, efficient elevated access.", href: "/services/mobile-access" },
+  { icon: Grid3X3, title: "Netting & Decking", desc: "Safety netting, edge protection, and temporary decking for fall prevention on site.", href: "/services/netting-decking" },
+];
+
+const certifications = [
+  { icon: Shield, label: "ISO 45001 Certified" },
+  { icon: Award, label: "IRATA Member" },
+  { icon: CheckCircle, label: "SafeWork Licensed" },
+  { icon: Shield, label: "Fully Insured" },
+  { icon: Award, label: "NASC Accredited" },
+];
+
+const projects = [
+  { title: "Sydney Harbour Bridge Maintenance", category: "Rope Access", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" },
+  { title: "Commercial Tower Scaffolding", category: "Scaffolding", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" },
+  { title: "Stadium Safety Netting Install", category: "Netting & Decking", image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" },
+];
+
+const testimonials = [
+  { name: "James Carter", company: "BuildCorp Australia", quote: "Access & Height delivered on a complex rope access project with zero safety incidents. Professional, reliable, and highly skilled." },
+  { name: "Sarah Mitchell", company: "Turner Construction", quote: "Their scaffolding team set up a 30-storey system in record time. Exceptional planning and execution from start to finish." },
+  { name: "David Nguyen", company: "Lendlease", quote: "We've worked with Access & Height for 5 years — they're our go-to for anything at height. Unmatched safety standards." },
+];
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div>
+      {/* Hero */}
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
+        <div className="absolute inset-0 bg-background/80" />
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+            <p className="text-primary font-heading uppercase tracking-[0.3em] text-sm mb-4">
+              Safety at Every Level
+            </p>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold uppercase leading-tight text-foreground mb-6">
+              Access & Height<br />
+              <span className="text-primary">Safety Services</span>
+            </h1>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
+              Industry-leading rope access, scaffolding, and height safety solutions for commercial and industrial projects across Australia.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button size="lg" asChild className="text-base px-8">
+                <Link to="/contact">Request a Quote <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="text-base px-8 border-primary/50 text-primary hover:bg-primary/10">
+                <a href="tel:+1300123456"><Phone className="mr-2 w-4 h-4" /> Call Now</a>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
+            <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">What We Do</p>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase text-foreground">Our Services</h2>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((s, i) => (
+              <motion.div key={s.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.1 } } }}>
+                <Link to={s.href}>
+                  <Card className="bg-secondary/50 border-border hover:border-primary/50 transition-all group h-full">
+                    <CardContent className="p-6">
+                      <s.icon className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <h3 className="font-heading text-lg font-semibold uppercase text-foreground mb-2">{s.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                      <span className="inline-flex items-center mt-4 text-primary text-sm font-medium group-hover:gap-2 transition-all">
+                        Learn More <ArrowRight className="w-3 h-3 ml-1" />
+                      </span>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-12 bg-background border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            {certifications.map((c) => (
+              <div key={c.label} className="flex items-center gap-2 text-muted-foreground">
+                <c.icon className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">{c.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
+            <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Our Work</p>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase text-foreground">Featured Projects</h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {projects.map((p, i) => (
+              <motion.div key={p.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.15 } } }}>
+                <div className="group relative overflow-hidden rounded-lg aspect-[4/3]">
+                  <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <span className="text-primary text-xs font-heading uppercase tracking-wider">{p.category}</span>
+                    <h3 className="font-heading text-lg font-semibold text-foreground mt-1">{p.title}</h3>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button variant="outline" asChild className="border-primary/50 text-primary hover:bg-primary/10">
+              <Link to="/projects">View All Projects <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
+            <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Trusted By Industry Leaders</p>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase text-foreground">What Our Clients Say</h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.15 } } }}>
+                <Card className="bg-card border-border h-full">
+                  <CardContent className="p-6">
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, j) => (
+                        <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                      ))}
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">"{t.quote}"</p>
+                    <div>
+                      <p className="text-foreground font-medium text-sm">{t.name}</p>
+                      <p className="text-muted-foreground text-xs">{t.company}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase text-primary-foreground mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
+            Get a free, no-obligation quote for your next project. Our team is ready to help.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" variant="secondary" asChild className="text-base px-8">
+              <Link to="/contact">Request a Quote</Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <a href="tel:+1300123456"><Phone className="mr-2 w-4 h-4" /> 1300 123 456</a>
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
