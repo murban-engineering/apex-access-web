@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import RopeAccess from "./pages/RopeAccess";
 import Scaffolding from "./pages/Scaffolding";
+import MobileAccess from "./pages/MobileAccess";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/services/rope-access" element={<RopeAccess />} />
             <Route path="/services/scaffolding" element={<Scaffolding />} />
+            <Route path="/services/mobile-access" element={<MobileAccess />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
