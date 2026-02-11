@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { SERVICES } from "@/data/services";
 
 const Footer = () => (
   <footer className="bg-card border-t border-border">
@@ -24,10 +25,11 @@ const Footer = () => (
         <div>
           <h4 className="font-heading text-foreground uppercase tracking-wider text-sm mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/services/rope-access" className="hover:text-primary transition-colors">Rope Access</Link></li>
-            <li><Link to="/services/scaffolding" className="hover:text-primary transition-colors">Scaffolding</Link></li>
-            <li><Link to="/services/mobile-access" className="hover:text-primary transition-colors">Mobile Access Platforms</Link></li>
-            <li><Link to="/services/netting-decking" className="hover:text-primary transition-colors">Netting & Decking</Link></li>
+            {SERVICES.map((service) => (
+              <li key={service.name}>
+                <Link to={service.href} className="hover:text-primary transition-colors">{service.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 

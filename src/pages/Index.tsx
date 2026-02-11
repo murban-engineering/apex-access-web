@@ -1,21 +1,15 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Shield, Award, CheckCircle, ArrowRight, Phone, Star, Anchor, Building2, Truck, Grid3X3 } from "lucide-react";
+import { Shield, Award, CheckCircle, ArrowRight, Phone, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroBg from "@/assets/hero-bg.jpg";
+import { SERVICES } from "@/data/services";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
-
-const services = [
-  { icon: Anchor, title: "Rope Access", desc: "IRATA-certified technicians for inspection, maintenance, and high-rise works at any height.", href: "/services/rope-access" },
-  { icon: Building2, title: "Scaffolding", desc: "Design, erection, hire, and compliance management for commercial and industrial projects.", href: "/services/scaffolding" },
-  { icon: Truck, title: "Mobile Access Platforms", desc: "EWP and boom lift hire with operator support for safe, efficient elevated access.", href: "/services/mobile-access" },
-  { icon: Grid3X3, title: "Netting & Decking", desc: "Safety netting, edge protection, and temporary decking for fall prevention on site.", href: "/services/netting-decking" },
-];
 
 const certifications = [
   { icon: Shield, label: "ISO 45001 Certified" },
@@ -79,14 +73,14 @@ const Index = () => {
             <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase text-foreground">Our Services</h2>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s, i) => (
-              <motion.div key={s.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.1 } } }}>
-                <Link to={s.href}>
+            {SERVICES.map((service, i) => (
+              <motion.div key={service.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.1 } } }}>
+                <Link to={service.href}>
                   <Card className="bg-secondary/50 border-border hover:border-primary/50 transition-all group h-full">
                     <CardContent className="p-6">
-                      <s.icon className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                      <h3 className="font-heading text-lg font-semibold uppercase text-foreground mb-2">{s.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                      <service.icon className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <h3 className="font-heading text-lg font-semibold uppercase text-foreground mb-2">{service.name}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                       <span className="inline-flex items-center mt-4 text-primary text-sm font-medium group-hover:gap-2 transition-all">
                         Learn More <ArrowRight className="w-3 h-3 ml-1" />
                       </span>

@@ -4,16 +4,11 @@ import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const services = [
-  { name: "Rope Access", href: "/services/rope-access" },
-  { name: "Scaffolding", href: "/services/scaffolding" },
-  { name: "Mobile Access Platforms", href: "/services/mobile-access" },
-  { name: "Netting & Decking", href: "/services/netting-decking" },
-];
+import { SERVICES } from "@/data/services";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services", children: services },
+  { name: "Services", href: "/services", children: SERVICES.map((service) => ({ name: service.name, href: service.href })) },
   { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
