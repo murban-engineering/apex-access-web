@@ -1,5 +1,6 @@
-import { type FormEvent, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Activity,
   ArrowRight,
@@ -24,11 +25,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
   Carousel,
   CarouselContent,
@@ -36,7 +33,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useToast } from "@/components/ui/use-toast";
 
 const cmsContent = {
   seo: {
@@ -130,23 +126,12 @@ const sectionAnim = {
 
 const RopeAccess = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>("All");
-  const { toast } = useToast();
 
   const filteredProjects = useMemo(() => {
     if (selectedIndustry === "All") return projectGallery;
     return projectGallery.filter((project) => project.industry === selectedIndustry);
   }, [selectedIndustry]);
 
-  const handleQuoteSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    toast({
-      title: "Quote request submitted",
-      description: "Thanks! Your request has been sent and admin email alerts were triggered to ropeaccess@accessheight.com.au.",
-    });
-
-    event.currentTarget.reset();
-  };
 
   return (
     <main className="bg-background text-foreground">
@@ -406,62 +391,14 @@ const RopeAccess = () => {
               </div>
             </div>
 
-            <form className="space-y-4 p-8 md:p-10" onSubmit={handleQuoteSubmit}>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" name="name" required />
-                </div>
-                <div>
-                  <Label htmlFor="company">Company</Label>
-                  <Input id="company" name="company" required />
-                </div>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" required />
-                </div>
-                <div>
-                  <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" name="phone" type="tel" required />
-                </div>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <Label htmlFor="height">Project Height (meters)</Label>
-                  <Input id="height" name="height" placeholder="e.g. 65" required />
-                </div>
-                <div>
-                  <Label htmlFor="structureType">Structure Type</Label>
-                  <Input id="structureType" name="structureType" placeholder="Tower, bridge, tank, plant..." required />
-                </div>
-              </div>
-
-              <div>
-                <Label htmlFor="services">Selected Services</Label>
-                <Textarea id="services" name="services" placeholder="List required services (inspection, coating, NDT, rescue standby...)" required />
-              </div>
-
-              <div>
-                <Label htmlFor="photo">Photo Upload</Label>
-                <Input id="photo" name="photo" type="file" accept="image/*" />
-              </div>
-
-              <div className="flex items-start gap-3 rounded-lg border border-border p-3">
-                <Checkbox id="adminAlerts" defaultChecked />
-                <div>
-                  <Label htmlFor="adminAlerts">Enable admin email alerts</Label>
-                  <p className="text-xs text-muted-foreground">Submit notifications to ropeaccess@accessheight.com.au and operations@accessheight.com.au.</p>
-                </div>
-              </div>
-
-              <input type="hidden" name="adminEmail" value="ropeaccess@accessheight.com.au" />
-
-              <Button type="submit" className="w-full sm:w-auto">
-                Request Rope Access Quote <ArrowRight className="ml-2 h-4 w-4" />
+            <div className="space-y-4 p-8 md:p-10">
+              <p className="text-muted-foreground">Quotation form removed from this service page. Please use our contact page for quote requests.</p>
+              <Button asChild className="w-full sm:w-auto">
+                <Link to="/contact">
+                  Request Rope Access Quote <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
-            </form>
+            </div>
           </div>
         </Card>
       </section>

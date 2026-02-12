@@ -3,9 +3,6 @@ import { ArrowRight, BadgeCheck, CalendarClock, Clock3, Phone, ShieldCheck, Truc
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 
 const platformTypes = [
   {
@@ -85,9 +82,9 @@ const MobileAccess = () => {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild>
-              <a href="#quote-form">
+              <Link to="/contact">
                 Request a Quote <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" asChild>
               <a href="tel:+1300123456">
@@ -182,7 +179,7 @@ const MobileAccess = () => {
         </div>
       </section>
 
-      <section id="quote-form" className="container mx-auto px-4 py-14 md:py-20">
+      <section className="container mx-auto px-4 py-14 md:py-20">
         <Card className="mx-auto max-w-5xl">
           <CardHeader>
             <CardTitle className="font-heading text-3xl md:text-4xl">Request a Mobile Access Quote</CardTitle>
@@ -191,72 +188,17 @@ const MobileAccess = () => {
             </p>
           </CardHeader>
           <CardContent>
-            <form className="grid gap-5 sm:grid-cols-2" data-cms-field="mobile-access-quote-form">
-              <div className="space-y-2">
-                <Label htmlFor="fullName">Full Name</Label>
-                <Input id="fullName" name="fullName" placeholder="e.g. Jordan Lee" required />
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-muted-foreground">Quotation form removed from this service page. Please use the contact page for quote requests.</p>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild>
+                  <Link to="/contact">Go to Contact Page</Link>
+                </Button>
+                <Button type="button" variant="outline" asChild>
+                  <Link to="/services/scaffolding">View Scaffolding Services</Link>
+                </Button>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="company">Company</Label>
-                <Input id="company" name="company" placeholder="Company name" required />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" placeholder="you@company.com" required />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="phone">Phone</Label>
-                <Input id="phone" name="phone" type="tel" placeholder="04xx xxx xxx" required />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="location">Site Location</Label>
-                <Input id="location" name="location" placeholder="Suburb / project site" required />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="duration">Hire Duration</Label>
-                <Input id="duration" name="duration" placeholder="e.g. 2 weeks" required />
-              </div>
-              <div className="space-y-2 sm:col-span-2">
-                <Label htmlFor="platformType">Preferred Platform Type</Label>
-                <select
-                  id="platformType"
-                  name="platformType"
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
-                  defaultValue=""
-                  required
-                >
-                  <option value="" disabled>
-                    Select a platform type
-                  </option>
-                  {platformTypes.map((platform) => (
-                    <option key={platform.title} value={platform.title}>
-                      {platform.title}
-                    </option>
-                  ))}
-                  <option value="Not sure">Not sure - recommend best option</option>
-                </select>
-              </div>
-              <div className="space-y-2 sm:col-span-2">
-                <Label htmlFor="scope">Project Scope & Access Requirements</Label>
-                <Textarea
-                  id="scope"
-                  name="scope"
-                  rows={5}
-                  placeholder="Tell us about task type, height, obstacles, timeline, and site constraints."
-                  required
-                />
-              </div>
-
-              <div className="sm:col-span-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-muted-foreground">By submitting this form, you consent to being contacted about your quote request.</p>
-                <div className="flex flex-wrap gap-3">
-                  <Button type="submit">Submit Quote Request</Button>
-                  <Button type="button" variant="outline" asChild>
-                    <Link to="/services/scaffolding">View Scaffolding Services</Link>
-                  </Button>
-                </div>
-              </div>
-            </form>
+            </div>
           </CardContent>
         </Card>
       </section>
