@@ -8,8 +8,8 @@ import { SERVICES } from "@/data/services";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services", children: SERVICES.map((service) => ({ name: service.name, href: service.href })) },
-  { name: "Projects", href: "/projects" },
+  { name: "Services", href: "/#our-services", children: SERVICES.map((service) => ({ name: service.name, href: service.href })) },
+  { name: "Projects", href: "/#featured-projects" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
 ];
@@ -18,6 +18,18 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
+
+  const isNavLinkActive = (href: string) => {
+    if (href.startsWith('/#')) {
+      return location.pathname === '/' && location.hash === href.slice(1);
+    }
+
+    if (href === '/') {
+      return location.pathname === '/' && location.hash === '';
+    }
+
+    return location.pathname === href;
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -45,7 +57,7 @@ const Header = () => {
                   to={link.href}
                   className={cn(
                     "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
-                    location.pathname.startsWith("/services") ? "text-primary" : "text-muted-foreground"
+                    isNavLinkActive(link.href) ? "text-primary" : "text-muted-foreground"
                   )}
                 >
                   {link.name} <ChevronDown className="w-3 h-3" />
@@ -70,7 +82,7 @@ const Header = () => {
                 to={link.href}
                 className={cn(
                   "px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
-                  location.pathname === link.href ? "text-primary" : "text-muted-foreground"
+                  isNavLinkActive(link.href) ? "text-primary" : "text-muted-foreground"
                 )}
               >
                 {link.name}
