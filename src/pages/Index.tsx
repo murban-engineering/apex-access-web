@@ -163,7 +163,7 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-card">
+      <section id="our-services" className="scroll-mt-20 py-20 bg-card">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">What We Do</p>
@@ -205,7 +205,7 @@ const Index = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 bg-card">
+      <section id="featured-projects" className="scroll-mt-20 py-20 bg-card">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Our Work</p>
