@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Shield, Award, CheckCircle, ArrowRight, Phone, Star } from "lucide-react";
+import { Shield, Award, CheckCircle, ArrowRight, Phone, Star, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -60,6 +60,7 @@ const initialQuoteForm: QuoteFormData = {
 };
 
 const Index = () => {
+  const location = useLocation();
   const [quoteForm, setQuoteForm] = useState<QuoteFormData>(initialQuoteForm);
   const [showQuoteForm, setShowQuoteForm] = useState(false);
   const [submittedQuote, setSubmittedQuote] = useState<(QuoteFormData & { createdAt: string }) | null>(null);
@@ -77,6 +78,14 @@ const Index = () => {
       clearPrintMode();
     };
   }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+
+    if (params.get("quote") === "1") {
+      activateQuoteForm();
+    }
+  }, [location.search]);
 
   const activateQuoteForm = () => {
     setShowQuoteForm(true);
@@ -254,6 +263,55 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Contact */}
+      <section className="py-20 bg-card border-y border-border">
+        <div className="container mx-auto px-4">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
+            <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Contact</p>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase text-foreground">Reach Us Anytime</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mt-3">Get in touch through phone, email, WhatsApp, or by sharing your details in the contact form.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <Card className="bg-background border-border">
+              <CardContent className="p-6 space-y-4">
+                <h3 className="font-heading uppercase text-foreground text-lg">Communication Channels</h3>
+                <a href="tel:+1300123456" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <span>1300 123 456</span>
+                </a>
+                <a href="mailto:info@accessheight.com.au" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <span>info@accessheight.com.au</span>
+                </a>
+                <a href="https://wa.me/611300123456" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                  <MessageCircle className="w-5 h-5 text-primary" />
+                  <span>WhatsApp Chat</span>
+                </a>
+                <div className="flex items-start gap-3 text-muted-foreground">
+                  <MapPin className="w-5 h-5 text-primary mt-0.5" />
+                  <span>123 Industrial Way, Sydney NSW 2000</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="lg:col-span-2 bg-background border-border">
+              <CardContent className="p-6">
+                <h3 className="font-heading uppercase text-foreground text-lg mb-4">Quick Contact Form</h3>
+                <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Input placeholder="Full Name" required />
+                  <Input type="email" placeholder="Email Address" required />
+                  <Input placeholder="Phone Number" required />
+                  <Input placeholder="Preferred Contact Method" />
+                  <Textarea className="md:col-span-2" rows={4} placeholder="How can we help you?" required />
+                  <Button type="button" className="md:col-span-2 w-full md:w-auto">Submit Enquiry</Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 text-center">
@@ -275,7 +333,7 @@ const Index = () => {
       </section>
 
       {showQuoteForm && (
-        <section ref={quoteSectionRef} className="py-20 bg-background border-t border-border">
+        <section id="quote-request" ref={quoteSectionRef} className="py-20 bg-background border-t border-border">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="mb-8 text-center">
               <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Project Quotation</p>

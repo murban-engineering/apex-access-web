@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Services", href: "/services", children: SERVICES.map((service) => ({ name: service.name, href: service.href })) },
   { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
-  { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
@@ -84,7 +84,7 @@ const Header = () => {
             <Phone className="w-4 h-4" /> 1300 123 456
           </a>
           <Button asChild>
-            <Link to="/contact">Get a Quote</Link>
+            <Link to="/?quote=1#quote-request">Get a Quote</Link>
           </Button>
         </div>
 
@@ -128,7 +128,7 @@ const Header = () => {
                 <Phone className="w-4 h-4" /> 1300 123 456
               </a>
               <Button asChild className="w-full">
-                <Link to="/contact" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
+                <Link to="/?quote=1#quote-request" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
               </Button>
             </div>
           </nav>
