@@ -1,4 +1,4 @@
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Shield, Award, CheckCircle, ArrowRight, Phone, Star } from "lucide-react";
@@ -65,6 +65,19 @@ const Index = () => {
   const [submittedQuote, setSubmittedQuote] = useState<(QuoteFormData & { createdAt: string }) | null>(null);
   const quoteSectionRef = useRef<HTMLElement | null>(null);
 
+  useEffect(() => {
+    const clearPrintMode = () => {
+      document.body.classList.remove("print-quote-only");
+    };
+
+    window.addEventListener("afterprint", clearPrintMode);
+
+    return () => {
+      window.removeEventListener("afterprint", clearPrintMode);
+      clearPrintMode();
+    };
+  }, []);
+
   const activateQuoteForm = () => {
     setShowQuoteForm(true);
     requestAnimationFrame(() => {
@@ -98,6 +111,14 @@ const Index = () => {
   };
 
   const selectedServiceDetails = SERVICES.filter((service) => submittedQuote?.services.includes(service.name));
+
+  const handleQuotePrint = () => {
+    document.body.classList.add("print-quote-only");
+    window.print();
+    window.setTimeout(() => {
+      document.body.classList.remove("print-quote-only");
+    }, 300);
+  };
 
   return (
     <div>
@@ -335,7 +356,7 @@ const Index = () => {
             </Card>
 
             {submittedQuote && (
-              <Card className="mt-10 bg-card border-primary/40">
+              <Card id="quote-print-area" className="mt-10 bg-card border-primary/40">
                 <CardContent className="p-6 md:p-8 space-y-6">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 border-b border-border pb-4">
                     <div>
@@ -379,7 +400,7 @@ const Index = () => {
                   </div>
 
                   <div className="flex justify-end print:hidden">
-                    <Button type="button" onClick={() => window.print()}>
+                    <Button type="button" onClick={handleQuotePrint}>
                       Print Quotation
                     </Button>
                   </div>

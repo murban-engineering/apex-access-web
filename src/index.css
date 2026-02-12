@@ -94,3 +94,29 @@
     font-family: var(--font-heading);
   }
 }
+
+
+@media print {
+  body.print-quote-only #root * {
+    visibility: hidden;
+  }
+
+  body.print-quote-only #quote-print-area,
+  body.print-quote-only #quote-print-area * {
+    visibility: visible;
+  }
+
+  body.print-quote-only #quote-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  body.print-quote-only #quote-print-area .print\:hidden {
+    display: none !important;
+  }
+}
