@@ -202,10 +202,10 @@ const Index = () => {
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Our Work</p>
             <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase text-foreground">Featured Projects</h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {projects.map((p, i) => (
-              <motion.div key={p.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.15 } } }}>
-                <div className="group relative overflow-hidden rounded-lg aspect-[4/3]">
+          <div className="featured-projects-marquee">
+            <div className="featured-projects-track">
+              {[...projects, ...projects].map((p, index) => (
+                <div key={`${p.title}-${index}`} className="featured-project-card group relative overflow-hidden rounded-lg aspect-[4/3]">
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -213,8 +213,8 @@ const Index = () => {
                     <h3 className="font-heading text-lg font-semibold text-foreground mt-1">{p.title}</h3>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
           <div className="text-center mt-8">
             <Button variant="outline" asChild className="border-primary/50 text-primary hover:bg-primary/10">

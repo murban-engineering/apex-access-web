@@ -120,3 +120,35 @@
     display: none !important;
   }
 }
+
+.featured-projects-marquee {
+  overflow: hidden;
+}
+
+.featured-projects-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: featured-projects-scroll 40s linear infinite;
+}
+
+.featured-project-card {
+  width: min(22rem, 80vw);
+  flex: 0 0 auto;
+}
+
+@keyframes featured-projects-scroll {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-projects-track {
+    animation: none;
+  }
+}
