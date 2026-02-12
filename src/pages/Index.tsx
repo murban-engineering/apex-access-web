@@ -87,6 +87,23 @@ const Index = () => {
     }
   }, [location.search]);
 
+  useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    const targetId = location.hash.slice(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (!targetElement) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, [location.hash]);
+
   const activateQuoteForm = () => {
     setShowQuoteForm(true);
     requestAnimationFrame(() => {
