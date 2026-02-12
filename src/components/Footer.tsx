@@ -23,7 +23,11 @@ const Footer = () => (
 
         {/* Services */}
         <div>
-          <h4 className="font-heading text-foreground uppercase tracking-wider text-sm mb-4">Services</h4>
+          <h4 className="mb-4">
+            <Link to="/services" className="font-heading text-foreground uppercase tracking-wider text-sm hover:text-primary transition-colors">
+              Services
+            </Link>
+          </h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             {SERVICES.map((service) => (
               <li key={service.name}>
@@ -35,7 +39,11 @@ const Footer = () => (
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-heading text-foreground uppercase tracking-wider text-sm mb-4">Company</h4>
+          <h4 className="mb-4">
+            <Link to="/about" className="font-heading text-foreground uppercase tracking-wider text-sm hover:text-primary transition-colors">
+              Company
+            </Link>
+          </h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
             <li><Link to="/projects" className="hover:text-primary transition-colors">Projects</Link></li>
@@ -46,7 +54,11 @@ const Footer = () => (
 
         {/* Contact */}
         <div>
-          <h4 className="font-heading text-foreground uppercase tracking-wider text-sm mb-4">Contact</h4>
+          <h4 className="mb-4">
+            <Link to="/contact" className="font-heading text-foreground uppercase tracking-wider text-sm hover:text-primary transition-colors">
+              Contact
+            </Link>
+          </h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> 1300 123 456</li>
             <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> info@accessheight.com.au</li>
