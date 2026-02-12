@@ -80,14 +80,6 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-
-    if (params.get("quote") === "1") {
-      activateQuoteForm();
-    }
-  }, [location.search]);
-
-  useEffect(() => {
     if (!location.hash) {
       return;
     }
@@ -103,13 +95,6 @@ const Index = () => {
       targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }, [location.hash]);
-
-  const activateQuoteForm = () => {
-    setShowQuoteForm(true);
-    requestAnimationFrame(() => {
-      quoteSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  };
 
   const toggleService = (serviceName: string) => {
     setQuoteForm((current) => {
@@ -169,7 +154,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild className="text-base px-8">
-                <button type="button" onClick={activateQuoteForm}>Request a Quote <ArrowRight className="ml-2 w-4 h-4" /></button>
+                <Link to="/contact#quote-request">Request a Quote <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="text-base px-8 border-primary/50 text-primary hover:bg-primary/10">
                 <a href="tel:+1300123456"><Phone className="mr-2 w-4 h-4" /> Call Now</a>
@@ -336,11 +321,11 @@ const Index = () => {
             Ready to Get Started?
           </h2>
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
-            Get a free, no-obligation quote for your next project. Our team is ready to help.
+            Get a free, no-obligation quote for your next project on our contact page. Our team is ready to help.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" variant="secondary" asChild className="text-base px-8">
-              <button type="button" onClick={activateQuoteForm}>Request a Quote</button>
+              <Link to="/contact#quote-request">Request a Quote</Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
               <a href="tel:+1300123456"><Phone className="mr-2 w-4 h-4" /> 1300 123 456</a>

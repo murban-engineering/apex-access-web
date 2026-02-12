@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,9 +6,27 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { SERVICES } from "@/data/services";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
   const [selectedService, setSelectedService] = useState("");
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash !== "#quote-request") {
+      return;
+    }
+
+    const quoteSection = document.getElementById("quote-request");
+
+    if (!quoteSection) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      quoteSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, [location.hash]);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -65,7 +83,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="lg:col-span-2 bg-card border-border">
+            <Card id="quote-request" className="lg:col-span-2 bg-card border-border scroll-mt-24">
               <CardContent className="p-6">
                 <h2 className="font-heading text-lg uppercase text-foreground mb-4">Request a quotation</h2>
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={handleSubmit}>

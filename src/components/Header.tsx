@@ -96,7 +96,7 @@ const Header = () => {
             <Phone className="w-4 h-4" /> 1300 123 456
           </a>
           <Button asChild>
-            <Link to="/?quote=1#quote-request">Get a Quote</Link>
+            <Link to="/contact#quote-request">Get a Quote</Link>
           </Button>
         </div>
 
@@ -140,7 +140,7 @@ const Header = () => {
                 <Phone className="w-4 h-4" /> 1300 123 456
               </a>
               <Button asChild className="w-full">
-                <Link to="/?quote=1#quote-request" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
+                <Link to="/contact#quote-request" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
               </Button>
             </div>
           </nav>
