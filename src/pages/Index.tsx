@@ -134,31 +134,53 @@ const Index = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[90vh] items-center overflow-hidden py-16">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-background/80" />
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-            <p className="text-primary font-heading uppercase tracking-[0.3em] text-sm mb-4">
-              Safety at Every Level
+        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_hsl(var(--primary)/0.25)_0%,_transparent_50%)]" />
+        <div className="relative z-10 container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="mx-auto max-w-5xl rounded-3xl border border-primary/20 bg-background/70 p-8 text-center shadow-2xl backdrop-blur-xl md:p-12"
+          >
+            <p className="mb-4 inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+              Australia&apos;s Trusted Working-at-Height Specialists
             </p>
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold uppercase leading-tight text-foreground mb-6">
-              Access & Height<br />
-              <span className="text-primary">Safety Services</span>
+            <h1 className="mb-6 font-heading text-4xl font-bold uppercase leading-tight text-foreground sm:text-5xl md:text-7xl">
+              Smarter Access.
+              <br />
+              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Safer Outcomes.</span>
             </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
-              Industry-leading rope access, scaffolding, and height safety solutions for commercial and industrial projects across Australia.
+            <p className="mx-auto mb-8 max-w-3xl text-base text-muted-foreground md:text-lg">
+              Future-ready rope access, scaffolding, and height safety solutions engineered for fast-moving commercial and industrial projects.
+              We blend elite site execution with uncompromising compliance.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="text-base px-8">
-                <Link to="/contact#quote-request">Request a Quote <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button size="lg" asChild className="px-8 text-base shadow-lg shadow-primary/30">
+                <Link to="/contact#quote-request">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-base px-8 border-primary/50 text-primary hover:bg-primary/10">
-                <a href="tel:+1300123456"><Phone className="mr-2 w-4 h-4" /> Call Now</a>
+              <Button size="lg" variant="outline" asChild className="border-primary/50 px-8 text-base text-primary hover:bg-primary/10">
+                <a href="tel:+1300123456"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
               </Button>
+            </div>
+            <div className="grid grid-cols-1 gap-3 text-left sm:grid-cols-3">
+              <div className="rounded-xl border border-border/70 bg-card/60 p-4">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">Safety Record</p>
+                <p className="mt-1 text-2xl font-bold text-foreground">0 LTIs</p>
+              </div>
+              <div className="rounded-xl border border-border/70 bg-card/60 p-4">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">Response Time</p>
+                <p className="mt-1 text-2xl font-bold text-foreground">24/7 Rapid</p>
+              </div>
+              <div className="rounded-xl border border-border/70 bg-card/60 p-4">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">National Reach</p>
+                <p className="mt-1 text-2xl font-bold text-foreground">All Major Cities</p>
+              </div>
             </div>
           </motion.div>
         </div>
