@@ -229,14 +229,14 @@ const Index = () => {
           </div>
           <div className="text-center mt-8">
             <Button variant="outline" asChild className="border-primary/50 text-primary hover:bg-primary/10">
-              <Link to="/projects">View All Projects <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link to="/#featured-projects">View Featured Projects <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-background">
+      <section id="testimonials" className="scroll-mt-20 py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Trusted By Industry Leaders</p>
@@ -266,7 +266,7 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section className="py-20 bg-card border-y border-border">
+      <section id="contact-section" className="scroll-mt-20 py-20 bg-card border-y border-border">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Contact</p>

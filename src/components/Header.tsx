@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/#our-services", children: SERVICES.map((service) => ({ name: service.name, href: service.href })) },
   { name: "Projects", href: "/#featured-projects" },
-  { name: "About", href: "/about" },
+  { name: "Testimonials", href: "/#testimonials" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -20,12 +20,12 @@ const Header = () => {
   const location = useLocation();
 
   const isNavLinkActive = (href: string) => {
-    if (href.startsWith('/#')) {
-      return location.pathname === '/' && location.hash === href.slice(1);
+    if (href.startsWith("/#")) {
+      return location.pathname === "/" && location.hash === href.slice(1);
     }
 
-    if (href === '/') {
-      return location.pathname === '/' && location.hash === '';
+    if (href === "/") {
+      return location.pathname === "/" && location.hash === "";
     }
 
     return location.pathname === href;
@@ -33,8 +33,14 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-sm focus:font-medium focus:text-primary-foreground"
+      >
+        Skip to main content
+      </a>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2" aria-label="Access and Height home page">
           <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
             <span className="font-heading text-primary-foreground font-bold text-sm">AH</span>
           </div>
@@ -43,8 +49,7 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
           {navLinks.map((link) =>
             link.children ? (
               <div
@@ -57,7 +62,7 @@ const Header = () => {
                   to={link.href}
                   className={cn(
                     "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
-                    isNavLinkActive(link.href) ? "text-primary" : "text-muted-foreground"
+                    isNavLinkActive(link.href) ? "text-primary" : "text-muted-foreground",
                   )}
                 >
                   {link.name} <ChevronDown className="w-3 h-3" />
@@ -82,12 +87,12 @@ const Header = () => {
                 to={link.href}
                 className={cn(
                   "px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
-                  isNavLinkActive(link.href) ? "text-primary" : "text-muted-foreground"
+                  isNavLinkActive(link.href) ? "text-primary" : "text-muted-foreground",
                 )}
               >
                 {link.name}
               </Link>
-            )
+            ),
           )}
         </nav>
 
@@ -100,16 +105,21 @@ const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile toggle */}
-        <button className="lg:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
+        <button
+          className="lg:hidden text-foreground"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
+          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+          type="button"
+        >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="lg:hidden bg-card border-t border-border">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
+        <div id="mobile-navigation" className="lg:hidden bg-card border-t border-border">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2" aria-label="Mobile primary">
             {navLinks.map((link) => (
               <div key={link.name}>
                 <Link
