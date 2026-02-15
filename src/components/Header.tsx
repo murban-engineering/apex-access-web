@@ -40,12 +40,12 @@ const Header = () => {
         Skip to main content
       </a>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex items-center gap-2" aria-label="Access and Height home page">
+        <Link to="/" className="flex items-center gap-2" aria-label="OTNO ACCESS SOLUTION LIMITED home page">
           <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
             <span className="font-heading text-primary-foreground font-bold text-sm">AH</span>
           </div>
           <span className="font-heading text-foreground text-lg font-semibold tracking-wide uppercase hidden sm:block">
-            Access & Height
+            OTNO ACCESS SOLUTION LIMITED
           </span>
         </Link>
 
