@@ -30,9 +30,9 @@ const projects = [
 ];
 
 const testimonials = [
-  { name: "James Carter", company: "BuildCorp Australia", quote: "Access & Height delivered on a complex rope access project with zero safety incidents. Professional, reliable, and highly skilled." },
+  { name: "James Carter", company: "BuildCorp Australia", quote: "OTNO ACCESS SOLUTION LIMITED delivered on a complex rope access project with zero safety incidents. Professional, reliable, and highly skilled." },
   { name: "Sarah Mitchell", company: "Turner Construction", quote: "Their scaffolding team set up a 30-storey system in record time. Exceptional planning and execution from start to finish." },
-  { name: "David Nguyen", company: "Lendlease", quote: "We've worked with Access & Height for 5 years — they're our go-to for anything at height. Unmatched safety standards." },
+  { name: "David Nguyen", company: "Lendlease", quote: "We've worked with OTNO ACCESS SOLUTION LIMITED for 5 years — they're our go-to for anything at height. Unmatched safety standards." },
 ];
 
 type QuoteFormData = {
@@ -146,7 +146,7 @@ const Index = () => {
               Safety at Every Level
             </p>
             <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold uppercase leading-tight text-foreground mb-6">
-              Access & Height<br />
+              OTNO ACCESS SOLUTION LIMITED<br />
               <span className="text-primary">Safety Services</span>
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
@@ -421,7 +421,7 @@ const Index = () => {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 border-b border-border pb-4">
                     <div>
                       <p className="text-primary font-heading uppercase tracking-[0.2em] text-xs">Quotation Summary</p>
-                      <h3 className="font-heading text-2xl font-semibold uppercase text-foreground">Access & Height Safety Services</h3>
+                      <h3 className="font-heading text-2xl font-semibold uppercase text-foreground">OTNO ACCESS SOLUTION LIMITED Safety Services</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">Generated: {submittedQuote.createdAt}</p>
                   </div>

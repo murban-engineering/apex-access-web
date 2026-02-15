@@ -12,7 +12,7 @@ const Footer = () => (
               <span className="font-heading text-primary-foreground font-bold text-sm">AH</span>
             </div>
             <span className="font-heading text-foreground text-lg font-semibold tracking-wide uppercase">
-              Access & Height
+              OTNO ACCESS SOLUTION LIMITED
             </span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
@@ -64,7 +64,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-10 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Access & Height Safety Services. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} OTNO ACCESS SOLUTION LIMITED Safety Services. All rights reserved.</p>
         <div className="flex gap-4">
           <Link to="/contact" className="hover:text-primary transition-colors">Privacy Policy</Link>
           <Link to="/contact" className="hover:text-primary transition-colors">Terms of Service</Link>
