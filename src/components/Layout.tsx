@@ -55,7 +55,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
       )}
-      <main className={`flex-1 ${isHomePage ? "pt-16" : "pt-0"}`}>{children}</main>
+      <main id="main-content" className={`flex-1 ${isHomePage ? "pt-16" : "pt-0"}`}>{children}</main>
       <Footer />
     </div>
   );

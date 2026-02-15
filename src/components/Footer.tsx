@@ -6,7 +6,6 @@ const Footer = () => (
   <footer className="bg-card border-t border-border">
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
@@ -21,10 +20,9 @@ const Footer = () => (
           </p>
         </div>
 
-        {/* Services */}
         <div>
           <h4 className="mb-4">
-            <Link to="/services" className="font-heading text-foreground uppercase tracking-wider text-sm hover:text-primary transition-colors">
+            <Link to="/#our-services" className="font-heading text-foreground uppercase tracking-wider text-sm hover:text-primary transition-colors">
               Services
             </Link>
           </h4>
@@ -37,22 +35,20 @@ const Footer = () => (
           </ul>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h4 className="mb-4">
-            <Link to="/about" className="font-heading text-foreground uppercase tracking-wider text-sm hover:text-primary transition-colors">
+            <Link to="/#testimonials" className="font-heading text-foreground uppercase tracking-wider text-sm hover:text-primary transition-colors">
               Company
             </Link>
           </h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-            <li><Link to="/projects" className="hover:text-primary transition-colors">Projects</Link></li>
+            <li><Link to="/#testimonials" className="hover:text-primary transition-colors">Client Testimonials</Link></li>
+            <li><Link to="/#featured-projects" className="hover:text-primary transition-colors">Featured Projects</Link></li>
             <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             <li><Link to="/contact#quote-request" className="hover:text-primary transition-colors">Get a Quote</Link></li>
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h4 className="mb-4">
             <Link to="/contact" className="font-heading text-foreground uppercase tracking-wider text-sm hover:text-primary transition-colors">
@@ -70,8 +66,8 @@ const Footer = () => (
       <div className="mt-10 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
         <p>&copy; {new Date().getFullYear()} Access & Height Safety Services. All rights reserved.</p>
         <div className="flex gap-4">
-          <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-          <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+          <Link to="/contact" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <Link to="/contact" className="hover:text-primary transition-colors">Terms of Service</Link>
         </div>
       </div>
     </div>
