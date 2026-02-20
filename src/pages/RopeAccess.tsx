@@ -1,4 +1,3 @@
-import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -75,15 +74,6 @@ const industries = [
   "Government and defense",
 ];
 
-const projectGallery = [
-  { title: "CBD Glass Façade Remediation", industry: "Commercial", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000&q=80" },
-  { title: "Bridge Bearing Inspection", industry: "Infrastructure", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1000&q=80" },
-  { title: "Tank Farm NDT Program", industry: "Energy", image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1000&q=80" },
-  { title: "Stadium Cable Installation", industry: "Commercial", image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1000&q=80" },
-  { title: "Port Facility Corrosion Coatings", industry: "Marine", image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1000&q=80" },
-  { title: "Confined Shaft Rescue Cover", industry: "Industrial", image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1000&q=80" },
-];
-
 const testimonials = [
   {
     name: "Ethan Marshall",
@@ -125,14 +115,6 @@ const sectionAnim = {
 };
 
 const RopeAccess = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState<string>("All");
-
-  const filteredProjects = useMemo(() => {
-    if (selectedIndustry === "All") return projectGallery;
-    return projectGallery.filter((project) => project.industry === selectedIndustry);
-  }, [selectedIndustry]);
-
-
   return (
     <main className="bg-background text-foreground">
       <section className="border-b border-border bg-card/50">
@@ -271,32 +253,15 @@ const RopeAccess = () => {
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <div>
               <h2 className="font-heading text-3xl font-bold">Project Gallery</h2>
-              <p className="mt-2 text-muted-foreground" data-cms-field="gallery-copy">Filter recent rope access projects by industry.</p>
+              <p className="mt-2 text-muted-foreground" data-cms-field="gallery-copy">
+                This gallery now has a dedicated page so you can browse rope access projects as a standalone section.
+              </p>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {["All", "Commercial", "Infrastructure", "Energy", "Marine", "Industrial"].map((filter) => (
-                <Button
-                  key={filter}
-                  variant={selectedIndustry === filter ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedIndustry(filter)}
-                >
-                  {filter}
-                </Button>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredProjects.map((project) => (
-              <div key={project.title} className="overflow-hidden rounded-lg border border-border">
-                <img src={project.image} alt={project.title} className="h-52 w-full object-cover" loading="lazy" />
-                <div className="p-4">
-                  <p className="text-xs uppercase tracking-wider text-primary">{project.industry}</p>
-                  <h3 className="mt-1 font-heading text-lg font-semibold">{project.title}</h3>
-                </div>
-              </div>
-            ))}
+            <Button asChild>
+              <Link to="/services/rope-access/project-gallery">
+                Open Project Gallery <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

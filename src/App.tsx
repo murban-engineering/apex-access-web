@@ -9,6 +9,7 @@ import Layout from "./components/Layout";
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const RopeAccess = lazy(() => import("./pages/RopeAccess"));
+const RopeAccessProjectGallery = lazy(() => import("./pages/RopeAccessProjectGallery"));
 const Scaffolding = lazy(() => import("./pages/Scaffolding"));
 const MobileAccess = lazy(() => import("./pages/MobileAccess"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -41,6 +42,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/services/rope-access" element={<RopeAccess />} />
+              <Route path="/services/rope-access/project-gallery" element={<RopeAccessProjectGallery />} />
               <Route path="/services/scaffolding" element={<Scaffolding />} />
               <Route path="/services/mobile-access" element={<MobileAccess />} />
               <Route path="/contact" element={<Contact />} />
