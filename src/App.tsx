@@ -10,6 +10,7 @@ import RopeAccessProjectGallery from "./pages/RopeAccessProjectGallery";
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const RopeAccess = lazy(() => import("./pages/RopeAccess"));
+const RopeAccessProjectGallery = lazy(() => import("./pages/RopeAccessProjectGallery"));
 const Scaffolding = lazy(() => import("./pages/Scaffolding"));
 const MobileAccess = lazy(() => import("./pages/MobileAccess"));
 const Contact = lazy(() => import("./pages/Contact"));

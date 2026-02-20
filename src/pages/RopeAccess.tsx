@@ -253,6 +253,9 @@ const RopeAccess = () => {
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <div>
               <h2 className="font-heading text-3xl font-bold">Project Gallery</h2>
+              <p className="mt-2 text-muted-foreground" data-cms-field="gallery-copy">
+                This gallery now has a dedicated page so you can browse rope access projects as a standalone section.
+              </p>
             </div>
             <Button asChild>
               <Link to="/services/rope-access/project-gallery">
