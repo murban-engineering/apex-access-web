@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import heroBg from "@/assets/hero-bg.jpg";
+import ropeAccessImg from "@/assets/rope-access-hero.jpg";
 import { SERVICES } from "@/data/services";
 
 const fadeUp = {
@@ -24,7 +25,7 @@ const certifications = [
 ];
 
 const projects = [
-  { title: "Sydney Harbour Bridge Maintenance", category: "Rope Access", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" },
+  { title: "Sydney Harbour Bridge Maintenance", category: "Rope Access", image: ropeAccessImg },
   { title: "Commercial Tower Scaffolding", category: "Scaffolding", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" },
   { title: "Stadium Safety Netting Install", category: "Netting & Decking", image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" },
 ];
