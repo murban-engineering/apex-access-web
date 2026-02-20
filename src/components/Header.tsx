@@ -10,7 +10,7 @@ import { SERVICES } from "@/data/services";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/#our-services", children: SERVICES.map((service) => ({ name: service.name, href: service.href })) },
-  { name: "Projects", href: "/#featured-projects" },
+  { name: "Project Gallery", href: "/services/rope-access/project-gallery" },
   { name: "Testimonials", href: "/#testimonials" },
   { name: "Contact", href: "/contact" },
 ];

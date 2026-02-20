@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
+import RopeAccessProjectGallery from "./pages/RopeAccessProjectGallery";
 
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -41,6 +42,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/services/rope-access" element={<RopeAccess />} />
+              <Route path="/services/rope-access/project-gallery" element={<RopeAccessProjectGallery />} />
               <Route path="/services/scaffolding" element={<Scaffolding />} />
               <Route path="/services/mobile-access" element={<MobileAccess />} />
               <Route path="/contact" element={<Contact />} />
