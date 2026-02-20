@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SERVICES } from "@/data/services";
+import logo from "@/assets/logo.jpeg";
 
 const Footer = () => (
   <footer className="bg-card border-t border-border">
@@ -8,12 +9,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-              <span className="font-heading text-primary-foreground font-bold text-sm">AH</span>
-            </div>
-            <span className="font-heading text-foreground text-lg font-semibold tracking-wide uppercase">
-              OTNO ACCESS SOLUTION LIMITED
-            </span>
+            <img src={logo} alt="OTNO Access Solution Logo" className="h-10 w-auto" />
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Industry-leading access and height safety solutions. Trusted by Australia's top contractors since 2005.

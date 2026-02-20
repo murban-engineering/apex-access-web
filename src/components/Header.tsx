@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.jpeg";
 
 import { SERVICES } from "@/data/services";
 
@@ -41,9 +42,7 @@ const Header = () => {
       </a>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center gap-2" aria-label="OTNO ACCESS SOLUTION LIMITED home page">
-          <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-            <span className="font-heading text-primary-foreground font-bold text-sm">AH</span>
-          </div>
+          <img src={logo} alt="OTNO Access Solution Logo" className="h-9 w-auto" />
           <span className="font-heading text-foreground text-lg font-semibold tracking-wide uppercase hidden sm:block">
             OTNO ACCESS SOLUTION LIMITED
           </span>
