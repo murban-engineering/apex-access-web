@@ -5,14 +5,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
-import RopeAccessProjectGallery from "./pages/RopeAccessProjectGallery";
-
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const RopeAccess = lazy(() => import("./pages/RopeAccess"));
 const RopeAccessProjectGallery = lazy(() => import("./pages/RopeAccessProjectGallery"));
 const Scaffolding = lazy(() => import("./pages/Scaffolding"));
 const MobileAccess = lazy(() => import("./pages/MobileAccess"));
+const NettingDocking = lazy(() => import("./pages/NettingDocking"));
 const Contact = lazy(() => import("./pages/Contact"));
 
 const queryClient = new QueryClient();
@@ -46,6 +45,7 @@ const App = () => (
               <Route path="/services/rope-access/project-gallery" element={<RopeAccessProjectGallery />} />
               <Route path="/services/scaffolding" element={<Scaffolding />} />
               <Route path="/services/mobile-access" element={<MobileAccess />} />
+              <Route path="/services/netting-decking" element={<NettingDocking />} />
               <Route path="/contact" element={<Contact />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
