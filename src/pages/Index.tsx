@@ -135,14 +135,14 @@ const Index = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-background/80" />
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(2,6,23,0.85),rgba(2,6,23,0.65),rgba(185,28,28,0.45))]" />
+        <div className="relative z-10 container mx-auto px-4">
+          <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mx-auto max-w-4xl text-center">
             <p className="text-primary font-heading uppercase tracking-[0.3em] text-sm mb-4">
               Safety at Every Level
             </p>
@@ -150,23 +150,35 @@ const Index = () => {
               OTNO ACCESS SOLUTION LIMITED<br />
               <span className="text-primary">Safety Services</span>
             </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-slate-200">
               Industry-leading rope access, scaffolding, and height safety solutions for commercial and industrial projects across Australia.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild className="text-base px-8">
                 <Link to="/contact#quote-request">Request a Quote <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-base px-8 border-primary/50 text-primary hover:bg-primary/10">
+              <Button size="lg" variant="outline" asChild className="border-white/35 bg-white/5 px-8 text-base text-white hover:bg-white/15">
                 <a href="tel:+1300123456"><Phone className="mr-2 w-4 h-4" /> Call Now</a>
               </Button>
+            </div>
+            <div className="mx-auto grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
+              {[
+                { label: "Projects completed", value: "1,200+" },
+                { label: "Safety incident free", value: "99.9%" },
+                { label: "Response time", value: "< 30 min" },
+              ].map((stat) => (
+                <div key={stat.label} className="glass-surface rounded-xl px-5 py-4 text-left shadow-lg shadow-black/30">
+                  <p className="text-2xl font-semibold text-white">{stat.value}</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-300">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Services */}
-      <section id="our-services" className="scroll-mt-20 py-20 bg-card">
+      <section id="our-services" className="scroll-mt-20 py-24">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">What We Do</p>
@@ -176,7 +188,7 @@ const Index = () => {
             {SERVICES.map((service, i) => (
               <motion.div key={service.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.1 } } }}>
                 <Link to={service.href}>
-                  <Card className="bg-secondary/50 border-border hover:border-primary/50 transition-all group h-full">
+                  <Card className="group h-full border-white/10 bg-white/5 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/20">
                     <CardContent className="p-6">
                       <service.icon className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
                       <h3 className="font-heading text-lg font-semibold uppercase text-foreground mb-2">{service.name}</h3>
@@ -194,7 +206,7 @@ const Index = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-12 bg-background border-y border-border">
+      <section className="border-y border-white/10 bg-black/10 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
             {certifications.map((c) => (
@@ -208,7 +220,7 @@ const Index = () => {
       </section>
 
       {/* Featured Projects */}
-      <section id="featured-projects" className="scroll-mt-20 py-20 bg-card">
+      <section id="featured-projects" className="scroll-mt-20 py-24">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Our Work</p>
@@ -237,7 +249,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="scroll-mt-20 py-20 bg-background">
+      <section id="testimonials" className="scroll-mt-20 bg-black/10 py-24">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Trusted By Industry Leaders</p>
@@ -246,7 +258,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.15 } } }}>
-                <Card className="bg-card border-border h-full">
+                <Card className="h-full border-white/10 bg-white/5">
                   <CardContent className="p-6">
                     <div className="flex gap-1 mb-4">
                       {[...Array(5)].map((_, j) => (
@@ -267,7 +279,7 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section id="contact-section" className="scroll-mt-20 py-20 bg-card border-y border-border">
+      <section id="contact-section" className="scroll-mt-20 border-y border-white/10 bg-black/20 py-24">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
             <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Contact</p>
@@ -276,7 +288,7 @@ const Index = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <Card className="bg-background border-border">
+            <Card className="border-white/10 bg-white/5">
               <CardContent className="p-6 space-y-4">
                 <h3 className="font-heading uppercase text-foreground text-lg">Communication Channels</h3>
                 <a href="tel:+1300123456" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
@@ -298,7 +310,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="lg:col-span-2 bg-background border-border">
+            <Card className="lg:col-span-2 border-white/10 bg-white/5">
               <CardContent className="p-6">
                 <h3 className="font-heading uppercase text-foreground text-lg mb-4">Quick Contact Form</h3>
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -316,15 +328,15 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16">
+        <div className="container mx-auto rounded-3xl border border-white/10 bg-primary px-4 py-14 text-center shadow-2xl shadow-primary/30">
           <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase text-primary-foreground mb-4">
             Ready to Get Started?
           </h2>
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
             Get a free, no-obligation quote for your next project on our contact page. Our team is ready to help.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" variant="secondary" asChild className="text-base px-8">
               <Link to="/contact#quote-request">Request a Quote</Link>
             </Button>

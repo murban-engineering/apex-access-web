@@ -33,22 +33,22 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/80 backdrop-blur-xl">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-sm focus:font-medium focus:text-primary-foreground"
       >
         Skip to main content
       </a>
-      <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex items-center gap-2" aria-label="OTNO ACCESS SOLUTION LIMITED home page">
-          <img src={logo} alt="OTNO Access Solution Logo" className="h-9 w-auto" />
-          <span className="font-heading text-foreground text-lg font-semibold tracking-wide uppercase hidden sm:block">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <Link to="/" className="flex items-center gap-3" aria-label="OTNO ACCESS SOLUTION LIMITED home page">
+          <img src={logo} alt="OTNO Access Solution Logo" className="h-9 w-auto rounded-sm ring-1 ring-white/20" />
+          <span className="hidden font-heading text-lg font-semibold uppercase tracking-wide text-foreground sm:block">
             OTNO ACCESS SOLUTION LIMITED
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {navLinks.map((link) =>
             link.children ? (
               <div
@@ -60,19 +60,21 @@ const Header = () => {
                 <Link
                   to={link.href}
                   className={cn(
-                    "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
-                    isNavLinkActive(link.href) ? "text-primary" : "text-muted-foreground",
+                    "flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                    isNavLinkActive(link.href)
+                      ? "bg-white/10 text-foreground"
+                      : "text-muted-foreground hover:bg-white/5 hover:text-foreground",
                   )}
                 >
-                  {link.name} <ChevronDown className="w-3 h-3" />
+                  {link.name} <ChevronDown className="h-3 w-3" />
                 </Link>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 w-56 bg-card border border-border rounded-md shadow-lg py-2">
+                  <div className="absolute left-0 top-full mt-2 w-64 rounded-xl border border-white/10 bg-card/95 p-2 shadow-2xl backdrop-blur">
                     {link.children.map((child) => (
                       <Link
                         key={child.name}
                         to={child.href}
-                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                        className="block rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
                       >
                         {child.name}
                       </Link>
@@ -85,8 +87,10 @@ const Header = () => {
                 key={link.name}
                 to={link.href}
                 className={cn(
-                  "px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
-                  isNavLinkActive(link.href) ? "text-primary" : "text-muted-foreground",
+                  "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  isNavLinkActive(link.href)
+                    ? "bg-white/10 text-foreground"
+                    : "text-muted-foreground hover:bg-white/5 hover:text-foreground",
                 )}
               >
                 {link.name}
@@ -95,35 +99,35 @@ const Header = () => {
           )}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+1234567890" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors">
-            <Phone className="w-4 h-4" /> 1300 123 456
+        <div className="hidden items-center gap-3 lg:flex">
+          <a href="tel:+1234567890" className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Phone className="h-4 w-4" /> 1300 123 456
           </a>
-          <Button asChild>
+          <Button asChild className="shadow-lg shadow-primary/30">
             <Link to="/contact#quote-request">Get a Quote</Link>
           </Button>
         </div>
 
         <button
-          className="lg:hidden text-foreground"
+          className="text-foreground lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-navigation"
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           type="button"
         >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {mobileOpen && (
-        <div id="mobile-navigation" className="lg:hidden bg-card border-t border-border">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2" aria-label="Mobile primary">
+        <div id="mobile-navigation" className="border-t border-white/10 bg-card/95 backdrop-blur-xl lg:hidden">
+          <nav className="container mx-auto flex flex-col gap-2 px-4 py-4" aria-label="Mobile primary">
             {navLinks.map((link) => (
               <div key={link.name}>
                 <Link
                   to={link.href}
-                  className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary"
+                  className="block rounded-md px-2 py-2 text-sm font-medium text-muted-foreground hover:bg-white/5 hover:text-foreground"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.name}
@@ -134,7 +138,7 @@ const Header = () => {
                       <Link
                         key={child.name}
                         to={child.href}
-                        className="block py-1.5 text-sm text-muted-foreground hover:text-primary"
+                        className="block rounded-md px-2 py-1.5 text-sm text-muted-foreground hover:bg-white/5 hover:text-foreground"
                         onClick={() => setMobileOpen(false)}
                       >
                         {child.name}
@@ -144,9 +148,9 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <div className="pt-2 border-t border-border flex flex-col gap-2">
+            <div className="flex flex-col gap-2 border-t border-white/10 pt-3">
               <a href="tel:+1234567890" className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4" /> 1300 123 456
+                <Phone className="h-4 w-4" /> 1300 123 456
               </a>
               <Button asChild className="w-full">
                 <Link to="/contact#quote-request" onClick={() => setMobileOpen(false)}>Get a Quote</Link>
