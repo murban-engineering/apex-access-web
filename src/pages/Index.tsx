@@ -13,7 +13,7 @@ import { SERVICES } from "@/data/services";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.25 } },
 };
 
 const certifications = [
@@ -92,9 +92,7 @@ const Index = () => {
       return;
     }
 
-    requestAnimationFrame(() => {
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    targetElement.scrollIntoView({ behavior: "auto", block: "start" });
   }, [location.hash]);
 
   const toggleService = (serviceName: string) => {
@@ -186,7 +184,7 @@ const Index = () => {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map((service, i) => (
-              <motion.div key={service.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.1 } } }}>
+              <motion.div key={service.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.25, delay: i * 0.04 } } }}>
                 <Link to={service.href}>
                   <Card className="group h-full border-white/10 bg-white/5 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/20">
                     <CardContent className="p-6">
@@ -257,7 +255,7 @@ const Index = () => {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
-              <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.6, delay: i * 0.15 } } }}>
+              <motion.div key={t.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.25, delay: i * 0.05 } } }}>
                 <Card className="h-full border-white/10 bg-white/5">
                   <CardContent className="p-6">
                     <div className="flex gap-1 mb-4">
