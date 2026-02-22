@@ -232,8 +232,8 @@ const Index = () => {
           <div className="featured-projects-marquee">
             <div className="featured-projects-track">
               {[...projects, ...projects].map((p, index) => (
-                <div key={`${p.title}-${index}`} className="featured-project-card group relative overflow-hidden rounded-lg aspect-[4/3]">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div key={`${p.title}-${index}`} className="featured-project-card project-image-frame group relative overflow-hidden rounded-xl aspect-[4/3] border border-white/10">
+                  <img src={p.image} alt={p.title} className="project-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <span className="text-primary text-xs font-heading uppercase tracking-wider">{p.category}</span>

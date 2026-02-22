@@ -46,8 +46,8 @@ const RopeAccessProjectGallery = () => {
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project) => (
-            <div key={project.title} className="overflow-hidden rounded-lg border border-border">
-              <img src={project.image} alt={project.title} className="h-52 w-full object-cover" loading="lazy" />
+            <div key={project.title} className="project-image-frame overflow-hidden rounded-xl border border-border/80 bg-card/40 shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1">
+              <img src={project.image} alt={project.title} className="project-image h-56 w-full object-cover" loading="lazy" />
               <div className="p-4">
                 <p className="text-xs uppercase tracking-wider text-primary">{project.industry}</p>
                 <h3 className="mt-1 font-heading text-lg font-semibold">{project.title}</h3>
