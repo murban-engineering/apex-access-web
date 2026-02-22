@@ -14,9 +14,6 @@ export const ROPE_ACCESS_PROJECTS: RopeAccessProject[] = [
   { title: "CBD Glass Façade Remediation", industry: "Commercial", image: projectConcreteImg },
   { title: "Bridge Bearing Inspection", industry: "Infrastructure", image: projectScaffoldingWorkImg },
   { title: "Tank Farm NDT Program", industry: "Energy", image: projectFacadeScaffoldingImg },
-  { title: "Stadium Cable Installation", industry: "Commercial", image: projectConcreteImg },
-  { title: "Port Facility Corrosion Coatings", industry: "Marine", image: projectScaffoldingWorkImg },
-  { title: "Confined Shaft Rescue Cover", industry: "Industrial", image: projectFacadeScaffoldingImg },
   { title: "Building Façade Drilling Works", industry: "Commercial", image: ropeAccessDrillingImg },
   { title: "High-Rise Façade Maintenance Team", industry: "Commercial", image: ropeAccessTeamImg },
 ];
