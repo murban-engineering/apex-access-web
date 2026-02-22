@@ -12,6 +12,7 @@ import ropeAccessImg from "@/assets/rope-access-hero.jpg";
 import projectConcreteImg from "@/assets/project-concrete.jpg";
 import projectScaffoldingWorkImg from "@/assets/project-scaffolding-work.jpg";
 import projectFacadeScaffoldingImg from "@/assets/project-facade-scaffolding.jpg";
+import ropeAccessTeamImg from "@/assets/rope-access-team.jpg";
 import { SERVICES } from "@/data/services";
 
 const fadeUp = {
@@ -29,6 +30,7 @@ const certifications = [
 
 const projects = [
   { title: "Concrete Reinforcement Works", category: "Infrastructure", image: projectConcreteImg },
+  { title: "High-Rise Façade Rope Access", category: "Rope Access", image: ropeAccessTeamImg },
   { title: "Scaffolding Height Operations", category: "Scaffolding", image: projectScaffoldingWorkImg },
   { title: "Façade Scaffolding System", category: "Scaffolding", image: projectFacadeScaffoldingImg },
 ];
