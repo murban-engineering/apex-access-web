@@ -1,69 +1,65 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
-import { SERVICES } from "@/data/services";
-import logo from "@/assets/logo.jpeg";
 
 const Footer = () => (
-  <footer className="border-t border-white/10 bg-[#070b14]">
-    <div className="container mx-auto px-4 py-14">
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <div className="mb-4 flex items-center gap-2">
-            <img src={logo} alt="OTNO Access Solution Logo" className="h-10 w-auto rounded-sm ring-1 ring-white/20" />
+  <footer className="py-20 border-t border-border bg-background">
+    <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-12">
+          <div className="md:col-span-2">
+            <h3 className="text-2xl font-light text-architectural mb-4">
+              OTNO ACCESS SOLUTION LIMITED
+            </h3>
+            <p className="text-muted-foreground leading-relaxed max-w-md">
+              Industry-leading rope access, scaffolding, and height safety solutions for commercial and industrial projects across Australia.
+            </p>
           </div>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            Industry-leading access and height safety solutions. Trusted by Australia&apos;s top contractors since 2005.
+
+          <div>
+            <h4 className="text-minimal text-muted-foreground mb-6">SERVICES</h4>
+            <div className="space-y-3">
+              <Link to="/services" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                Rope Access
+              </Link>
+              <Link to="/services" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                Scaffolding
+              </Link>
+              <Link to="/services" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                Mobile Access
+              </Link>
+              <Link to="/services" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                Netting & Decking
+              </Link>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-minimal text-muted-foreground mb-6">CONTACT</h4>
+            <div className="space-y-3">
+              <a href="tel:+1300123456" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                1300 123 456
+              </a>
+              <a href="mailto:info@accessheight.com.au" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                info@accessheight.com.au
+              </a>
+              <address className="not-italic text-muted-foreground">
+                123 Industrial Way<br />Sydney NSW 2000
+              </address>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-minimal text-muted-foreground">
+            &copy; {new Date().getFullYear()} OTNO ACCESS SOLUTION LIMITED. All rights reserved.
           </p>
-        </div>
-
-        <div>
-          <h4 className="mb-4">
-            <Link to="/#our-services" className="font-heading text-sm uppercase tracking-wider text-foreground transition-colors hover:text-primary">
-              Services
+          <div className="flex gap-8">
+            <Link to="/contact" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
+              Privacy Policy
             </Link>
-          </h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            {SERVICES.map((service) => (
-              <li key={service.name}>
-                <Link to={service.href} className="transition-colors hover:text-foreground">{service.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="mb-4">
-            <Link to="/#testimonials" className="font-heading text-sm uppercase tracking-wider text-foreground transition-colors hover:text-primary">
-              Company
+            <Link to="/contact" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
+              Terms of Service
             </Link>
-          </h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/#testimonials" className="transition-colors hover:text-foreground">Client Testimonials</Link></li>
-            <li><Link to="/#featured-projects" className="transition-colors hover:text-foreground">Featured Projects</Link></li>
-            <li><Link to="/contact" className="transition-colors hover:text-foreground">Contact</Link></li>
-            <li><Link to="/contact#quote-request" className="transition-colors hover:text-foreground">Get a Quote</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="mb-4">
-            <Link to="/contact" className="font-heading text-sm uppercase tracking-wider text-foreground transition-colors hover:text-primary">
-              Contact
-            </Link>
-          </h4>
-          <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> 1300 123 456</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> info@accessheight.com.au</li>
-            <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary" /> 123 Industrial Way, Sydney NSW 2000</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-muted-foreground md:flex-row">
-        <p>&copy; {new Date().getFullYear()} OTNO ACCESS SOLUTION LIMITED Safety Services. All rights reserved.</p>
-        <div className="flex gap-4">
-          <Link to="/contact" className="transition-colors hover:text-foreground">Privacy Policy</Link>
-          <Link to="/contact" className="transition-colors hover:text-foreground">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </div>
