@@ -1,127 +1,105 @@
-import { useEffect, useState, type FormEvent } from "react";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { type FormEvent, useState } from "react";
 import { SERVICES } from "@/data/services";
-import { useLocation } from "react-router-dom";
 
 const Contact = () => {
-  const [selectedService, setSelectedService] = useState("");
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash !== "#quote-request") {
-      return;
-    }
-
-    const quoteSection = document.getElementById("quote-request");
-
-    if (!quoteSection) {
-      return;
-    }
-
-    requestAnimationFrame(() => {
-      quoteSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }, [location.hash]);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     const formData = new FormData(event.currentTarget);
-    const fullName = String(formData.get("fullName") || "");
+    const name = String(formData.get("fullName") || "");
     const email = String(formData.get("email") || "");
     const phone = String(formData.get("phone") || "");
-    const company = String(formData.get("company") || "");
-    const scope = String(formData.get("scope") || "");
+    const message = String(formData.get("message") || "");
 
-    const subject = `Quotation Request - ${selectedService}`;
-    const body = [
-      `Name: ${fullName}`,
-      `Email: ${email}`,
-      `Phone: ${phone}`,
-      `Company: ${company || "N/A"}`,
-      `Service: ${selectedService}`,
-      "",
-      "Project details:",
-      scope,
-    ].join("\n");
-
+    const subject = `Enquiry from ${name}`;
+    const body = [`Name: ${name}`, `Email: ${email}`, `Phone: ${phone}`, "", message].join("\n");
     window.location.href = `mailto:info@accessheight.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSubmitted(true);
   };
 
   return (
-    <div className="pt-16">
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <p className="text-primary font-heading uppercase tracking-[0.2em] text-sm mb-2">Contact</p>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold uppercase text-foreground">Let's Talk About Your Project</h1>
-            <p className="text-muted-foreground mt-3">Reach out using any communication channel below and our team will respond quickly.</p>
-          </div>
+    <section className="pt-32 pb-32 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-20">
+            <div>
+              <h1 className="text-minimal text-muted-foreground mb-4">GET IN TOUCH</h1>
+              <h2 className="text-4xl md:text-6xl font-light text-architectural mb-12">
+                Let's Discuss
+                <br />
+                Your Project
+              </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <Card className="bg-card border-border">
-              <CardContent className="p-6 space-y-4 text-sm">
-                <h2 className="font-heading text-lg uppercase text-foreground">Reach us directly</h2>
-                <a href="tel:+1300123456" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                  <Phone className="w-5 h-5 text-primary" /> 1300 123 456
-                </a>
-                <a href="mailto:info@accessheight.com.au" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                  <Mail className="w-5 h-5 text-primary" /> info@accessheight.com.au
-                </a>
-                <a href="https://wa.me/611300123456" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                  <MessageCircle className="w-5 h-5 text-primary" /> WhatsApp chat
-                </a>
-                <p className="flex items-start gap-3 text-muted-foreground">
-                  <MapPin className="w-5 h-5 text-primary mt-0.5" />
-                  123 Industrial Way, Sydney NSW 2000
-                </p>
-              </CardContent>
-            </Card>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-minimal text-muted-foreground mb-2">EMAIL</h3>
+                  <a
+                    href="mailto:info@accessheight.com.au"
+                    className="text-xl hover:text-muted-foreground transition-colors duration-300"
+                  >
+                    info@accessheight.com.au
+                  </a>
+                </div>
 
-            <Card id="quote-request" className="lg:col-span-2 bg-card border-border scroll-mt-24">
-              <CardContent className="p-6">
-                <h2 className="font-heading text-lg uppercase text-foreground mb-4">Request a quotation</h2>
-                <form className="grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={handleSubmit}>
-                  <Input name="fullName" placeholder="Full Name" required />
-                  <Input name="email" type="email" placeholder="Email Address" required />
-                  <Input name="phone" placeholder="Phone Number" required />
-                  <Input name="company" placeholder="Company Name" />
-                  <div className="md:col-span-2">
-                    <Select value={selectedService} onValueChange={setSelectedService} required>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a service for quotation" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {SERVICES.map((service) => (
-                          <SelectItem key={service.name} value={service.name}>
-                            {service.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <Textarea
-                    className="md:col-span-2"
-                    rows={5}
-                    name="scope"
-                    placeholder="Tell us what you need help with (scope, location, timeline, access requirements)"
-                    required
-                  />
-                  <Button type="submit" className="md:col-span-2 w-full md:w-auto" disabled={!selectedService}>
-                    Send Quotation Request
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                <div>
+                  <h3 className="text-minimal text-muted-foreground mb-2">PHONE</h3>
+                  <a
+                    href="tel:+1300123456"
+                    className="text-xl hover:text-muted-foreground transition-colors duration-300"
+                  >
+                    1300 123 456
+                  </a>
+                </div>
+
+                <div>
+                  <h3 className="text-minimal text-muted-foreground mb-2">WHATSAPP</h3>
+                  <a
+                    href="https://wa.me/611300123456"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xl hover:text-muted-foreground transition-colors duration-300"
+                  >
+                    Chat with us
+                  </a>
+                </div>
+
+                <div>
+                  <h3 className="text-minimal text-muted-foreground mb-2">OFFICE</h3>
+                  <address className="text-xl not-italic">
+                    123 Industrial Way
+                    <br />
+                    Sydney NSW 2000
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-minimal text-muted-foreground mb-6">SEND AN ENQUIRY</h3>
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                <Input name="fullName" placeholder="Full Name" required className="bg-transparent border-border" />
+                <Input name="email" type="email" placeholder="Email Address" required className="bg-transparent border-border" />
+                <Input name="phone" placeholder="Phone Number" required className="bg-transparent border-border" />
+                <Textarea name="message" rows={6} placeholder="Tell us about your project requirements" required className="bg-transparent border-border" />
+                <button
+                  type="submit"
+                  className="text-minimal text-foreground hover:text-muted-foreground transition-colors duration-300 relative group"
+                >
+                  SEND ENQUIRY
+                  <span className="absolute bottom-0 left-0 w-full h-px bg-foreground group-hover:bg-muted-foreground transition-colors duration-300" />
+                </button>
+              </form>
+              {submitted && (
+                <p className="mt-6 text-muted-foreground">Your email client should have opened. Thank you for your enquiry.</p>
+              )}
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,82 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Minimal Architecture Design System — Black & White with Industrial Edge */
+
 @layer base {
   :root {
-    --background: 220 15% 10%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
-    --card: 220 13% 14%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 220 13% 14%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 4 86% 48%;
+    --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 12% 18%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 220 12% 16%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 20%;
 
-    --accent: 4 86% 48%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 95%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 22%;
-    --input: 220 10% 22%;
-    --ring: 4 86% 48%;
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 0 0% 0%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 220 15% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 4 86% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 12% 16%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 220 10% 22%;
-    --sidebar-ring: 4 86% 48%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
 
-    --font-heading: 'Oswald', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* Architectural tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.8), hsl(0 0% 0% / 0.4));
+    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.9), hsl(0 0% 0% / 0.1));
+    --shadow-architectural: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.15);
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .dark {
-    --background: 220 15% 10%;
-    --foreground: 0 0% 95%;
-    --card: 220 13% 14%;
-    --card-foreground: 0 0% 95%;
-    --popover: 220 13% 14%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 4 86% 48%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 220 12% 18%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 220 12% 16%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 4 86% 48%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 15%;
     --accent-foreground: 0 0% 100%;
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 10% 22%;
-    --input: 220 10% 22%;
-    --ring: 4 86% 48%;
-    --sidebar-background: 220 15% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 4 86% 48%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 0 0% 100%;
+
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 224 76% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 12% 16%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 220 10% 22%;
-    --sidebar-ring: 4 86% 48%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -86,23 +100,38 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-body);
-    background-image:
-      radial-gradient(circle at 10% 10%, hsl(var(--primary) / 0.2), transparent 40%),
-      radial-gradient(circle at 90% 15%, hsl(205 80% 45% / 0.15), transparent 35%),
-      linear-gradient(to bottom, #090d17, #070a12 35%, #05070d 100%);
-    min-height: 100vh;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+  /* Architectural Typography */
+  .text-architectural {
+    @apply tracking-[-0.02em] leading-[1.1];
   }
-}
 
-@layer utilities {
-  .glass-surface {
-    @apply border border-white/10 bg-white/5 backdrop-blur-md;
+  .text-minimal {
+    @apply tracking-wide uppercase text-xs font-medium;
+  }
+
+  /* Hero Image Overlay */
+  .hero-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  /* Smooth Reveal Animation */
+  .reveal {
+    @apply opacity-0 translate-y-8;
+    animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .reveal-delayed {
+    @apply opacity-0 translate-y-8;
+    animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  }
+
+  @keyframes reveal {
+    to {
+      @apply opacity-100 translate-y-0;
+    }
   }
 }
 
@@ -110,17 +139,14 @@ a {
   @apply transition-colors duration-200;
 }
 
-
 @media print {
   body.print-quote-only #root * {
     visibility: hidden;
   }
-
   body.print-quote-only #quote-print-area,
   body.print-quote-only #quote-print-area * {
     visibility: visible;
   }
-
   body.print-quote-only #quote-print-area {
     position: absolute;
     left: 0;
@@ -130,57 +156,7 @@ a {
     border: 0 !important;
     box-shadow: none !important;
   }
-
   body.print-quote-only #quote-print-area .print\:hidden {
     display: none !important;
-  }
-}
-
-.featured-projects-marquee {
-  overflow: hidden;
-}
-
-.featured-projects-track {
-  display: flex;
-  gap: 1.5rem;
-  width: max-content;
-  animation: featured-projects-scroll 40s linear infinite;
-}
-
-.featured-project-card {
-  width: min(22rem, 80vw);
-  flex: 0 0 auto;
-}
-
-.project-image-frame {
-  position: relative;
-  box-shadow: 0 18px 38px -28px rgba(0, 0, 0, 0.9);
-}
-
-.project-image-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(2, 6, 23, 0.38) 100%);
-}
-
-.project-image {
-  filter: saturate(1.08) contrast(1.06) brightness(0.96);
-}
-
-@keyframes featured-projects-scroll {
-  from {
-    transform: translateX(-50%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .featured-projects-track {
-    animation: none;
   }
 }
