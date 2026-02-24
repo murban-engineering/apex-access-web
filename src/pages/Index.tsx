@@ -9,12 +9,12 @@ const services = [
   {
     number: "01",
     title: "ROPE ACCESS",
-    description: "IRATA-certified technicians for inspection, maintenance, and high-rise works at any height.",
+    description: "IRATA-certified technicians for inspection, maintenance, and high-rise works across Kenya.",
   },
   {
     number: "02",
     title: "SCAFFOLDING",
-    description: "Design, erection, hire, and compliance management for commercial and industrial projects.",
+    description: "Design, erection, hire, and compliance management for commercial and industrial projects in East Africa.",
   },
   {
     number: "03",
@@ -32,45 +32,45 @@ const projects = [
   {
     image: projectConcreteImg,
     title: "CONCRETE REINFORCEMENT WORKS",
-    location: "SYDNEY, 2024",
+    location: "NAIROBI, 2024",
     description: "Structural reinforcement at height using rope access techniques for a major infrastructure project.",
   },
   {
     image: ropeAccessTeamImg,
     title: "HIGH-RISE FAÇADE MAINTENANCE",
-    location: "MELBOURNE, 2024",
+    location: "MOMBASA, 2024",
     description: "Full façade inspection and maintenance program for a 40-storey commercial tower.",
   },
   {
     image: projectScaffoldingWorkImg,
     title: "SCAFFOLDING HEIGHT OPERATIONS",
-    location: "BRISBANE, 2023",
+    location: "KISUMU, 2023",
     description: "Complex scaffolding system for multi-level industrial maintenance works.",
   },
   {
     image: projectFacadeScaffoldingImg,
     title: "FAÇADE SCAFFOLDING SYSTEM",
-    location: "PERTH, 2023",
+    location: "NAKURU, 2023",
     description: "Full-perimeter scaffolding for heritage building façade restoration.",
   },
 ];
 
 const testimonials = [
   {
-    name: "James Carter",
-    company: "BuildCorp Australia",
+    name: "James Ochieng",
+    company: "Kenya Construction Ltd",
     quote:
       "OTNO ACCESS SOLUTION LIMITED delivered on a complex rope access project with zero safety incidents. Professional, reliable, and highly skilled.",
   },
   {
-    name: "Sarah Mitchell",
-    company: "Turner Construction",
+    name: "Sarah Wanjiku",
+    company: "Nairobi Developments",
     quote:
       "Their scaffolding team set up a 30-storey system in record time. Exceptional planning and execution from start to finish.",
   },
   {
-    name: "David Nguyen",
-    company: "Lendlease",
+    name: "David Mwangi",
+    company: "East African Builders",
     quote:
       "We've worked with OTNO ACCESS SOLUTION LIMITED for 5 years — they're our go-to for anything at height. Unmatched safety standards.",
   },
@@ -93,7 +93,7 @@ const Index = () => {
             SOLUTION
           </h1>
           <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide max-w-2xl mx-auto reveal-delayed">
-            Industry-leading height safety services for commercial and industrial projects across Australia
+            Industry-leading height safety services for commercial and industrial projects across Kenya & East Africa
           </p>
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 reveal-delayed">
@@ -272,20 +272,20 @@ const Index = () => {
                 <div className="space-y-8">
                   <div>
                     <h4 className="text-minimal text-muted-foreground mb-2">EMAIL</h4>
-                    <a href="mailto:info@accessheight.com.au" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                      info@accessheight.com.au
+                    <a href="mailto:info@otnoaccess.co.ke" className="text-xl hover:text-muted-foreground transition-colors duration-300">
+                      info@otnoaccess.co.ke
                     </a>
                   </div>
                   <div>
                     <h4 className="text-minimal text-muted-foreground mb-2">PHONE</h4>
-                    <a href="tel:+1300123456" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                      1300 123 456
+                    <a href="tel:+254700123456" className="text-xl hover:text-muted-foreground transition-colors duration-300">
+                      +254 700 123 456
                     </a>
                   </div>
                   <div>
                     <h4 className="text-minimal text-muted-foreground mb-2">OFFICE</h4>
                     <address className="text-xl not-italic">
-                      123 Industrial Way<br />Sydney NSW 2000
+                      Westlands Business Park<br />Nairobi, Kenya
                     </address>
                   </div>
                 </div>

@@ -3,13 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { SERVICES } from "@/data/services";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { name: "HOME", href: "/" },
+  { name: "ABOUT", href: "/about" },
   { name: "SERVICES", href: "/services" },
   { name: "WORK", href: "/work" },
-  { name: "ABOUT", href: "/about" },
   { name: "BLOG", href: "/blog" },
   { name: "CONTACT", href: "/contact" },
 ];

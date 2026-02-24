@@ -16,7 +16,7 @@ const Contact = () => {
 
     const subject = `Enquiry from ${name}`;
     const body = [`Name: ${name}`, `Email: ${email}`, `Phone: ${phone}`, "", message].join("\n");
-    window.location.href = `mailto:info@accessheight.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@otnoaccess.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 
@@ -37,27 +37,27 @@ const Contact = () => {
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-2">EMAIL</h3>
                   <a
-                    href="mailto:info@accessheight.com.au"
+                    href="mailto:info@otnoaccess.co.ke"
                     className="text-xl hover:text-muted-foreground transition-colors duration-300"
                   >
-                    info@accessheight.com.au
+                    info@otnoaccess.co.ke
                   </a>
                 </div>
 
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-2">PHONE</h3>
                   <a
-                    href="tel:+1300123456"
+                    href="tel:+254700123456"
                     className="text-xl hover:text-muted-foreground transition-colors duration-300"
                   >
-                    1300 123 456
+                    +254 700 123 456
                   </a>
                 </div>
 
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-2">WHATSAPP</h3>
                   <a
-                    href="https://wa.me/611300123456"
+                    href="https://wa.me/254700123456"
                     target="_blank"
                     rel="noreferrer"
                     className="text-xl hover:text-muted-foreground transition-colors duration-300"
@@ -69,9 +69,9 @@ const Contact = () => {
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-2">OFFICE</h3>
                   <address className="text-xl not-italic">
-                    123 Industrial Way
+                    Westlands Business Park
                     <br />
-                    Sydney NSW 2000
+                    Nairobi, Kenya
                   </address>
                 </div>
               </div>

@@ -10,7 +10,7 @@ const Footer = () => (
               OTNO ACCESS SOLUTION LIMITED
             </h3>
             <p className="text-muted-foreground leading-relaxed max-w-md">
-              Industry-leading rope access, scaffolding, and height safety solutions for commercial and industrial projects across Australia.
+              Industry-leading rope access, scaffolding, and height safety solutions for commercial and industrial projects across Kenya & East Africa.
             </p>
           </div>
 
@@ -35,14 +35,14 @@ const Footer = () => (
           <div>
             <h4 className="text-minimal text-muted-foreground mb-6">CONTACT</h4>
             <div className="space-y-3">
-              <a href="tel:+1300123456" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
-                1300 123 456
+              <a href="tel:+254700123456" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                +254 700 123 456
               </a>
-              <a href="mailto:info@accessheight.com.au" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
-                info@accessheight.com.au
+              <a href="mailto:info@otnoaccess.co.ke" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                info@otnoaccess.co.ke
               </a>
               <address className="not-italic text-muted-foreground">
-                123 Industrial Way<br />Sydney NSW 2000
+                Westlands Business Park<br />Nairobi, Kenya
               </address>
             </div>
           </div>
