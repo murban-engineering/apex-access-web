@@ -95,6 +95,22 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide max-w-2xl mx-auto reveal-delayed">
             Industry-leading height safety services for commercial and industrial projects across Kenya & East Africa
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12 reveal-delayed">
+            <Link
+              to="/services"
+              className="group relative px-10 py-4 border-2 border-white text-white text-minimal overflow-hidden"
+            >
+              <span className="relative z-10 group-hover:text-black transition-colors duration-500">OUR SERVICES</span>
+              <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+            </Link>
+            <Link
+              to="/contact"
+              className="group relative px-10 py-4 bg-white text-black text-minimal overflow-hidden"
+            >
+              <span className="relative z-10 group-hover:text-white transition-colors duration-500">CONTACT US</span>
+              <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+            </Link>
+          </div>
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 reveal-delayed">
           <div className="w-px h-16 bg-white/40" />
