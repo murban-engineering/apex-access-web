@@ -256,18 +256,20 @@ const Index = () => {
                 What Our Clients Say
               </h3>
             </div>
-            <div className="grid md:grid-cols-3 gap-12">
-              {testimonials.map((t, i) => (
-                <div key={i} className="space-y-6">
-                  <p className="text-lg text-muted-foreground leading-relaxed italic">
-                    "{t.quote}"
-                  </p>
-                  <div className="border-t border-border pt-4">
-                    <p className="font-medium">{t.name}</p>
-                    <p className="text-minimal text-muted-foreground">{t.company}</p>
+            <div className="relative overflow-hidden">
+              <div className="flex gap-12 animate-marquee whitespace-nowrap">
+                {[...testimonials, ...testimonials, ...testimonials].map((t, i) => (
+                  <div key={i} className="inline-block w-[400px] min-w-[400px] whitespace-normal space-y-6 border-l-2 border-foreground pl-8">
+                    <p className="text-lg text-muted-foreground leading-relaxed italic">
+                      "{t.quote}"
+                    </p>
+                    <div>
+                      <p className="font-medium">{t.name}</p>
+                      <p className="text-minimal text-muted-foreground">{t.company}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
