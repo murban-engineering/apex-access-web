@@ -1,54 +1,59 @@
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/construction-silhouette.jpg";
-import projectConcreteImg from "@/assets/project-concrete.jpg";
-import projectScaffoldingWorkImg from "@/assets/project-scaffolding-work.jpg";
-import projectFacadeScaffoldingImg from "@/assets/project-facade-scaffolding.jpg";
-import ropeAccessTeamImg from "@/assets/rope-access-team.jpg";
+import safetyWorkerImg from "@/assets/safety-equipment-worker.jpg";
+import highriseScaffoldingImg from "@/assets/workers-highrise-scaffolding.jpg";
+import constructionSilhouettesImg from "@/assets/construction-site-silhouettes.jpg";
+import constructionBwImg from "@/assets/construction-workers-bw.jpg";
+import constructionSunsetImg from "@/assets/construction-workers-sunset.jpg";
 
 const services = [
   {
     number: "01",
     title: "ROPE ACCESS",
     description: "IRATA-certified technicians for inspection, maintenance, and high-rise works across Kenya.",
+    image: constructionBwImg,
   },
   {
     number: "02",
     title: "SCAFFOLDING",
     description: "Design, erection, hire, and compliance management for commercial and industrial projects in East Africa.",
+    image: safetyWorkerImg,
   },
   {
     number: "03",
     title: "MOBILE ACCESS PLATFORMS",
     description: "EWP and boom lift hire with operator support for safe, efficient elevated access.",
+    image: highriseScaffoldingImg,
   },
   {
     number: "04",
     title: "NETTING & DECKING",
     description: "Safety netting, edge protection, and temporary decking for fall prevention on site.",
+    image: constructionSilhouettesImg,
   },
 ];
 
 const projects = [
   {
-    image: projectConcreteImg,
+    image: constructionBwImg,
     title: "CONCRETE REINFORCEMENT WORKS",
     location: "NAIROBI, 2024",
     description: "Structural reinforcement at height using rope access techniques for a major infrastructure project.",
   },
   {
-    image: ropeAccessTeamImg,
+    image: highriseScaffoldingImg,
     title: "HIGH-RISE FAÇADE MAINTENANCE",
     location: "MOMBASA, 2024",
     description: "Full façade inspection and maintenance program for a 40-storey commercial tower.",
   },
   {
-    image: projectScaffoldingWorkImg,
+    image: constructionSunsetImg,
     title: "SCAFFOLDING HEIGHT OPERATIONS",
     location: "KISUMU, 2023",
     description: "Complex scaffolding system for multi-level industrial maintenance works.",
   },
   {
-    image: projectFacadeScaffoldingImg,
+    image: safetyWorkerImg,
     title: "FAÇADE SCAFFOLDING SYSTEM",
     location: "NAKURU, 2023",
     description: "Full-perimeter scaffolding for heritage building façade restoration.",
@@ -85,7 +90,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 hero-overlay" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white text-architectural mb-8 reveal">
             OTNO ACCESS
@@ -128,19 +133,26 @@ const Index = () => {
                 What We Do
               </h3>
             </div>
-            <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-12">
               {services.map((service) => (
-                <div key={service.number} className="group">
-                  <div className="flex items-start space-x-6">
-                    <span className="text-minimal text-muted-foreground font-medium">
+                <div key={service.number} className="group rounded-2xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-lg transition-shadow duration-500">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/30" />
+                    <span className="absolute top-4 left-4 text-minimal text-white/80 font-medium">
                       {service.number}
                     </span>
-                    <div>
-                      <h4 className="text-2xl font-light mb-4 text-architectural group-hover:text-muted-foreground transition-colors duration-500">
-                        {service.title}
-                      </h4>
-                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-xl font-light mb-3 text-architectural group-hover:text-muted-foreground transition-colors duration-500">
+                      {service.title}
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{service.description}</p>
                   </div>
                 </div>
               ))}
@@ -221,7 +233,7 @@ const Index = () => {
             <div className="space-y-32">
               {projects.map((project, index) => (
                 <div key={index} className="group">
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden rounded-2xl">
                     <img
                       src={project.image}
                       alt={project.title}
