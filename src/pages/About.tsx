@@ -32,36 +32,6 @@ const About = () => {
               </div>
 
               <div className="space-y-12">
-                <div>
-                  <h3 className="text-minimal text-muted-foreground mb-6">CERTIFICATIONS</h3>
-                  <div className="space-y-6">
-                    <div className="border-l-2 border-foreground pl-6">
-                      <h4 className="text-lg font-medium mb-2">ISO 45001 Certified</h4>
-                      <p className="text-muted-foreground">
-                        Occupational health and safety management systems
-                      </p>
-                    </div>
-                    <div className="border-l-2 border-foreground pl-6">
-                      <h4 className="text-lg font-medium mb-2">IRATA Member</h4>
-                      <p className="text-muted-foreground">
-                        Industrial Rope Access Trade Association accredited
-                      </p>
-                    </div>
-                    <div className="border-l-2 border-foreground pl-6">
-                      <h4 className="text-lg font-medium mb-2">NCA Registered</h4>
-                      <p className="text-muted-foreground">
-                        National Construction Authority of Kenya registered contractor
-                      </p>
-                    </div>
-                    <div className="border-l-2 border-foreground pl-6">
-                      <h4 className="text-lg font-medium mb-2">DOSH Compliant</h4>
-                      <p className="text-muted-foreground">
-                        Directorate of Occupational Safety and Health fully compliant
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="pt-8 border-t border-border">
                   <div className="grid grid-cols-3 gap-8">
                     <div>
