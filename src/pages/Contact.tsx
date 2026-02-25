@@ -16,7 +16,7 @@ const Contact = () => {
 
     const subject = `Enquiry from ${name}`;
     const body = [`Name: ${name}`, `Email: ${email}`, `Phone: ${phone}`, "", message].join("\n");
-    window.location.href = `mailto:info@otnoaccess.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:otnoacess@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 
@@ -37,20 +37,10 @@ const Contact = () => {
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-2">EMAIL</h3>
                   <a
-                    href="mailto:info@otnoaccess.co.ke"
+                    href="mailto:otnoacess@gmail.com"
                     className="text-xl hover:text-muted-foreground transition-colors duration-300"
                   >
-                    info@otnoaccess.co.ke
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="text-minimal text-muted-foreground mb-2">PHONE</h3>
-                  <a
-                    href="tel:+254700123456"
-                    className="text-xl hover:text-muted-foreground transition-colors duration-300"
-                  >
-                    +254 700 123 456
+                    otnoacess@gmail.com
                   </a>
                 </div>
 
@@ -67,11 +57,16 @@ const Contact = () => {
                 </div>
 
                 <div>
+                  <h3 className="text-minimal text-muted-foreground mb-2">POSTAL ADDRESS</h3>
+                  <p className="text-xl">99215-80107 Mombasa, Kenya</p>
+                </div>
+
+                <div>
                   <h3 className="text-minimal text-muted-foreground mb-2">OFFICE</h3>
                   <address className="text-xl not-italic">
-                    Westlands Business Park
+                    Embakasi, Old North Airport Rd
                     <br />
-                    Nairobi, Kenya
+                    Next to Naivas Embakasi
                   </address>
                 </div>
               </div>

@@ -290,20 +290,18 @@ const Index = () => {
                 <div className="space-y-8">
                   <div>
                     <h4 className="text-minimal text-muted-foreground mb-2">EMAIL</h4>
-                    <a href="mailto:info@otnoaccess.co.ke" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                      info@otnoaccess.co.ke
+                    <a href="mailto:otnoacess@gmail.com" className="text-xl hover:text-muted-foreground transition-colors duration-300">
+                      otnoacess@gmail.com
                     </a>
                   </div>
                   <div>
-                    <h4 className="text-minimal text-muted-foreground mb-2">PHONE</h4>
-                    <a href="tel:+254700123456" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                      +254 700 123 456
-                    </a>
+                    <h4 className="text-minimal text-muted-foreground mb-2">POSTAL ADDRESS</h4>
+                    <p className="text-xl">99215-80107 Mombasa, Kenya</p>
                   </div>
                   <div>
                     <h4 className="text-minimal text-muted-foreground mb-2">OFFICE</h4>
                     <address className="text-xl not-italic">
-                      Westlands Business Park<br />Nairobi, Kenya
+                      Embakasi, Old North Airport Rd<br />Next to Naivas Embakasi
                     </address>
                   </div>
                 </div>
