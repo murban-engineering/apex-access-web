@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/construction-silhouette.jpg";
 import projectConcreteImg from "@/assets/project-concrete.jpg";
 import projectScaffoldingWorkImg from "@/assets/project-scaffolding-work.jpg";
 import projectFacadeScaffoldingImg from "@/assets/project-facade-scaffolding.jpg";
