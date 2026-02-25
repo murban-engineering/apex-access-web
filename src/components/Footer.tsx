@@ -35,15 +35,13 @@ const Footer = () => (
           <div>
             <h4 className="text-minimal text-muted-foreground mb-6">CONTACT</h4>
             <div className="space-y-3">
-              <a href="tel:+254700123456" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
-                +254 700 123 456
-              </a>
-              <a href="mailto:info@otnoaccess.co.ke" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
-                info@otnoaccess.co.ke
+              <a href="mailto:otnoacess@gmail.com" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                otnoacess@gmail.com
               </a>
               <address className="not-italic text-muted-foreground">
-                Westlands Business Park<br />Nairobi, Kenya
+                Embakasi, Old North Airport Rd<br />Next to Naivas Embakasi
               </address>
+              <p className="text-muted-foreground">P.O. Box 99215-80107, Mombasa</p>
             </div>
           </div>
         </div>
