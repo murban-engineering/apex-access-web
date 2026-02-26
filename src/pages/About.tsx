@@ -1,4 +1,5 @@
 import KenyaMap from "@/components/KenyaMap";
+import nacelleImg from "@/assets/man-nacelle.jpg";
 
 const About = () => {
   return (
@@ -94,6 +95,35 @@ const About = () => {
 
               <div>
                 <KenyaMap />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Section */}
+      <section className="py-32 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-20 items-center">
+              <div className="rounded-2xl overflow-hidden">
+                <img
+                  src={nacelleImg}
+                  alt="Worker operating a mobile elevated work platform"
+                  className="w-full h-[500px] object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-minimal text-muted-foreground mb-4">OUR CAPABILITY</h2>
+                <h3 className="text-4xl md:text-6xl font-light text-architectural mb-12">
+                  Equipped for
+                  <br />
+                  Every Task
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  From mobile elevated work platforms to rope access systems, our fleet and teams
+                  are ready to tackle any height safety challenge across Kenya and East Africa.
+                </p>
               </div>
             </div>
           </div>

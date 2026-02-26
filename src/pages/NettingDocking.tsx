@@ -100,7 +100,7 @@ const NettingDocking = () => {
         <div className="container mx-auto px-4 py-16 md:py-24">
           <motion.div initial="hidden" animate="show" variants={sectionAnim} transition={{ duration: 0.5 }}>
             <Badge className="mb-4 uppercase tracking-widest">{pageContent.hero.eyebrow}</Badge>
-            <h1 className="max-w-5xl font-heading text-4xl font-bold leading-tight md:text-6xl">{pageContent.hero.title}</h1>
+            <h1 className="max-w-5xl text-4xl font-light text-architectural md:text-6xl">{pageContent.hero.title}</h1>
             <p className="mt-6 max-w-4xl text-base text-muted-foreground md:text-lg">{pageContent.hero.description}</p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -124,7 +124,7 @@ const NettingDocking = () => {
 
       <section className="container mx-auto px-4 py-14 md:py-20">
         <div className="mb-10 max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">Complete Netting & Docking Service Modules</h2>
+          <h2 className="text-3xl font-light text-architectural md:text-4xl">Complete Netting & Docking Service Modules</h2>
           <p className="mt-4 text-muted-foreground">
             From design through inspections, we provide end-to-end delivery for netting, temporary decking, and docking access controls.
           </p>
@@ -135,7 +135,7 @@ const NettingDocking = () => {
             <Card key={module.title} className="h-full">
               <CardHeader>
                 <module.icon className="h-8 w-8 text-primary" />
-                <CardTitle className="font-heading text-2xl">{module.title}</CardTitle>
+                <CardTitle className="text-2xl font-light text-architectural">{module.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm leading-relaxed text-muted-foreground">{module.description}</p>
@@ -150,7 +150,7 @@ const NettingDocking = () => {
           <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr]">
             <Card>
               <CardHeader>
-                <CardTitle className="font-heading text-3xl">Where We Deliver</CardTitle>
+                <CardTitle className="text-3xl font-light text-architectural">Where We Deliver</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="grid gap-3 sm:grid-cols-2">
@@ -166,7 +166,7 @@ const NettingDocking = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle className="font-heading text-3xl">Why Clients Choose Us</CardTitle>
+                <CardTitle className="text-3xl font-light text-architectural">Why Clients Choose Us</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-sm text-muted-foreground">
                 <p className="flex items-start gap-2">
@@ -193,7 +193,7 @@ const NettingDocking = () => {
 
       <section className="container mx-auto px-4 py-14 md:py-20">
         <div className="mb-8 max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">Delivery Workflow</h2>
+          <h2 className="text-3xl font-light text-architectural md:text-4xl">Delivery Workflow</h2>
           <p className="mt-3 text-muted-foreground">
             Every project follows a clear process to protect site teams, maintain momentum, and meet compliance requirements.
           </p>
@@ -203,7 +203,7 @@ const NettingDocking = () => {
           {deliveryWorkflow.map((item) => (
             <Card key={item.step}>
               <CardHeader>
-                <CardTitle className="font-heading text-2xl">
+                <CardTitle className="text-2xl font-light text-architectural">
                   <span className="mr-3 text-primary">{item.step}</span>
                   {item.title}
                 </CardTitle>
@@ -218,7 +218,7 @@ const NettingDocking = () => {
 
       <section className="pb-16 md:pb-24">
         <Card className="container mx-auto max-w-5xl px-4 py-10 md:px-10">
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">Plan Your Netting & Docking Scope</h2>
+          <h2 className="text-3xl font-light text-architectural md:text-4xl">Plan Your Netting & Docking Scope</h2>
           <p className="mt-3 max-w-3xl text-muted-foreground">
             Share your site requirements and program constraints. We will recommend the right system, deliver a compliant setup plan, and provide a clear quote.
           </p>

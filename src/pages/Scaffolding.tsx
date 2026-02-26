@@ -110,7 +110,7 @@ const Scaffolding = () => {
             <Badge className="mb-4 uppercase tracking-widest" data-cms-field="scaffolding-hero-eyebrow">
               {scaffoldingContent.hero.eyebrow}
             </Badge>
-            <h1 className="max-w-5xl font-heading text-4xl font-bold leading-tight md:text-6xl" data-cms-field="scaffolding-hero-title">
+            <h1 className="max-w-5xl text-4xl font-light text-architectural md:text-6xl" data-cms-field="scaffolding-hero-title">
               {scaffoldingContent.hero.title}
             </h1>
             <p className="mt-6 max-w-4xl text-base text-muted-foreground md:text-lg" data-cms-field="scaffolding-hero-description">
@@ -138,7 +138,7 @@ const Scaffolding = () => {
 
       <section className="container mx-auto px-4 py-14 md:py-20">
         <div className="mb-10 max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">Complete Scaffolding Service Modules</h2>
+          <h2 className="text-3xl font-light text-architectural md:text-4xl">Complete Scaffolding Service Modules</h2>
           <p className="mt-3 text-muted-foreground" data-cms-field="scaffolding-services-intro">
             Delivered as a complete package, our scaffolding services combine engineering quality, compliant implementation, and practical site support
             for commercial and industrial projects.
@@ -150,7 +150,7 @@ const Scaffolding = () => {
             <Card key={module.title} className="h-full">
               <CardContent className="p-6">
                 <module.icon className="h-8 w-8 text-primary" />
-                <h3 className="mt-4 font-heading text-xl font-semibold">{module.title}</h3>
+                <h3 className="mt-4 text-xl font-light text-architectural">{module.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground" data-cms-field={`scaffolding-module-${module.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
                   {module.description}
                 </p>
@@ -165,7 +165,7 @@ const Scaffolding = () => {
           <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
             <Card>
               <CardHeader>
-                <CardTitle className="font-heading text-3xl">Safety, Engineering & Trust Elements</CardTitle>
+                <CardTitle className="text-3xl font-light text-architectural">Safety, Engineering & Trust Elements</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
@@ -181,7 +181,7 @@ const Scaffolding = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle className="font-heading text-2xl">Compliance Snapshot</CardTitle>
+                <CardTitle className="text-2xl font-light text-architectural">Compliance Snapshot</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {[
@@ -206,7 +206,7 @@ const Scaffolding = () => {
       <section className="container mx-auto px-4 py-14 md:py-20">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h2 className="font-heading text-3xl font-bold md:text-4xl">Professional Delivery Framework</h2>
+            <h2 className="text-3xl font-light text-architectural md:text-4xl">Professional Delivery Framework</h2>
             <p className="mt-2 text-muted-foreground" data-cms-field="scaffolding-delivery-intro">
               A structured workflow keeps every scaffold project safe, efficient, and auditable from planning through completion.
             </p>
@@ -218,7 +218,7 @@ const Scaffolding = () => {
             <Card key={step.step} className="h-full">
               <CardContent className="p-6">
                 <p className="text-sm font-semibold tracking-widest text-primary">STEP {step.step}</p>
-                <h3 className="mt-2 font-heading text-xl font-semibold">{step.title}</h3>
+                <h3 className="mt-2 text-xl font-light text-architectural">{step.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground" data-cms-field={`scaffolding-step-${step.step}`}>
                   {step.detail}
                 </p>
@@ -230,7 +230,7 @@ const Scaffolding = () => {
 
       <section className="bg-primary py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-3xl font-bold text-primary-foreground md:text-4xl" data-cms-field="scaffolding-cta-title">
+          <h2 className="text-3xl font-light text-primary-foreground md:text-4xl" data-cms-field="scaffolding-cta-title">
             Need an Engineered Scaffolding Partner for Your Next Project?
           </h2>
           <p className="mx-auto mt-3 max-w-3xl text-primary-foreground/85" data-cms-field="scaffolding-cta-description">
