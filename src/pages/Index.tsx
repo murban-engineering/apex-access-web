@@ -141,7 +141,6 @@ const Index = () => {
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/30" />
                     <span className="absolute top-4 left-4 text-minimal text-white/80 font-medium">
@@ -238,7 +237,6 @@ const Index = () => {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-[70vh] object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>

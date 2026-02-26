@@ -72,7 +72,7 @@ const MobileAccess = () => {
           <Badge className="mb-4 uppercase tracking-widest" data-cms-field="mobile-access-hero-eyebrow">
             Mobile Access Platforms
           </Badge>
-          <h1 className="max-w-5xl font-heading text-4xl font-bold leading-tight md:text-6xl" data-cms-field="mobile-access-hero-title">
+          <h1 className="max-w-5xl text-4xl font-light text-architectural md:text-6xl" data-cms-field="mobile-access-hero-title">
             Safe, Reliable EWP Hire for Commercial, Industrial, and Infrastructure Projects
           </h1>
           <p className="mt-6 max-w-4xl text-base text-muted-foreground md:text-lg" data-cms-field="mobile-access-hero-description">
@@ -97,7 +97,7 @@ const MobileAccess = () => {
 
       <section className="container mx-auto px-4 py-14 md:py-20">
         <div className="mb-8 max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">Platform Types & Key Specs</h2>
+          <h2 className="text-3xl font-light text-architectural md:text-4xl">Platform Types & Key Specs</h2>
           <p className="mt-3 text-muted-foreground" data-cms-field="mobile-access-platform-intro">
             Compare common EWP categories to match working height, outreach, and load requirements for your scope.
           </p>
@@ -107,7 +107,7 @@ const MobileAccess = () => {
           {platformTypes.map((platform) => (
             <Card key={platform.title} className="h-full">
               <CardHeader>
-                <CardTitle className="font-heading text-2xl">{platform.title}</CardTitle>
+                <CardTitle className="text-2xl font-light text-architectural">{platform.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-sm text-muted-foreground">
                 <p>
@@ -133,13 +133,13 @@ const MobileAccess = () => {
           <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr]">
             <Card>
               <CardHeader>
-                <CardTitle className="font-heading text-3xl">Hire Options</CardTitle>
+                <CardTitle className="text-3xl font-light text-architectural">Hire Options</CardTitle>
               </CardHeader>
               <CardContent className="grid gap-4">
                 {hireOptions.map((option) => (
                   <div key={option.title} className="rounded-lg border border-border p-4" data-cms-field="mobile-access-hire-option">
                     <option.icon className="h-5 w-5 text-primary" />
-                    <h3 className="mt-2 font-heading text-lg font-semibold">{option.title}</h3>
+                    <h3 className="mt-2 text-lg font-light text-architectural">{option.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{option.description}</p>
                   </div>
                 ))}
@@ -148,7 +148,7 @@ const MobileAccess = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle className="font-heading text-3xl">Safety & Compliance</CardTitle>
+                <CardTitle className="text-3xl font-light text-architectural">Safety & Compliance</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
@@ -182,7 +182,7 @@ const MobileAccess = () => {
       <section className="container mx-auto px-4 py-14 md:py-20">
         <Card className="mx-auto max-w-5xl">
           <CardHeader>
-            <CardTitle className="font-heading text-3xl md:text-4xl">Request a Mobile Access Quote</CardTitle>
+            <CardTitle className="text-3xl font-light text-architectural md:text-4xl">Request a Mobile Access Quote</CardTitle>
             <p className="text-muted-foreground" data-cms-field="mobile-access-quote-intro">
               Send us your site details and preferred platform type. Our team will provide equipment recommendations, availability, and pricing.
             </p>

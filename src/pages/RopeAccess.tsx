@@ -121,7 +121,7 @@ const RopeAccess = () => {
         <div className="container mx-auto px-4 py-16 md:py-24">
           <motion.div initial="hidden" animate="show" variants={sectionAnim} transition={{ duration: 0.5 }}>
             <Badge className="mb-4 uppercase tracking-wider" data-cms-field="hero-eyebrow">{cmsContent.hero.eyebrow}</Badge>
-            <h1 className="max-w-4xl font-heading text-4xl font-bold leading-tight md:text-6xl" data-cms-field="hero-title">
+            <h1 className="max-w-4xl text-4xl font-light text-architectural md:text-6xl" data-cms-field="hero-title">
               {cmsContent.hero.title}
             </h1>
             <p className="mt-6 max-w-4xl text-base text-muted-foreground md:text-lg" data-cms-field="hero-description">
@@ -147,7 +147,7 @@ const RopeAccess = () => {
           <TabsContent value="overview" className="mt-6">
             <Card>
               <CardContent className="p-6 md:p-8">
-                <h2 className="font-heading text-2xl font-semibold md:text-3xl">Why rope access outperforms traditional height access</h2>
+                <h2 className="text-2xl font-light text-architectural md:text-3xl">Why rope access outperforms traditional height access</h2>
                 <p className="mt-4 text-muted-foreground" data-cms-field="overview-copy">
                   Rope access is engineered for precision and control. Instead of large temporary structures, technicians deploy rope systems rapidly,
                   reducing setup time while maintaining strict safety standards. This enables safer execution, lower access costs, and minimal
@@ -174,7 +174,7 @@ const RopeAccess = () => {
             <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
               <Card>
                 <CardHeader>
-                  <CardTitle className="font-heading text-2xl">Safety Management & Certification</CardTitle>
+                  <CardTitle className="text-2xl font-light text-architectural">Safety Management & Certification</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
                   <p data-cms-field="safety-copy">
@@ -193,7 +193,7 @@ const RopeAccess = () => {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle className="font-heading text-xl">Certification Badges</CardTitle>
+                  <CardTitle className="text-xl font-light text-architectural">Certification Badges</CardTitle>
                 </CardHeader>
                 <CardContent className="grid gap-3">
                   {[
@@ -218,7 +218,7 @@ const RopeAccess = () => {
                 <Card key={service.title} className="h-full">
                   <CardContent className="p-6">
                     <service.icon className="h-8 w-8 text-primary" />
-                    <h3 className="mt-4 font-heading text-xl font-semibold">{service.title}</h3>
+                    <h3 className="mt-4 text-xl font-light text-architectural">{service.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground" data-cms-field={`service-${service.title.toLowerCase().replace(/\s+/g, "-")}`}>
                       {service.description}
                     </p>
@@ -252,7 +252,7 @@ const RopeAccess = () => {
         <div className="container mx-auto px-4">
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h2 className="font-heading text-3xl font-bold">Project Gallery</h2>
+              <h2 className="text-3xl font-light text-architectural">Project Gallery</h2>
               <p className="mt-2 text-muted-foreground" data-cms-field="gallery-copy">
                 This gallery now has a dedicated page so you can browse rope access projects as a standalone section.
               </p>
@@ -270,7 +270,7 @@ const RopeAccess = () => {
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr]">
           <Card>
             <CardHeader>
-              <CardTitle className="font-heading text-3xl">Client Testimonials</CardTitle>
+              <CardTitle className="text-3xl font-light text-architectural">Client Testimonials</CardTitle>
             </CardHeader>
             <CardContent>
               <Carousel opts={{ loop: true }} className="mx-8">
@@ -293,7 +293,7 @@ const RopeAccess = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle className="font-heading text-3xl">Case Study Downloads</CardTitle>
+              <CardTitle className="text-3xl font-light text-architectural">Case Study Downloads</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {caseStudies.map((study) => (
@@ -317,7 +317,7 @@ const RopeAccess = () => {
 
       <section className="bg-card py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold">Cost Comparison: Rope Access vs Traditional Access</h2>
+          <h2 className="text-3xl font-light text-architectural">Cost Comparison: Rope Access vs Traditional Access</h2>
           <div className="mt-6 overflow-hidden rounded-xl border border-border">
             <table className="w-full text-left text-sm">
               <thead className="bg-secondary/60">
@@ -345,7 +345,7 @@ const RopeAccess = () => {
         <Card className="overflow-hidden border-primary/20">
           <div className="grid gap-0 lg:grid-cols-2">
             <div className="bg-primary p-8 text-primary-foreground md:p-10">
-              <h2 className="font-heading text-3xl font-bold">Request Rope Access Quote</h2>
+              <h2 className="text-3xl font-light">Request Rope Access Quote</h2>
               <p className="mt-3 text-primary-foreground/85" data-cms-field="cta-copy">
                 Share your scope and receive a rapid response from our rope access specialists.
               </p>
