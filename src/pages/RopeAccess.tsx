@@ -8,7 +8,6 @@ import {
   Building2,
   CheckCircle,
   ClipboardCheck,
-  Factory,
   FileDown,
   HardHat,
   LifeBuoy,
@@ -25,13 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import ropeAccessHeroImg from "@/assets/rope-access-hero.jpg";
 
 const cmsContent = {
   seo: {
@@ -74,27 +67,6 @@ const industries = [
   "Government and defense",
 ];
 
-const testimonials = [
-  {
-    name: "Ethan Marshall",
-    role: "Facilities Director, Northpoint Towers",
-    quote:
-      "Their IRATA team completed a full façade defect program in half the time quoted for scaffold access, with exceptional safety documentation.",
-  },
-  {
-    name: "Priya Raman",
-    role: "Asset Integrity Lead, WestGrid Energy",
-    quote:
-      "The rope access NDT campaign reduced outage pressure and gave us precise defect mapping without disrupting adjacent operations.",
-  },
-  {
-    name: "Noah Bennett",
-    role: "Project Manager, Urban Structure Group",
-    quote:
-      "From risk assessments to rescue plans, their process discipline was world-class. The team worked efficiently and professionally throughout.",
-  },
-];
-
 const caseStudies = [
   { name: "Case Study: 48-Storey Façade Remediation", size: "PDF • 1.2 MB" },
   { name: "Case Study: Offshore Flare Stack NDT", size: "PDF • 980 KB" },
@@ -119,19 +91,26 @@ const RopeAccess = () => {
     <main className="bg-background text-foreground">
       <section className="border-b border-border bg-card/50">
         <div className="container mx-auto px-4 py-16 md:py-24">
-          <motion.div initial="hidden" animate="show" variants={sectionAnim} transition={{ duration: 0.5 }}>
-            <Badge className="mb-4 uppercase tracking-wider" data-cms-field="hero-eyebrow">{cmsContent.hero.eyebrow}</Badge>
-            <h1 className="max-w-4xl text-4xl font-light text-architectural md:text-6xl" data-cms-field="hero-title">
-              {cmsContent.hero.title}
-            </h1>
-            <p className="mt-6 max-w-4xl text-base text-muted-foreground md:text-lg" data-cms-field="hero-description">
-              {cmsContent.hero.description}
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Badge variant="outline" data-cms-field="seo-title">{cmsContent.seo.title}</Badge>
-              <Badge variant="secondary" data-cms-field="seo-description">SEO-ready section content</Badge>
-            </div>
-          </motion.div>
+          <div className="grid lg:grid-cols-[1fr_auto] gap-12 items-center">
+            <motion.div initial="hidden" animate="show" variants={sectionAnim} transition={{ duration: 0.5 }}>
+              <Badge className="mb-4 uppercase tracking-wider">{cmsContent.hero.eyebrow}</Badge>
+              <h1 className="max-w-4xl text-4xl font-light text-architectural md:text-6xl">
+                {cmsContent.hero.title}
+              </h1>
+              <p className="mt-6 max-w-4xl text-base text-muted-foreground md:text-lg">
+                {cmsContent.hero.description}
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Badge variant="outline">{cmsContent.seo.title}</Badge>
+                <Badge variant="secondary">SEO-ready section content</Badge>
+              </div>
+            </motion.div>
+            <img
+              src={ropeAccessHeroImg}
+              alt="Rope access technician at height"
+              className="w-64 h-64 object-cover rounded-3xl hidden lg:block"
+            />
+          </div>
         </div>
       </section>
 
@@ -148,10 +127,9 @@ const RopeAccess = () => {
             <Card>
               <CardContent className="p-6 md:p-8">
                 <h2 className="text-2xl font-light text-architectural md:text-3xl">Why rope access outperforms traditional height access</h2>
-                <p className="mt-4 text-muted-foreground" data-cms-field="overview-copy">
+                <p className="mt-4 text-muted-foreground">
                   Rope access is engineered for precision and control. Instead of large temporary structures, technicians deploy rope systems rapidly,
-                  reducing setup time while maintaining strict safety standards. This enables safer execution, lower access costs, and minimal
-                  interruption to tenants, operations, and surrounding public spaces.
+                  reducing setup time while maintaining strict safety standards.
                 </p>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
                   {[
@@ -177,9 +155,8 @@ const RopeAccess = () => {
                   <CardTitle className="text-2xl font-light text-architectural">Safety Management & Certification</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-muted-foreground">
-                  <p data-cms-field="safety-copy">
-                    Every scope is delivered by trained rope access technicians operating under documented procedures. We enforce pre-start hazard
-                    reviews, dynamic risk controls, rescue preparedness, and quality assurance checks for each job package.
+                  <p>
+                    Every scope is delivered by trained rope access technicians operating under documented procedures.
                   </p>
                   <ul className="space-y-3">
                     {cmsContent.compliance.map((item) => (
@@ -202,7 +179,7 @@ const RopeAccess = () => {
                     { icon: ClipboardCheck, label: "Documented SWMS" },
                     { icon: MapPinned, label: "Site Rescue Ready" },
                   ].map((badge) => (
-                    <div key={badge.label} className="flex items-center gap-3 rounded-lg border border-border p-3" data-cms-field="certification-badges">
+                    <div key={badge.label} className="flex items-center gap-3 rounded-lg border border-border p-3">
                       <badge.icon className="h-5 w-5 text-primary" />
                       <span className="text-sm font-medium">{badge.label}</span>
                     </div>
@@ -219,9 +196,7 @@ const RopeAccess = () => {
                   <CardContent className="p-6">
                     <service.icon className="h-8 w-8 text-primary" />
                     <h3 className="mt-4 text-xl font-light text-architectural">{service.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground" data-cms-field={`service-${service.title.toLowerCase().replace(/\s+/g, "-")}`}>
-                      {service.description}
-                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -232,7 +207,7 @@ const RopeAccess = () => {
             <Card>
               <CardContent className="p-6 md:p-8">
                 <h2 className="font-heading text-2xl font-semibold md:text-3xl">Industries Served</h2>
-                <p className="mt-3 text-muted-foreground" data-cms-field="industries-copy">
+                <p className="mt-3 text-muted-foreground">
                   We support asset owners, EPC contractors, and maintenance providers requiring precise, compliant, and low-disruption access.
                 </p>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -253,8 +228,8 @@ const RopeAccess = () => {
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <div>
               <h2 className="text-3xl font-light text-architectural">Project Gallery</h2>
-              <p className="mt-2 text-muted-foreground" data-cms-field="gallery-copy">
-                This gallery now has a dedicated page so you can browse rope access projects as a standalone section.
+              <p className="mt-2 text-muted-foreground">
+                Browse rope access projects as a standalone section.
               </p>
             </div>
             <Button asChild>
@@ -267,52 +242,26 @@ const RopeAccess = () => {
       </section>
 
       <section className="container mx-auto px-4 py-14 md:py-20">
-        <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr]">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-3xl font-light text-architectural">Client Testimonials</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Carousel opts={{ loop: true }} className="mx-8">
-                <CarouselContent>
-                  {testimonials.map((testimonial) => (
-                    <CarouselItem key={testimonial.name}>
-                      <div className="rounded-lg border border-border p-6">
-                        <p className="text-muted-foreground">“{testimonial.quote}”</p>
-                        <p className="mt-4 font-semibold">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="left-0" />
-                <CarouselNext className="right-0" />
-              </Carousel>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-3xl font-light text-architectural">Case Study Downloads</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              {caseStudies.map((study) => (
-                <a
-                  key={study.name}
-                  href="#"
-                  className="flex items-center justify-between rounded-lg border border-border p-3 transition hover:bg-secondary/50"
-                  data-cms-field="case-study-link"
-                >
-                  <div>
-                    <p className="text-sm font-medium">{study.name}</p>
-                    <p className="text-xs text-muted-foreground">{study.size}</p>
-                  </div>
-                  <FileDown className="h-4 w-4 text-primary" />
-                </a>
-              ))}
-            </CardContent>
-          </Card>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-3xl font-light text-architectural">Case Study Downloads</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {caseStudies.map((study) => (
+              <a
+                key={study.name}
+                href="#"
+                className="flex items-center justify-between rounded-lg border border-border p-3 transition hover:bg-secondary/50"
+              >
+                <div>
+                  <p className="text-sm font-medium">{study.name}</p>
+                  <p className="text-xs text-muted-foreground">{study.size}</p>
+                </div>
+                <FileDown className="h-4 w-4 text-primary" />
+              </a>
+            ))}
+          </CardContent>
+        </Card>
       </section>
 
       <section className="bg-card py-14 md:py-20">
@@ -346,18 +295,18 @@ const RopeAccess = () => {
           <div className="grid gap-0 lg:grid-cols-2">
             <div className="bg-primary p-8 text-primary-foreground md:p-10">
               <h2 className="text-3xl font-light">Request Rope Access Quote</h2>
-              <p className="mt-3 text-primary-foreground/85" data-cms-field="cta-copy">
+              <p className="mt-3 text-primary-foreground/85">
                 Share your scope and receive a rapid response from our rope access specialists.
               </p>
               <div className="mt-6 space-y-3 text-sm">
-                <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> Admin alerts: ropeaccess@accessheight.com.au</p>
-                <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> 1300 123 456</p>
-                <p className="flex items-center gap-2"><Building className="h-4 w-4" /> National industrial coverage</p>
+                <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> otnoacess@gmail.com</p>
+                <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> +254 723 124739</p>
+                <p className="flex items-center gap-2"><Building className="h-4 w-4" /> Kenya & East Africa coverage</p>
               </div>
             </div>
 
             <div className="space-y-4 p-8 md:p-10">
-              <p className="text-muted-foreground">Quotation form removed from this service page. Please use our contact page for quote requests.</p>
+              <p className="text-muted-foreground">Please use our contact page for quote requests.</p>
               <Button asChild className="w-full sm:w-auto">
                 <Link to="/contact">
                   Request Rope Access Quote <ArrowRight className="ml-2 h-4 w-4" />

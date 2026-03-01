@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Phone, Mail } from "lucide-react";
 import { SERVICES } from "@/data/services";
 
 const Services = () => {
@@ -32,6 +33,34 @@ const Services = () => {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Request for Quote */}
+          <div className="mt-24 border-t border-border pt-16">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl md:text-4xl font-light text-architectural mb-4">Request a Quote</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Get in touch with our team for a free consultation and project quote. We respond within 24 hours.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <a
+                  href="tel:+254723124739"
+                  className="flex items-center gap-3 text-lg text-foreground hover:text-muted-foreground transition-colors duration-300"
+                >
+                  <Phone className="h-5 w-5 text-primary" />
+                  +254 723 124739
+                </a>
+                <a
+                  href="mailto:otnoacess@gmail.com"
+                  className="flex items-center gap-3 text-lg text-foreground hover:text-muted-foreground transition-colors duration-300"
+                >
+                  <Mail className="h-5 w-5 text-primary" />
+                  otnoacess@gmail.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
