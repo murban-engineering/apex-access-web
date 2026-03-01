@@ -1,4 +1,4 @@
-import KenyaMap from "@/components/KenyaMap";
+import EastAfricaMap from "@/components/EastAfricaMap";
 import nacelleImg from "@/assets/man-nacelle.jpg";
 
 const About = () => {
@@ -94,7 +94,7 @@ const About = () => {
               </div>
 
               <div>
-                <KenyaMap />
+                <EastAfricaMap />
               </div>
             </div>
           </div>
