@@ -1,57 +1,59 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import projectConcreteImg from "@/assets/project-concrete.jpg";
-import projectScaffoldingWorkImg from "@/assets/project-scaffolding-work.jpg";
-import projectFacadeScaffoldingImg from "@/assets/project-facade-scaffolding.jpg";
-import ropeAccessTeamImg from "@/assets/rope-access-team.jpg";
-import ropeAccessDrillingImg from "@/assets/rope-access-drilling.jpg";
-import ropeAccessHeroImg from "@/assets/rope-access-hero.jpg";
+import EastAfricaMap from "@/components/EastAfricaMap";
+import constructionWorkersBw2 from "@/assets/construction-workers-bw-2.jpg";
+import constructionAerial from "@/assets/construction-aerial.jpg";
+import constructionSilhouettes2 from "@/assets/construction-silhouettes-2.jpg";
+import workersHighrise2 from "@/assets/workers-highrise-2.jpg";
+import safetyWorkerPpe from "@/assets/safety-worker-ppe.jpg";
+import metallicStructure from "@/assets/metallic-structure.jpg";
+import constructionWorkersRebar from "@/assets/construction-workers-rebar.jpg";
 
 const Work = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
 
   const projects = [
     {
-      image: projectConcreteImg,
-      title: "CONCRETE REINFORCEMENT WORKS",
-      location: "SYDNEY, 2024",
+      image: constructionWorkersBw2,
+      title: "STRUCTURAL STEEL REINFORCEMENT",
+      location: "NAIROBI, 2024",
       category: "INFRASTRUCTURE",
       description: "Structural reinforcement at height using rope access techniques for a major infrastructure project.",
     },
     {
-      image: ropeAccessTeamImg,
-      title: "HIGH-RISE FAÇADE MAINTENANCE",
-      location: "MELBOURNE, 2024",
-      category: "ROPE ACCESS",
-      description: "Full façade inspection and maintenance program for a 40-storey commercial tower.",
-    },
-    {
-      image: projectScaffoldingWorkImg,
-      title: "SCAFFOLDING HEIGHT OPERATIONS",
-      location: "BRISBANE, 2023",
+      image: constructionAerial,
+      title: "HIGH-RISE SCAFFOLDING WORKS",
+      location: "MOMBASA, 2024",
       category: "SCAFFOLDING",
-      description: "Complex scaffolding system for multi-level industrial maintenance works.",
+      description: "Full scaffolding system installation for a multi-storey commercial development.",
     },
     {
-      image: projectFacadeScaffoldingImg,
-      title: "FAÇADE SCAFFOLDING SYSTEM",
-      location: "PERTH, 2023",
-      category: "SCAFFOLDING",
-      description: "Full-perimeter scaffolding for heritage building façade restoration.",
-    },
-    {
-      image: ropeAccessDrillingImg,
-      title: "BUILDING FAÇADE DRILLING",
-      location: "SYDNEY, 2024",
+      image: constructionSilhouettes2,
+      title: "FAÇADE ACCESS & MAINTENANCE",
+      location: "NAIROBI, 2023",
       category: "ROPE ACCESS",
-      description: "Precision drilling works on building façade using rope access for commercial installation.",
+      description: "Comprehensive façade inspection and maintenance program using certified rope access.",
     },
     {
-      image: ropeAccessHeroImg,
-      title: "HIGH-RISE ROPE ACCESS INSPECTION",
-      location: "ADELAIDE, 2023",
+      image: workersHighrise2,
+      title: "ELEVATED PLATFORM OPERATIONS",
+      location: "KISUMU, 2023",
       category: "ROPE ACCESS",
-      description: "Comprehensive structural inspection using IRATA-certified rope access techniques.",
+      description: "High-rise platform access and maintenance using mobile elevated work platforms.",
+    },
+    {
+      image: safetyWorkerPpe,
+      title: "SAFETY COMPLIANCE WORKS",
+      location: "NAKURU, 2024",
+      category: "INFRASTRUCTURE",
+      description: "Full safety compliance and PPE-controlled works for industrial maintenance projects.",
+    },
+    {
+      image: constructionWorkersRebar,
+      title: "CONCRETE REINFORCEMENT AT HEIGHT",
+      location: "ELDORET, 2023",
+      category: "INFRASTRUCTURE",
+      description: "Precision rebar installation and concrete reinforcement works at height for commercial construction.",
     },
   ];
 
@@ -133,7 +135,49 @@ const Work = () => {
         </div>
       </section>
 
+      {/* East Africa Coverage Map */}
       <section className="py-32 bg-card/40 border-y border-border">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-4xl md:text-6xl font-light text-architectural mb-6">
+                  Project Coverage
+                  <br />
+                  Across East Africa
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-xl mb-8">
+                  Headquartered in Nairobi with active operations across Kenya and growing reach into the wider East Africa region.
+                </p>
+                <div className="space-y-4">
+                  {["Nairobi HQ", "Mombasa", "Kisumu", "Nakuru", "Eldoret"].map((city) => (
+                    <div key={city} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full" />
+                      <span className="text-foreground">{city}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <EastAfricaMap />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Scaffolding Management System for Hire */}
+      <section className="py-32 bg-card/40 border-b border-border">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
