@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import projectConcreteImg from "@/assets/project-concrete.jpg";
 import projectScaffoldingWorkImg from "@/assets/project-scaffolding-work.jpg";
 import projectFacadeScaffoldingImg from "@/assets/project-facade-scaffolding.jpg";
@@ -128,6 +129,80 @@ const Work = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 bg-card/40 border-y border-border">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl md:text-6xl font-light text-architectural mb-6">
+                Scaffolding Management
+                <br />
+                System for Hire
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mb-12">
+                Our fully engineered scaffolding management systems are available for short-term and long-term hire — designed for commercial, industrial, and shutdown projects with full compliance support.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Design & Engineering",
+                  description: "Site-specific scaffold designs with certified engineering packages, load calculations, and duty classifications.",
+                },
+                {
+                  title: "Erection & Dismantle",
+                  description: "Professional crews for controlled erection, staged modifications, and safe dismantle with permit controls.",
+                },
+                {
+                  title: "Compliance & Inspection",
+                  description: "Scheduled inspections, tagging protocols, handover certificates, and ongoing compliance audits throughout hire.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.15 }}
+                  className="bg-background border border-border rounded-2xl p-8"
+                >
+                  <h3 className="text-xl font-light text-architectural mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-12 flex flex-wrap gap-6"
+            >
+              <a
+                href="/contact"
+                className="inline-block text-minimal text-foreground hover:text-muted-foreground transition-colors duration-300 relative group"
+              >
+                ENQUIRE ABOUT HIRE
+                <span className="absolute bottom-0 left-0 w-full h-px bg-foreground group-hover:bg-muted-foreground transition-colors duration-300" />
+              </a>
+              <a
+                href="/services/scaffolding"
+                className="inline-block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+              >
+                VIEW SCAFFOLDING SERVICES
+                <span className="absolute bottom-0 left-0 w-full h-px bg-muted-foreground group-hover:bg-foreground transition-colors duration-300 scale-x-0 group-hover:scale-x-100 origin-left" />
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>
