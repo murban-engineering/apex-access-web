@@ -58,7 +58,6 @@ Working at height remains one of the highest risk activities in the construction
 ### Key Regulatory Bodies
 - SafeWork Australia sets the national standards
 - State-based regulators enforce compliance
-- IRATA provides international rope access standards
 
 ## Hierarchy of Controls
 
@@ -83,44 +82,6 @@ Staying compliant requires ongoing training, regular equipment inspections, and 
     date: "2024-05-20",
     readTime: "7 min read",
     category: "REGULATIONS",
-    image: "",
-  },
-  {
-    id: "irata-certification-guide",
-    title: "IRATA Certification: What It Means for Your Project",
-    excerpt: "Why IRATA certification matters and how it ensures the highest standards of safety in rope access work.",
-    content: `
-## What is IRATA?
-
-The Industrial Rope Access Trade Association (IRATA) is the global authority on rope access safety and training. IRATA certification is recognised worldwide as the gold standard for rope access operations.
-
-## Certification Levels
-
-### Level 1 — Rope Access Technician
-Entry-level certification covering basic rope access skills and safety procedures.
-
-### Level 2 — Rope Access Supervisor
-Advanced skills including rigging and rescue, with the ability to supervise Level 1 technicians.
-
-### Level 3 — Rope Access Safety Supervisor
-The highest level, responsible for planning, managing, and overseeing rope access operations.
-
-## Why It Matters
-
-IRATA-certified companies maintain a safety record that is 10x better than the construction industry average. When you choose an IRATA member company, you're choosing:
-- Rigorously trained technicians
-- Standardised safety procedures
-- Regular audits and compliance checks
-- Comprehensive insurance coverage
-
-## Our Commitment
-
-Every rope access technician at OTNO Access is IRATA certified. We maintain ongoing training programs and regular competency assessments to ensure the highest standards on every project.
-    `,
-    author: "OTNO Training",
-    date: "2024-04-10",
-    readTime: "6 min read",
-    category: "SAFETY",
     image: "",
   },
 ];
