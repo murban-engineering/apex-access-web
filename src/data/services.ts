@@ -10,7 +10,7 @@ export type ServiceItem = {
 export const SERVICES: ServiceItem[] = [
   {
     name: "Rope Access",
-    description: "IRATA-certified technicians for inspection, maintenance, and high-rise works at any height.",
+    description: "Certified technicians for inspection, maintenance, and high-rise works at any height.",
     href: "/services/rope-access",
     icon: Anchor,
   },

@@ -24,7 +24,7 @@ const About = () => {
                   </p>
 
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    With over 1,200 projects completed across Kenya and East Africa, our IRATA-certified
+                    With over 1,200 projects completed across Kenya and East Africa, our
                     technicians and licensed operators set the industry standard for
                     rope access, scaffolding, and elevated work platforms.
                   </p>

@@ -24,7 +24,7 @@ const services = [
   {
     number: "01",
     title: "ROPE ACCESS",
-    description: "IRATA-certified technicians for inspection, maintenance, and high-rise works across Kenya.",
+    description: "Certified technicians for inspection, maintenance, and high-rise works across Kenya.",
     image: constructionBwImg,
   },
   {
@@ -235,8 +235,8 @@ const Index = () => {
                     delivering height safety solutions that are both effective and uncompromising in quality.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    With over 1,200 projects completed and a 99.9% safety record, our team of IRATA-certified
-                    technicians sets the industry standard for rope access and height works.
+                    With over 1,200 projects completed and a 99.9% safety record, our team sets the
+                    industry standard for rope access and height works.
                   </p>
                 </div>
               </motion.div>
