@@ -47,7 +47,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-2">WHATSAPP</h3>
                   <a
-                    href="https://wa.me/254700123456"
+                    href="https://wa.me/254723124739"
                     target="_blank"
                     rel="noreferrer"
                     className="text-xl hover:text-muted-foreground transition-colors duration-300"

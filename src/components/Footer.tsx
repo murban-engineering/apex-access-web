@@ -38,6 +38,9 @@ const Footer = () => (
               <a href="mailto:otnoacess@gmail.com" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
                 otnoacess@gmail.com
               </a>
+              <a href="https://wa.me/254723124739" target="_blank" rel="noreferrer" className="block text-foreground hover:text-muted-foreground transition-colors duration-300">
+                WhatsApp: +254 723 124739
+              </a>
               <address className="not-italic text-muted-foreground">
                 Embakasi, Old North Airport Rd<br />Next to Naivas Embakasi
               </address>
