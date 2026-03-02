@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import EastAfricaMap from "@/components/EastAfricaMap";
 import constructionWorkersBw2 from "@/assets/construction-workers-bw-2.jpg";
 import constructionAerial from "@/assets/construction-aerial.jpg";
 import constructionSilhouettes2 from "@/assets/construction-silhouettes-2.jpg";
@@ -135,7 +134,7 @@ const Work = () => {
         </div>
       </section>
 
-      {/* East Africa Coverage Map */}
+      {/* Kenya Coverage Map */}
       <section className="py-32 bg-card/40 border-y border-border">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
@@ -149,10 +148,10 @@ const Work = () => {
                 <h2 className="text-4xl md:text-6xl font-light text-architectural mb-6">
                   Project Coverage
                   <br />
-                  Across East Africa
+                  Across Kenya
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-xl mb-8">
-                  Headquartered in Nairobi with active operations across Kenya and growing reach into the wider East Africa region.
+                  Headquartered in Nairobi with active operations across Kenya's major cities and industrial regions.
                 </p>
                 <div className="space-y-4">
                   {["Nairobi HQ", "Mombasa", "Kisumu", "Nakuru", "Eldoret"].map((city) => (
@@ -169,7 +168,14 @@ const Work = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <EastAfricaMap />
+                <div className="rounded-2xl overflow-hidden border border-border bg-background p-4 md:p-6">
+                  <img
+                    src="/kenya-map.svg"
+                    alt="Map of Kenya showing project coverage"
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
               </motion.div>
             </div>
           </div>
