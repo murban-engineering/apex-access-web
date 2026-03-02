@@ -241,44 +241,25 @@ const Index = () => {
                 </div>
               </motion.div>
               <motion.div
-                className="space-y-12"
+                className="pt-8 border-t border-border"
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeUp}
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               >
-                <div>
-                  <h4 className="text-minimal text-muted-foreground mb-6">APPROACH</h4>
-                  <div className="space-y-6">
-                    <div className="border-l-2 border-foreground pl-6">
-                      <h5 className="text-lg font-medium mb-2">Safety First</h5>
-                      <p className="text-muted-foreground">ISO 45001 certified with zero-incident commitment</p>
-                    </div>
-                    <div className="border-l-2 border-foreground pl-6">
-                      <h5 className="text-lg font-medium mb-2">Expert Teams</h5>
-                      <p className="text-muted-foreground">IRATA-certified technicians and SafeWork licensed operators</p>
-                    </div>
-                    <div className="border-l-2 border-foreground pl-6">
-                      <h5 className="text-lg font-medium mb-2">Full Compliance</h5>
-                      <p className="text-muted-foreground">NASC accredited with comprehensive insurance coverage</p>
-                    </div>
+                <div className="grid grid-cols-3 gap-8">
+                  <div>
+                    <h4 className="text-minimal text-muted-foreground mb-2">PROJECTS</h4>
+                    <p className="text-xl">1,200+</p>
                   </div>
-                </div>
-                <div className="pt-8 border-t border-border">
-                  <div className="grid grid-cols-3 gap-8">
-                    <div>
-                      <h4 className="text-minimal text-muted-foreground mb-2">PROJECTS</h4>
-                      <p className="text-xl">1,200+</p>
-                    </div>
-                    <div>
-                      <h4 className="text-minimal text-muted-foreground mb-2">SAFETY</h4>
-                      <p className="text-xl">99.9%</p>
-                    </div>
-                    <div>
-                      <h4 className="text-minimal text-muted-foreground mb-2">RESPONSE</h4>
-                      <p className="text-xl">&lt; 30min</p>
-                    </div>
+                  <div>
+                    <h4 className="text-minimal text-muted-foreground mb-2">SAFETY</h4>
+                    <p className="text-xl">99.9%</p>
+                  </div>
+                  <div>
+                    <h4 className="text-minimal text-muted-foreground mb-2">RESPONSE</h4>
+                    <p className="text-xl">&lt; 30min</p>
                   </div>
                 </div>
               </motion.div>
