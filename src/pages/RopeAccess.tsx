@@ -8,7 +8,6 @@ import {
   Building2,
   CheckCircle,
   ClipboardCheck,
-  FileDown,
   HardHat,
   LifeBuoy,
   Mail,
@@ -28,9 +27,9 @@ import ropeAccessHeroImg from "@/assets/rope-access-hero.jpg";
 
 const cmsContent = {
   seo: {
-    title: "Rope Access Services | IRATA & SPRAT Certified Work-at-Height Specialists",
+    title: "Rope Access Services | Certified Work-at-Height Specialists",
     description:
-      "Professional rope access services for inspection, maintenance, restoration, and emergency support. Certified IRATA/SPRAT technicians deliver safer, faster, and cost-effective work-at-height solutions.",
+      "Professional rope access services for inspection, maintenance, restoration, and emergency support. Certified technicians deliver safer, faster, and cost-effective work-at-height solutions.",
   },
   hero: {
     eyebrow: "Rope Access Section",
@@ -39,7 +38,7 @@ const cmsContent = {
       "Rope access is a safe, engineered work-at-height method that uses ropes and specialized equipment to position certified technicians exactly where work is needed. Compared with scaffolding and lifts, rope access offers faster setup, lower cost, minimal site disruption, and reliable access to confined or complex structures.",
   },
   compliance: [
-    "IRATA & SPRAT compliant procedures",
+    "Internationally compliant work-at-height procedures",
     "Task-specific risk assessments and method statements",
     "Site rescue plans with standby capability",
     "Daily pre-use and documented equipment inspections",
@@ -65,12 +64,6 @@ const industries = [
   "Mining and heavy industry",
   "Marine and ports",
   "Government and defense",
-];
-
-const caseStudies = [
-  { name: "Case Study: 48-Storey Façade Remediation", size: "PDF • 1.2 MB" },
-  { name: "Case Study: Offshore Flare Stack NDT", size: "PDF • 980 KB" },
-  { name: "Case Study: Bridge Expansion Joint Works", size: "PDF • 1.6 MB" },
 ];
 
 const costComparison = [
@@ -174,7 +167,7 @@ const RopeAccess = () => {
                 </CardHeader>
                 <CardContent className="grid gap-3">
                   {[
-                    { icon: Award, label: "IRATA International" },
+                    { icon: Award, label: "Third-party Certified Team" },
                     { icon: ShieldCheck, label: "SPRAT Certified" },
                     { icon: ClipboardCheck, label: "Documented SWMS" },
                     { icon: MapPinned, label: "Site Rescue Ready" },
@@ -239,29 +232,6 @@ const RopeAccess = () => {
             </Button>
           </div>
         </div>
-      </section>
-
-      <section className="container mx-auto px-4 py-14 md:py-20">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-3xl font-light text-architectural">Case Study Downloads</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {caseStudies.map((study) => (
-              <a
-                key={study.name}
-                href="#"
-                className="flex items-center justify-between rounded-lg border border-border p-3 transition hover:bg-secondary/50"
-              >
-                <div>
-                  <p className="text-sm font-medium">{study.name}</p>
-                  <p className="text-xs text-muted-foreground">{study.size}</p>
-                </div>
-                <FileDown className="h-4 w-4 text-primary" />
-              </a>
-            ))}
-          </CardContent>
-        </Card>
       </section>
 
       <section className="bg-card py-14 md:py-20">
