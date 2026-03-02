@@ -17,8 +17,7 @@ const MobileAccess = lazy(() => import("./pages/MobileAccess"));
 const NettingDocking = lazy(() => import("./pages/NettingDocking"));
 const Work = lazy(() => import("./pages/Work"));
 const About = lazy(() => import("./pages/About"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
+const Catalogue = lazy(() => import("./pages/Catalogue"));
 const Contact = lazy(() => import("./pages/Contact"));
 
 const queryClient = new QueryClient();
@@ -58,8 +57,7 @@ const App = () => (
                 <Route path="/services/netting-decking" element={<NettingDocking />} />
                 <Route path="/work" element={<Work />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:id" element={<BlogPost />} />
+                <Route path="/catalogue" element={<Catalogue />} />
                 <Route path="/contact" element={<Contact />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
