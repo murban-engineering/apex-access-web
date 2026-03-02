@@ -6,7 +6,10 @@ import highriseScaffoldingImg from "@/assets/workers-highrise-scaffolding.jpg";
 import constructionSilhouettesImg from "@/assets/construction-site-silhouettes.jpg";
 import constructionBwImg from "@/assets/construction-workers-bw.jpg";
 import constructionSunsetImg from "@/assets/construction-workers-sunset.jpg";
-import craneImg from "@/assets/crane-construction-site.jpg";
+import constructionAerialImg from "@/assets/construction-aerial.jpg";
+import ropeAccessTeamImg from "@/assets/rope-access-team.jpg";
+import manNacelleImg from "@/assets/man-nacelle.jpg";
+import constructionRebarImg from "@/assets/construction-workers-rebar.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -46,25 +49,25 @@ const services = [
 
 const projects = [
   {
-    image: craneImg,
+    image: constructionSunsetImg,
     title: "CONCRETE REINFORCEMENT WORKS",
     location: "NAIROBI, 2024",
     description: "Structural reinforcement at height using rope access techniques for a major infrastructure project.",
   },
   {
-    image: craneImg,
+    image: ropeAccessTeamImg,
     title: "HIGH-RISE FAÇADE MAINTENANCE",
     location: "MOMBASA, 2024",
     description: "Full façade inspection and maintenance program for a 40-storey commercial tower.",
   },
   {
-    image: craneImg,
+    image: constructionAerialImg,
     title: "SCAFFOLDING HEIGHT OPERATIONS",
     location: "KISUMU, 2023",
     description: "Complex scaffolding system for multi-level industrial maintenance works.",
   },
   {
-    image: craneImg,
+    image: constructionRebarImg,
     title: "FAÇADE SCAFFOLDING SYSTEM",
     location: "NAKURU, 2023",
     description: "Full-perimeter scaffolding for heritage building façade restoration.",
@@ -190,6 +193,8 @@ const Index = () => {
                     <img
                       src={service.image}
                       alt={service.title}
+                      loading="eager"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/30" />
@@ -312,6 +317,8 @@ const Index = () => {
                     <img
                       src={project.image}
                       alt={project.title}
+                      loading="eager"
+                      decoding="async"
                       className="w-full h-[70vh] object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
