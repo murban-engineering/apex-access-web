@@ -1,4 +1,5 @@
 import nacelleImg from "@/assets/man-nacelle.jpg";
+import KenyaMap from "@/components/KenyaMap";
 
 const About = () => {
   return (
@@ -93,11 +94,7 @@ const About = () => {
               </div>
 
               <div className="rounded-2xl overflow-hidden border border-border bg-background p-4 md:p-6">
-                <img
-                  src="/kenya-map.svg"
-                  alt="Map of Kenya showing our national service coverage"
-                  className="w-full h-auto"
-                />
+                <KenyaMap />
               </div>
             </div>
           </div>
