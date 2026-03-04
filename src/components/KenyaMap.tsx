@@ -96,7 +96,7 @@ const KenyaMap = () => {
       const id = path.getAttribute("id") || "";
       const isActive = activeCountyIds.includes(id);
 
-      path.style.transition = "all 0.3s ease";
+      path.style.transition = "fill 0.2s ease";
       path.style.cursor = "pointer";
       path.style.stroke = "hsl(var(--border))";
       path.style.strokeWidth = "0.5";
@@ -138,10 +138,23 @@ const KenyaMap = () => {
       });
     });
 
-    // Style the SVG itself
+    // Style the SVG itself — ensure full visibility
     svgEl.style.width = "100%";
     svgEl.style.height = "auto";
+    svgEl.style.maxHeight = "none";
+    svgEl.style.overflow = "visible";
     svgEl.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    
+    // Ensure viewBox isn't clipping — expand if needed
+    const viewBox = svgEl.getAttribute("viewBox");
+    if (viewBox) {
+      const parts = viewBox.split(/[\s,]+/).map(Number);
+      if (parts.length === 4) {
+        // Add padding to viewBox to prevent clipping
+        const padding = 10;
+        svgEl.setAttribute("viewBox", `${parts[0] - padding} ${parts[1] - padding} ${parts[2] + padding * 2} ${parts[3] + padding * 2}`);
+      }
+    }
   }, [svgContent]);
 
   return (
