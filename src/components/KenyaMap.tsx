@@ -102,20 +102,16 @@ const KenyaMap = () => {
       path.style.strokeWidth = "0.5";
 
       if (isActive) {
-        path.style.fill = "hsl(142 71% 45%)";
-        path.style.strokeWidth = "1.2";
-        path.style.stroke = "hsl(142 71% 35%)";
+        path.style.fill = "hsl(var(--foreground))";
       } else {
         path.style.fill = "hsl(var(--muted))";
-        path.style.strokeWidth = "0.5";
-        path.style.stroke = "hsl(var(--border))";
       }
 
       path.addEventListener("mouseenter", (e) => {
         const title = path.getAttribute("title") || countyNames[id] || id;
         setHoveredCounty(title);
         path.style.fill = isActive
-          ? "hsl(142 71% 55%)"
+          ? "hsl(var(--foreground) / 0.7)"
           : "hsl(var(--accent))";
         const rect = containerRef.current!.getBoundingClientRect();
         setTooltipPos({
@@ -135,7 +131,7 @@ const KenyaMap = () => {
       path.addEventListener("mouseleave", () => {
         setHoveredCounty(null);
         if (isActive) {
-          path.style.fill = "hsl(142 71% 45%)";
+          path.style.fill = "hsl(var(--foreground))";
         } else {
           path.style.fill = "hsl(var(--muted))";
         }
@@ -173,7 +169,7 @@ const KenyaMap = () => {
       {/* Legend */}
       <div className="flex items-center justify-center gap-8 mt-8">
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3" style={{ backgroundColor: "hsl(142 71% 45%)" }} />
+          <div className="w-3 h-3 bg-foreground" />
           <span className="text-minimal text-muted-foreground">ACTIVE REGIONS</span>
         </div>
         <div className="flex items-center gap-2">
