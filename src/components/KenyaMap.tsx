@@ -138,23 +138,12 @@ const KenyaMap = () => {
       });
     });
 
-    // Style the SVG itself — ensure full visibility
+    // Style the SVG itself so it stays inside its card
     svgEl.style.width = "100%";
     svgEl.style.height = "auto";
-    svgEl.style.maxHeight = "none";
-    svgEl.style.overflow = "visible";
+    svgEl.style.maxHeight = "100%";
+    svgEl.style.overflow = "hidden";
     svgEl.setAttribute("preserveAspectRatio", "xMidYMid meet");
-    
-    // Ensure viewBox isn't clipping — expand if needed
-    const viewBox = svgEl.getAttribute("viewBox");
-    if (viewBox) {
-      const parts = viewBox.split(/[\s,]+/).map(Number);
-      if (parts.length === 4) {
-        // Add padding to viewBox to prevent clipping
-        const padding = 10;
-        svgEl.setAttribute("viewBox", `${parts[0] - padding} ${parts[1] - padding} ${parts[2] + padding * 2} ${parts[3] + padding * 2}`);
-      }
-    }
   }, [svgContent]);
 
   return (
@@ -176,7 +165,7 @@ const KenyaMap = () => {
       {/* SVG Map */}
       <div
         dangerouslySetInnerHTML={{ __html: svgContent }}
-        className="w-full"
+        className="w-full overflow-hidden"
       />
 
       {/* Legend */}
