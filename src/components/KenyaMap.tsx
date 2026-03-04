@@ -141,7 +141,7 @@ const KenyaMap = () => {
     // Style the SVG itself
     svgEl.style.width = "100%";
     svgEl.style.height = "auto";
-    svgEl.style.maxHeight = "600px";
+    svgEl.setAttribute("preserveAspectRatio", "xMidYMid meet");
   }, [svgContent]);
 
   return (
