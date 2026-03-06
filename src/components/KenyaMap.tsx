@@ -146,7 +146,7 @@ const KenyaMap = () => {
   }, [svgContent]);
 
   return (
-    <div className="relative" ref={containerRef}>
+    <div className="relative w-full" ref={containerRef}>
       {/* Tooltip */}
       {hoveredCounty && (
         <div
@@ -164,7 +164,7 @@ const KenyaMap = () => {
       {/* SVG Map */}
       <div
         dangerouslySetInnerHTML={{ __html: svgContent }}
-        className="w-full overflow-hidden max-h-[350px] md:max-h-[500px] flex items-center justify-center [&>svg]:max-h-[350px] md:[&>svg]:max-h-[500px]"
+        className="w-full [&>svg]:w-full [&>svg]:h-auto [&>svg]:block"
       />
 
       {/* Legend */}
