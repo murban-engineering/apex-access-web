@@ -91,6 +91,8 @@ const Scaffolding = () => {
               src={metallicStructure}
               alt="Scaffolding metallic structure"
               className="w-64 h-64 object-cover rounded-3xl hidden lg:block"
+              loading="eager"
+              decoding="async"
             />
           </div>
         </div>
