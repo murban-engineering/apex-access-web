@@ -93,7 +93,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="rounded-2xl overflow-hidden border border-border bg-background p-2 md:p-6">
+              <div className="rounded-2xl overflow-hidden border border-border bg-background p-2 md:p-6 flex items-center justify-center">
                 <KenyaMap />
               </div>
             </div>
