@@ -92,6 +92,8 @@ const MobileAccess = () => {
               src={workersHighrise2}
               alt="Workers on elevated platform"
               className="w-64 h-64 object-cover rounded-3xl hidden lg:block"
+              loading="eager"
+              decoding="async"
             />
           </div>
         </div>
