@@ -138,9 +138,17 @@ const KenyaMap = () => {
       });
     });
 
+    // Expand viewBox so the full map is visible with padding
+    const bbox = svgEl.getBBox();
+    const pad = 10;
+    svgEl.setAttribute(
+      "viewBox",
+      `${bbox.x - pad} ${bbox.y - pad} ${bbox.width + pad * 2} ${bbox.height + pad * 2}`
+    );
+
     // Style the SVG itself so it stays inside its card
     svgEl.style.width = "100%";
-    svgEl.style.height = "100%";
+    svgEl.style.height = "auto";
     svgEl.style.display = "block";
     svgEl.setAttribute("preserveAspectRatio", "xMidYMid meet");
   }, [svgContent]);
