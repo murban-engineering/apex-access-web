@@ -140,9 +140,8 @@ const KenyaMap = () => {
 
     // Style the SVG itself so it stays inside its card
     svgEl.style.width = "100%";
-    svgEl.style.height = "auto";
-    svgEl.style.maxHeight = "100%";
-    svgEl.style.overflow = "hidden";
+    svgEl.style.height = "100%";
+    svgEl.style.display = "block";
     svgEl.setAttribute("preserveAspectRatio", "xMidYMid meet");
   }, [svgContent]);
 
