@@ -62,12 +62,21 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+This repository now includes a GitHub Pages workflow (`.github/workflows/deploy-pages.yml`).
 
-## Can I connect a custom domain to my Lovable project?
+1. Push your code to the `main` branch.
+2. In GitHub, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
+3. Ensure `public/CNAME` contains your custom domain (`otno.ke`).
 
-Yes, you can!
+## Custom domain (`otno.ke`) checklist
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+For `otno.ke` to resolve correctly, configure DNS records at your domain provider:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- `A` records for apex domain to GitHub Pages IPs:
+  - `185.199.108.153`
+  - `185.199.109.153`
+  - `185.199.110.153`
+  - `185.199.111.153`
+- Optional `CNAME` for `www` → `<your-github-username>.github.io`
+
+Also keep `public/404.html` in place (already present) for SPA route fallbacks on GitHub Pages.
