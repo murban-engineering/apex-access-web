@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
+const motion = m;;
 import { Link } from "react-router-dom";
 import {
   Activity,
