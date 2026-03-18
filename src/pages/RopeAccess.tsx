@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
+const motion = m;
 import { Link } from "react-router-dom";
 import {
   Activity,
@@ -81,6 +82,7 @@ const sectionAnim = {
 
 const RopeAccess = () => {
   return (
+    <LazyMotion features={domAnimation}>
     <main className="bg-background text-foreground">
       <section className="border-b border-border bg-card/50">
         <div className="container mx-auto px-4 py-16 md:py-24">
@@ -102,7 +104,7 @@ const RopeAccess = () => {
               src={ropeAccessHeroImg}
               alt="Rope access technician at height"
               className="w-64 h-64 object-cover rounded-3xl hidden lg:block"
-              loading="eager"
+              loading="lazy"
               decoding="async"
             />
           </div>
@@ -289,6 +291,7 @@ const RopeAccess = () => {
         </Card>
       </section>
     </main>
+  </LazyMotion>
   );
 };
 
