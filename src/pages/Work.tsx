@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-const motion = m;;
+const motion = m;
 import constructionWorkersBw2 from "@/assets/construction-workers-bw-2.jpg";
 import constructionAerial from "@/assets/construction-aerial.jpg";
 import constructionSilhouettes2 from "@/assets/construction-silhouettes-2.jpg";
