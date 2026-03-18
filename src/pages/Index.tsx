@@ -420,6 +420,7 @@ const Index = () => {
         </div>
       </section>
     </div>
+    </LazyMotion>
   );
 };
 
