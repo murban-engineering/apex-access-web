@@ -58,6 +58,7 @@ const sectionAnim = {
 
 const NettingDocking = () => {
   return (
+    <LazyMotion features={domAnimation}>
     <main className="bg-background text-foreground">
       <section className="border-b border-border bg-card/40">
         <div className="container mx-auto px-4 py-16 md:py-24">
@@ -189,6 +190,7 @@ const NettingDocking = () => {
         </Card>
       </section>
     </main>
+  </LazyMotion>
   );
 };
 

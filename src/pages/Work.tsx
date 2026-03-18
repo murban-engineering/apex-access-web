@@ -63,6 +63,7 @@ const Work = () => {
     activeCategory === "ALL" ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
+    <LazyMotion features={domAnimation}>
     <div className="min-h-screen bg-background">
       <section className="pt-32 pb-20">
         <div className="container mx-auto px-6">
@@ -282,6 +283,7 @@ const Work = () => {
         </div>
       </section>
     </div>
+  </LazyMotion>
   );
 };
 
