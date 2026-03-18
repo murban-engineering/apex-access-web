@@ -99,6 +99,7 @@ const testimonials = [
 
 const Index = () => {
   return (
+    <LazyMotion features={domAnimation}>
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
