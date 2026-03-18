@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import heroBg from "@/assets/construction-silhouette.jpg";
 import safetyWorkerImg from "@/assets/safety-equipment-worker.jpg";
 import highriseScaffoldingImg from "@/assets/workers-highrise-scaffolding.jpg";
@@ -10,6 +10,8 @@ import constructionAerialImg from "@/assets/construction-aerial.jpg";
 import ropeAccessTeamImg from "@/assets/rope-access-team.jpg";
 import manNacelleImg from "@/assets/man-nacelle.jpg";
 import constructionRebarImg from "@/assets/construction-workers-rebar.jpg";
+
+const motion = m;
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
