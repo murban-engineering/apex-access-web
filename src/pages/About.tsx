@@ -111,7 +111,7 @@ const About = () => {
                   src={nacelleImg}
                   alt="Worker operating a mobile elevated work platform"
                   className="w-full h-[300px] md:h-[500px] object-cover"
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                 />
               </div>

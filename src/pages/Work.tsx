@@ -111,7 +111,7 @@ const Work = () => {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-[60vh] object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="eager"
+                      loading="lazy"
                       decoding="async"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -174,7 +174,7 @@ const Work = () => {
                     src="/kenya-map.svg"
                     alt="Map of Kenya showing project coverage"
                     className="w-full h-auto"
-                    loading="eager"
+                    loading="lazy"
                     decoding="async"
                   />
                 </div>

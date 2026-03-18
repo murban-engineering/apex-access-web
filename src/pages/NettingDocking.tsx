@@ -82,7 +82,7 @@ const NettingDocking = () => {
               src={safetyWorkerPpe}
               alt="Safety worker with PPE equipment"
               className="w-64 h-64 object-cover rounded-3xl hidden lg:block"
-              loading="eager"
+              loading="lazy"
               decoding="async"
             />
           </div>

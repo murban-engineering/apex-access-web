@@ -102,7 +102,7 @@ const RopeAccess = () => {
               src={ropeAccessHeroImg}
               alt="Rope access technician at height"
               className="w-64 h-64 object-cover rounded-3xl hidden lg:block"
-              loading="eager"
+              loading="lazy"
               decoding="async"
             />
           </div>
