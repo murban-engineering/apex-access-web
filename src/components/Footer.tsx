@@ -44,7 +44,7 @@ const Footer = () => (
               <address className="not-italic text-muted-foreground">
                 Embakasi, Old North Airport Rd<br />Next to Naivas Embakasi
               </address>
-              <p className="text-muted-foreground">P.O. Box 99215-80107, Mombasa</p>
+              <p className="text-muted-foreground">P.O. BOX 142-00502 Nairobi Karen</p>
             </div>
           </div>
         </div>

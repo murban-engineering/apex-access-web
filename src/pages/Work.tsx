@@ -6,8 +6,8 @@ import constructionAerial from "@/assets/construction-aerial.jpg";
 import constructionSilhouettes2 from "@/assets/construction-silhouettes-2.jpg";
 import workersHighrise2 from "@/assets/workers-highrise-2.jpg";
 import safetyWorkerPpe from "@/assets/safety-worker-ppe.jpg";
-import metallicStructure from "@/assets/metallic-structure.jpg";
 import constructionWorkersRebar from "@/assets/construction-workers-rebar.jpg";
+import constructionSkyscrapers from "@/assets/construction-modern-skyscrapers.jpg";
 
 const Work = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -65,9 +65,18 @@ const Work = () => {
   return (
     <LazyMotion features={domAnimation}>
     <div className="min-h-screen bg-background">
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto">
+      {/* Hero */}
+      <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
+        <img
+          src={constructionSkyscrapers}
+          alt="Modern construction scaffolding"
+          className="absolute right-0 top-0 h-full w-2/3 object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="container mx-auto px-6 relative z-20 py-32">
+          <div className="max-w-2xl">
             <h1 className="text-6xl md:text-8xl font-light text-architectural mb-8">OUR WORK</h1>
             <p className="text-xl text-muted-foreground max-w-3xl">
               A curated selection of our height safety projects, each delivered with zero-incident commitment

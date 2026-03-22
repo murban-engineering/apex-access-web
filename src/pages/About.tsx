@@ -1,53 +1,53 @@
 import nacelleImg from "@/assets/man-nacelle.jpg";
+import constructionSkyscrapers from "@/assets/construction-modern-skyscrapers.jpg";
 import KenyaMap from "@/components/KenyaMap";
 
 const About = () => {
   return (
     <div>
-      {/* Hero / Philosophy */}
-      <section className="pt-20 pb-16 md:pt-32 md:pb-32 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
-              <div>
-                <h1 className="text-minimal text-muted-foreground mb-3 md:mb-4">ABOUT</h1>
-                <h2 className="text-3xl md:text-6xl font-light text-architectural mb-8 md:mb-12">
-                  Our Safety
-                  <br />
-                  Philosophy
-                </h2>
-
-                <div className="space-y-6 md:space-y-8">
-                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    OTNO ACCESS SOLUTION LIMITED was founded with a simple belief: every worker
-                    deserves to return home safely. We deliver height safety solutions that are
-                    effective, compliant, and uncompromising in quality.
-                  </p>
-
-                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    With over 1,200 projects completed across Kenya and East Africa, our
-                    technicians and licensed operators set the industry standard for
-                    rope access, scaffolding, and elevated work platforms.
-                  </p>
+      {/* Hero */}
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-card">
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
+        <img
+          src={constructionSkyscrapers}
+          alt="Modern construction scaffolding on high-rise building"
+          className="absolute right-0 top-0 h-full w-2/3 object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="container mx-auto px-4 md:px-6 relative z-20 py-32">
+          <div className="max-w-2xl">
+            <h1 className="text-minimal text-muted-foreground mb-3 md:mb-4">ABOUT</h1>
+            <h2 className="text-3xl md:text-6xl font-light text-architectural mb-8 md:mb-12">
+              Our Safety
+              <br />
+              Philosophy
+            </h2>
+            <div className="space-y-6 md:space-y-8">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                OTNO ACCESS SOLUTION LIMITED was founded with a simple belief: every worker
+                deserves to return home safely. We deliver height safety solutions that are
+                effective, compliant, and uncompromising in quality.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                With over 1,200 projects completed across Kenya and East Africa, our
+                technicians and licensed operators set the industry standard for
+                rope access, scaffolding, and elevated work platforms.
+              </p>
+            </div>
+            <div className="pt-6 md:pt-8 border-t border-border mt-8">
+              <div className="grid grid-cols-3 gap-4 md:gap-8">
+                <div>
+                  <h4 className="text-minimal text-muted-foreground mb-1 md:mb-2">PROJECTS</h4>
+                  <p className="text-lg md:text-xl">1,200+</p>
                 </div>
-              </div>
-
-              <div className="space-y-8 md:space-y-12">
-                <div className="pt-6 md:pt-8 border-t border-border">
-                  <div className="grid grid-cols-3 gap-4 md:gap-8">
-                    <div>
-                      <h4 className="text-minimal text-muted-foreground mb-1 md:mb-2">PROJECTS</h4>
-                      <p className="text-lg md:text-xl">1,200+</p>
-                    </div>
-                    <div>
-                      <h4 className="text-minimal text-muted-foreground mb-1 md:mb-2">SAFETY</h4>
-                      <p className="text-lg md:text-xl">99.9%</p>
-                    </div>
-                    <div>
-                      <h4 className="text-minimal text-muted-foreground mb-1 md:mb-2">SINCE</h4>
-                      <p className="text-lg md:text-xl">2005</p>
-                    </div>
-                  </div>
+                <div>
+                  <h4 className="text-minimal text-muted-foreground mb-1 md:mb-2">SAFETY</h4>
+                  <p className="text-lg md:text-xl">99.9%</p>
+                </div>
+                <div>
+                  <h4 className="text-minimal text-muted-foreground mb-1 md:mb-2">SINCE</h4>
+                  <p className="text-lg md:text-xl">2005</p>
                 </div>
               </div>
             </div>

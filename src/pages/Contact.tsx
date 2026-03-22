@@ -58,7 +58,7 @@ const Contact = () => {
 
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-2">POSTAL ADDRESS</h3>
-                  <p className="text-xl">99215-80107 Mombasa, Kenya</p>
+                  <p className="text-xl">P.O. BOX 142-00502 Nairobi Karen</p>
                 </div>
 
                 <div>
