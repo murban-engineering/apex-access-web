@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import { SERVICES } from "@/data/services";
+import constructionSkyscrapers from "@/assets/construction-modern-skyscrapers.jpg";
 
 const Services = () => {
   const services = SERVICES.map((s, i) => ({
@@ -11,14 +12,28 @@ const Services = () => {
   }));
 
   return (
-    <section className="pt-32 pb-32 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
+    <section className="bg-background">
+      {/* Hero */}
+      <div className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
+        <img
+          src={constructionSkyscrapers}
+          alt="Modern scaffolding on high-rise construction"
+          className="absolute right-0 top-0 h-full w-2/3 object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="container mx-auto px-6 relative z-20 py-32">
+          <div className="max-w-2xl">
             <h1 className="text-minimal text-muted-foreground mb-4">SERVICES</h1>
             <h2 className="text-4xl md:text-6xl font-light text-architectural">What We Do</h2>
           </div>
+        </div>
+      </div>
 
+      {/* Services List */}
+      <div className="container mx-auto px-6 py-20">
+        <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
             {services.map((service) => (
               <Link to={service.href} key={service.number} className="group">

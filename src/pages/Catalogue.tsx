@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import { catalogueItems, CATALOGUE_CATEGORIES } from "@/data/catalogueItems";
+import constructionSkyscrapers from "@/assets/construction-modern-skyscrapers.jpg";
 
 const Catalogue = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -13,9 +13,18 @@ const Catalogue = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto">
+      {/* Hero */}
+      <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
+        <img
+          src={constructionSkyscrapers}
+          alt="Construction scaffolding on modern building"
+          className="absolute right-0 top-0 h-full w-2/3 object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="container mx-auto px-6 relative z-20 py-32">
+          <div className="max-w-2xl">
             <h1 className="text-6xl md:text-8xl font-light text-architectural mb-8">CATALOGUE</h1>
             <p className="text-xl text-muted-foreground max-w-3xl">
               Scaffolding equipment available for hire. Quality Kwik-stage components for your project needs.
@@ -25,7 +34,7 @@ const Catalogue = () => {
       </section>
 
       {/* Category filters */}
-      <section className="pb-16">
+      <section className="pt-16 pb-8">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap gap-6 justify-center md:justify-start">
