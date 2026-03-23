@@ -24,7 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ropeAccessHeroImg from "@/assets/rope-access-hero.jpg";
+import ropeAccessTeamImg from "@/assets/rope-access-team.jpg";
 
 const cmsContent = {
   seo: {
@@ -87,8 +87,8 @@ const RopeAccess = () => {
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
         <img
-          src={ropeAccessHeroImg}
-          alt="Rope access technician at height"
+          src={ropeAccessTeamImg}
+          alt="Rope access team on a high-rise project"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
           decoding="async"

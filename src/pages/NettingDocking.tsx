@@ -17,7 +17,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import safetyWorkerPpe from "@/assets/safety-worker-ppe.jpg";
+import safetyEquipmentWorker from "@/assets/safety-equipment-worker.jpg";
 
 const pageContent = {
   hero: {
@@ -63,8 +63,8 @@ const NettingDocking = () => {
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
         <img
-          src={safetyWorkerPpe}
-          alt="Safety worker with PPE equipment"
+          src={safetyEquipmentWorker}
+          alt="Worker wearing safety equipment on site"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
           decoding="async"
