@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import { SERVICES } from "@/data/services";
-import constructionSkyscrapers from "@/assets/construction-modern-skyscrapers.jpg";
+import projectFacadeScaffolding from "@/assets/project-facade-scaffolding.jpg";
 
 const Services = () => {
   const services = SERVICES.map((s, i) => ({
@@ -17,8 +17,8 @@ const Services = () => {
       <div className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
         <img
-          src={constructionSkyscrapers}
-          alt="Modern scaffolding on high-rise construction"
+          src={projectFacadeScaffolding}
+          alt="Facade scaffolding on a commercial project"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
           decoding="async"

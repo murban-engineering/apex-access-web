@@ -3,7 +3,7 @@ import { ArrowRight, BadgeCheck, CalendarClock, Clock3, Mail, Phone, ShieldCheck
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import workersHighrise2 from "@/assets/workers-highrise-2.jpg";
+import manNacelleImg from "@/assets/man-nacelle.jpg";
 
 const platformTypes = [
   {
@@ -71,8 +71,8 @@ const MobileAccess = () => {
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
         <img
-          src={workersHighrise2}
-          alt="Workers on elevated platform"
+          src={manNacelleImg}
+          alt="Operator using a mobile elevated work platform"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
           decoding="async"

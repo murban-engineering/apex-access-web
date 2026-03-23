@@ -7,7 +7,7 @@ import constructionSilhouettes2 from "@/assets/construction-silhouettes-2.jpg";
 import workersHighrise2 from "@/assets/workers-highrise-2.jpg";
 import safetyWorkerPpe from "@/assets/safety-worker-ppe.jpg";
 import constructionWorkersRebar from "@/assets/construction-workers-rebar.jpg";
-import constructionSkyscrapers from "@/assets/construction-modern-skyscrapers.jpg";
+import craneConstructionSite from "@/assets/crane-construction-site.jpg";
 
 const Work = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -69,8 +69,8 @@ const Work = () => {
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
         <img
-          src={constructionSkyscrapers}
-          alt="Modern construction scaffolding"
+          src={craneConstructionSite}
+          alt="Crane and construction site skyline"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
           decoding="async"
