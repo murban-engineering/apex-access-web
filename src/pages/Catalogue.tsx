@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Phone, Mail } from "lucide-react";
 import { catalogueItems, CATALOGUE_CATEGORIES } from "@/data/catalogueItems";
-import projectScaffoldingWork from "@/assets/project-scaffolding-work.jpg";
+import metallicStructure from "@/assets/metallic-structure.jpg";
 
 const Catalogue = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -17,8 +17,8 @@ const Catalogue = () => {
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
         <img
-          src={projectScaffoldingWork}
-          alt="Scaffolding work equipment ready for hire"
+          src={metallicStructure}
+          alt="Stacked galvanized scaffolding components ready for hire"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
           decoding="async"
