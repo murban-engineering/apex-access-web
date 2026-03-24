@@ -76,6 +76,7 @@ const Scaffolding = () => {
           alt="Scaffolding metallic structure"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="container mx-auto px-4 relative z-20 py-32">

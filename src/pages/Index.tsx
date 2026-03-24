@@ -103,9 +103,13 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <motion.div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroBg})` }}
+        <motion.img
+          src={heroBg}
+          alt="Construction worksite silhouette"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
@@ -197,6 +201,7 @@ const Index = () => {
                       src={service.image}
                       alt={service.title}
                       loading="lazy"
+                      fetchPriority="low"
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
@@ -302,6 +307,7 @@ const Index = () => {
                       src={project.image}
                       alt={project.title}
                       loading="lazy"
+                      fetchPriority="low"
                       decoding="async"
                       className="w-full h-[70vh] object-cover transition-transform duration-700 group-hover:scale-105"
                     />
