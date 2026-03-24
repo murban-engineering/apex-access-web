@@ -21,6 +21,7 @@ const Services = () => {
           alt="Technicians working on high-rise scaffolding access systems"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="container mx-auto px-6 relative z-20 py-32">

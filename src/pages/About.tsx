@@ -13,6 +13,7 @@ const About = () => {
           alt="Modern construction scaffolding on high-rise building"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="container mx-auto px-4 md:px-6 relative z-20 py-32">
@@ -112,6 +113,7 @@ const About = () => {
                   alt="Worker operating a mobile elevated work platform"
                   className="w-full h-[300px] md:h-[500px] object-cover"
                   loading="lazy"
+                  fetchPriority="low"
                   decoding="async"
                 />
               </div>

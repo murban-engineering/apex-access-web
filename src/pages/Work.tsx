@@ -73,6 +73,7 @@ const Work = () => {
           alt="Crane and construction site skyline"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="container mx-auto px-6 relative z-20 py-32">
@@ -123,6 +124,7 @@ const Work = () => {
                       alt={project.title}
                       className="w-full h-[60vh] object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
+                      fetchPriority="low"
                       decoding="async"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -186,6 +188,7 @@ const Work = () => {
                     alt="Map of Kenya showing project coverage"
                     className="w-full h-auto"
                     loading="lazy"
+                    fetchPriority="low"
                     decoding="async"
                   />
                 </div>

@@ -21,6 +21,7 @@ const Catalogue = () => {
           alt="Stacked galvanized scaffolding components ready for hire"
           className="absolute right-0 top-0 h-full w-2/3 object-cover"
           loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="container mx-auto px-6 relative z-20 py-32">
