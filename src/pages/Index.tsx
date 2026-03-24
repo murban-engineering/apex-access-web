@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import heroBg from "@/assets/construction-silhouette.jpg";
@@ -12,6 +13,15 @@ import manNacelleImg from "@/assets/man-nacelle.jpg";
 import constructionRebarImg from "@/assets/construction-workers-rebar.jpg";
 
 const motion = m;
+
+const aboveTheFoldImages = [heroBg, constructionBwImg, safetyWorkerImg];
+
+const preloadImage = (src: string) => {
+  const img = new Image();
+  img.decoding = "async";
+  img.src = src;
+};
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -98,6 +108,20 @@ const testimonials = [
 ];
 
 const Index = () => {
+  useEffect(() => {
+    const warmHomeImages = () => {
+      aboveTheFoldImages.forEach(preloadImage);
+    };
+
+    if (typeof window.requestIdleCallback === "function") {
+      const idleId = window.requestIdleCallback(warmHomeImages, { timeout: 800 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+
+    const timeoutId = window.setTimeout(warmHomeImages, 300);
+    return () => window.clearTimeout(timeoutId);
+  }, []);
+
   return (
     <LazyMotion features={domAnimation}>
     <div className="min-h-screen">
@@ -189,7 +213,7 @@ const Index = () => {
               viewport={{ once: true, amount: 0.1 }}
               variants={stagger}
             >
-              {services.map((service) => (
+              {services.map((service, index) => (
                 <motion.div
                   key={service.number}
                   variants={fadeUp}
@@ -200,8 +224,8 @@ const Index = () => {
                     <img
                       src={service.image}
                       alt={service.title}
-                      loading="lazy"
-                      fetchPriority="low"
+                      loading={index < 2 ? "eager" : "lazy"}
+                      fetchPriority={index === 0 ? "high" : "low"}
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
@@ -306,8 +330,8 @@ const Index = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      loading="lazy"
-                      fetchPriority="low"
+                      loading={index === 0 ? "eager" : "lazy"}
+                      fetchPriority={index === 0 ? "high" : "low"}
                       decoding="async"
                       className="w-full h-[70vh] object-cover transition-transform duration-700 group-hover:scale-105"
                     />
