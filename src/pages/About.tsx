@@ -48,7 +48,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="text-minimal text-muted-foreground mb-1 md:mb-2">SINCE</h4>
-                  <p className="text-lg md:text-xl">2005</p>
+                  <p className="text-lg md:text-xl">2024</p>
                 </div>
               </div>
             </div>
