@@ -67,12 +67,6 @@ const projects = [
     description: "Structural reinforcement at height using rope access techniques for a major infrastructure project.",
   },
   {
-    image: ropeAccessTeamImg,
-    title: "HIGH-RISE FAÇADE MAINTENANCE",
-    location: "MOMBASA, 2024",
-    description: "Full façade inspection and maintenance program for a 40-storey commercial tower.",
-  },
-  {
     image: constructionAerialImg,
     title: "SCAFFOLDING HEIGHT OPERATIONS",
     location: "KISUMU, 2023",
