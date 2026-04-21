@@ -89,7 +89,7 @@ const About = () => {
                   </div>
                   <div className="border-l-2 border-foreground pl-4 md:pl-6">
                     <h4 className="text-base md:text-lg font-medium mb-0.5 md:mb-1">Northern Frontier</h4>
-                    <p className="text-sm md:text-base text-muted-foreground">Garissa, Marsabit, Turkana — expanding soon</p>
+                    <p className="text-sm md:text-base text-muted-foreground">Garissa, Marsabit, Turkana</p>
                   </div>
                 </div>
               </div>
