@@ -110,183 +110,20 @@ const RopeAccess = () => {
       </section>
 
       <section className="container mx-auto px-4 py-14 md:py-20">
-        <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid h-auto w-full grid-cols-2 gap-2 bg-transparent p-0 md:grid-cols-4">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="safety">Safety & Certification</TabsTrigger>
-            <TabsTrigger value="services">Services</TabsTrigger>
-            <TabsTrigger value="industries">Industries Served</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="overview" className="mt-6">
-            <Card>
-              <CardContent className="p-6 md:p-8">
-                <h2 className="text-2xl font-light text-architectural md:text-3xl">Why rope access outperforms traditional height access</h2>
-                <p className="mt-4 text-muted-foreground">
-                  Rope access is engineered for precision and control. Instead of large temporary structures, technicians deploy rope systems rapidly,
-                  reducing setup time while maintaining strict safety standards.
-                </p>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-                  {[
-                    "Safer controlled positioning",
-                    "Faster setup and demobilization",
-                    "Cost-effective delivery model",
-                    "Low-disruption project execution",
-                    "Access to confined and complex structures",
-                  ].map((item) => (
-                    <div key={item} className="rounded-lg border border-border bg-secondary/40 p-3 text-sm font-medium">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="safety" className="mt-6">
-            <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-light text-architectural">Safety Management & Certification</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-muted-foreground">
-                  <p>
-                    Every scope is delivered by trained rope access technicians operating under documented procedures.
-                  </p>
-                  <ul className="space-y-3">
-                    {cmsContent.compliance.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <CheckCircle className="mt-0.5 h-5 w-5 text-primary" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl font-light text-architectural">Certification Badges</CardTitle>
-                </CardHeader>
-                <CardContent className="grid gap-3">
-                  {[
-                    { icon: Award, label: "Third-party Certified Team" },
-                    { icon: ShieldCheck, label: "SPRAT Certified" },
-                    { icon: ClipboardCheck, label: "Documented SWMS" },
-                    { icon: MapPinned, label: "Site Rescue Ready" },
-                  ].map((badge) => (
-                    <div key={badge.label} className="flex items-center gap-3 rounded-lg border border-border p-3">
-                      <badge.icon className="h-5 w-5 text-primary" />
-                      <span className="text-sm font-medium">{badge.label}</span>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="services" className="mt-6">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {ropeServices.map((service) => (
-                <Card key={service.title} className="h-full">
-                  <CardContent className="p-6">
-                    <service.icon className="h-8 w-8 text-primary" />
-                    <h3 className="mt-4 text-xl font-light text-architectural">{service.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{service.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="industries" className="mt-6">
-            <Card>
-              <CardContent className="p-6 md:p-8">
-                <h2 className="font-heading text-2xl font-semibold md:text-3xl">Industries Served</h2>
-                <p className="mt-3 text-muted-foreground">
-                  We support asset owners, EPC contractors, and maintenance providers requiring precise, compliant, and low-disruption access.
-                </p>
-                <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {industries.map((industry) => (
-                    <div key={industry} className="rounded-lg border border-border p-3 text-sm">
-                      {industry}
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-        </Tabs>
-      </section>
-
-      <section className="bg-card py-14 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-light text-architectural">Project Gallery</h2>
-              <p className="mt-2 text-muted-foreground">
-                Browse rope access projects as a standalone section.
-              </p>
-            </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-light text-architectural mb-6">Ready to Start Your Project?</h2>
+          <p className="text-muted-foreground mb-8">
+            Contact our rope access specialists for a consultation and project quote.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
             <Button asChild>
-              <Link to="/services/rope-access/project-gallery">
-                Open Project Gallery <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <Link to="/contact">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="tel:+254723124739"><Phone className="mr-2 h-4 w-4" /> +254 723 124739</a>
             </Button>
           </div>
         </div>
-      </section>
-
-      <section className="bg-card py-14 md:py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-light text-architectural">Cost Comparison: Rope Access vs Traditional Access</h2>
-          <div className="mt-6 overflow-hidden rounded-xl border border-border">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-secondary/60">
-                <tr>
-                  <th className="p-4 font-semibold">Metric</th>
-                  <th className="p-4 font-semibold text-primary">Rope Access</th>
-                  <th className="p-4 font-semibold">Scaffold / Lift</th>
-                </tr>
-              </thead>
-              <tbody>
-                {costComparison.map((row) => (
-                  <tr key={row.metric} className="border-t border-border">
-                    <td className="p-4">{row.metric}</td>
-                    <td className="p-4 text-primary">{row.ropeAccess}</td>
-                    <td className="p-4 text-muted-foreground">{row.traditional}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 py-14 md:py-20">
-        <Card className="overflow-hidden border-primary/20">
-          <div className="grid gap-0 lg:grid-cols-2">
-            <div className="bg-primary p-8 text-primary-foreground md:p-10">
-              <h2 className="text-3xl font-light">Request Rope Access Quote</h2>
-              <p className="mt-3 text-primary-foreground/85">
-                Share your scope and receive a rapid response from our rope access specialists.
-              </p>
-              <div className="mt-6 space-y-3 text-sm">
-                <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> otnoacess@gmail.com</p>
-                <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> +254 723 124739</p>
-                <p className="flex items-center gap-2"><Building className="h-4 w-4" /> Kenya & East Africa coverage</p>
-              </div>
-            </div>
-
-            <div className="space-y-4 p-8 md:p-10">
-              <p className="text-muted-foreground">Please use our contact page for quote requests.</p>
-              <Button asChild className="w-full sm:w-auto">
-                <Link to="/contact">
-                  Request Rope Access Quote <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </Card>
       </section>
     </main>
   </LazyMotion>
