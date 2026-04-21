@@ -99,110 +99,17 @@ const Scaffolding = () => {
       </section>
 
       <section className="container mx-auto px-4 py-14 md:py-20">
-        <div className="mb-10 max-w-3xl">
-          <h2 className="text-3xl font-light text-architectural md:text-4xl">Complete Scaffolding Service Modules</h2>
-          <p className="mt-3 text-muted-foreground">
-            Delivered as a complete package, our scaffolding services combine engineering quality, compliant implementation, and practical site support.
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-light text-architectural mb-6">Need Scaffolding Services?</h2>
+          <p className="text-muted-foreground mb-8">
+            Contact our team for design, erection, hire, and compliance-managed scaffolding solutions.
           </p>
-        </div>
-        <div className="grid gap-5 sm:grid-cols-2">
-          {serviceModules.map((module) => (
-            <Card key={module.title} className="h-full">
-              <CardContent className="p-6">
-                <module.icon className="h-8 w-8 text-primary" />
-                <h3 className="mt-4 text-xl font-light text-architectural">{module.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{module.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-card py-14 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-3xl font-light text-architectural">Safety, Engineering & Trust Elements</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {trustFeatures.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm text-muted-foreground md:text-base">
-                      <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl font-light text-architectural">Compliance Snapshot</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {[
-                  { icon: Shield, label: "Standards Compliance", value: "Aligned to project and regulatory obligations" },
-                  { icon: Calculator, label: "Load Calculations", value: "Documented engineering checks and sign-off" },
-                  { icon: Users, label: "Certified Inspectors", value: "Competent scaffold inspection personnel" },
-                  { icon: FileCheck2, label: "Safety Documentation", value: "RAMS/SWMS, tags, handovers, registers" },
-                  { icon: Scale, label: "Load Ratings", value: "Clearly displayed duty and platform limits" },
-                ].map((item) => (
-                  <div key={item.label} className="rounded-lg border border-border p-4">
-                    <item.icon className="h-5 w-5 text-primary" />
-                    <p className="mt-2 font-medium">{item.label}</p>
-                    <p className="text-sm text-muted-foreground">{item.value}</p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 py-14 md:py-20">
-        <div className="mb-8">
-          <h2 className="text-3xl font-light text-architectural md:text-4xl">Professional Delivery Framework</h2>
-          <p className="mt-2 text-muted-foreground">
-            A structured workflow keeps every scaffold project safe, efficient, and auditable.
-          </p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-2">
-          {deliverySteps.map((step) => (
-            <Card key={step.step} className="h-full">
-              <CardContent className="p-6">
-                <p className="text-sm font-semibold tracking-widest text-primary">STEP {step.step}</p>
-                <h3 className="mt-2 text-xl font-light text-architectural">{step.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{step.detail}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-primary py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-light text-primary-foreground md:text-4xl">
-            Need an Engineered Scaffolding Partner for Your Next Project?
-          </h2>
-          <p className="mx-auto mt-3 max-w-3xl text-primary-foreground/85">
-            Talk to our team for design review, scaffold hire planning, and full compliance-managed delivery.
-          </p>
-          <div className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-            <p className="flex items-center justify-center gap-2"><Phone className="h-4 w-4" /> +254 723 124739</p>
-            <p className="flex items-center justify-center gap-2"><Mail className="h-4 w-4" /> otnoacess@gmail.com</p>
-          </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button size="lg" variant="secondary" asChild>
-              <Link to="/contact">Request a Project Consultation</Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button asChild>
+              <Link to="/contact">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-              asChild
-            >
-              <a href="tel:+254723124739">+254 723 124739</a>
+            <Button variant="outline" asChild>
+              <a href="tel:+254723124739"><Phone className="mr-2 h-4 w-4" /> +254 723 124739</a>
             </Button>
           </div>
         </div>
