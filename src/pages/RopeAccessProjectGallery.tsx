@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ROPE_ACCESS_PROJECTS } from "@/data/ropeAccessProjects";
+import { SEOHead } from "@/components/SEOHead";
 
 const filters = ["All", "Commercial", "Infrastructure", "Energy", "Marine", "Industrial"] as const;
 
@@ -16,6 +17,12 @@ const RopeAccessProjectGallery = () => {
   }, [selectedIndustry]);
 
   return (
+  <>
+      <SEOHead
+        title="Rope Access Projects | Gallery & Case Studies Kenya"
+        description="View our rope access project gallery — commercial, infrastructure, energy, marine, and industrial work-at-height projects across Kenya."
+        canonicalPath="/services/rope-access/project-gallery"
+      />
     <main>
       <section className="bg-card py-14 md:py-20">
         <div className="container mx-auto px-4">
@@ -73,6 +80,7 @@ const RopeAccessProjectGallery = () => {
         </Card>
       </section>
     </main>
+  </>
   );
 };
 

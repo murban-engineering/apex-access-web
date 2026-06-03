@@ -18,6 +18,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import safetyEquipmentWorker from "@/assets/safety-equipment-worker.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const pageContent = {
   hero: {
@@ -58,6 +59,12 @@ const sectionAnim = {
 
 const NettingDocking = () => {
   return (
+  <>
+      <SEOHead
+        title="Netting & Decking | Safety Netting & Edge Protection Kenya"
+        description="Safety netting, edge protection, and temporary decking systems for fall prevention on construction and industrial sites in Kenya."
+        canonicalPath="/services/netting-decking"
+      />
     <LazyMotion features={domAnimation}>
     <main className="bg-background text-foreground">
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
@@ -189,6 +196,7 @@ const NettingDocking = () => {
       </section>
     </main>
   </LazyMotion>
+  </>
   );
 };
 

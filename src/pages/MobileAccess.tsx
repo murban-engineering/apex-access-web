@@ -3,9 +3,16 @@ import { ArrowRight, Phone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import manNacelleImg from "@/assets/man-nacelle.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const MobileAccess = () => {
   return (
+  <>
+      <SEOHead
+        title="Mobile Access Platforms | EWP & Boom Lift Hire Kenya"
+        description="EWP and boom lift hire with operator support for safe, efficient elevated access on construction and maintenance projects in Kenya."
+        canonicalPath="/services/mobile-access"
+      />
     <main className="bg-background text-foreground">
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40 z-10" />
@@ -55,6 +62,7 @@ const MobileAccess = () => {
         </div>
       </section>
     </main>
+  </>
   );
 };
 

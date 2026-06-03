@@ -25,6 +25,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ropeAccessTeamImg from "@/assets/rope-access-team.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const cmsContent = {
   seo: {
@@ -82,6 +83,12 @@ const sectionAnim = {
 
 const RopeAccess = () => {
   return (
+  <>
+      <SEOHead
+        title="Rope Access Services | Certified Work-at-Height Kenya"
+        description="Certified rope access technicians for inspection, maintenance, and high-rise works. Safer, faster, cost-effective work-at-height solutions in Kenya."
+        canonicalPath="/services/rope-access"
+      />
     <LazyMotion features={domAnimation}>
     <main className="bg-background text-foreground">
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
@@ -127,6 +134,7 @@ const RopeAccess = () => {
       </section>
     </main>
   </LazyMotion>
+  </>
   );
 };
 

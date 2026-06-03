@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, Mail } from "lucide-react";
 import { catalogueItems, CATALOGUE_CATEGORIES } from "@/data/catalogueItems";
 import metallicStructure from "@/assets/metallic-structure.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const Catalogue = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -12,6 +13,12 @@ const Catalogue = () => {
       : catalogueItems.filter((item) => item.category === activeCategory);
 
   return (
+  <>
+      <SEOHead
+        title="Equipment Catalogue | Scaffolding Hire Kenya"
+        description="Quality Kwik-stage scaffolding equipment available for hire. Browse our catalogue of scaffolding components for your project needs in Kenya."
+        canonicalPath="/catalogue"
+      />
     <div className="min-h-screen bg-background">
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
@@ -134,6 +141,7 @@ const Catalogue = () => {
         </div>
       </section>
     </div>
+  </>
   );
 };
 

@@ -1,9 +1,16 @@
 import nacelleImg from "@/assets/man-nacelle.jpg";
 import constructionSkyscrapers from "@/assets/construction-modern-skyscrapers.jpg";
 import KenyaMap from "@/components/KenyaMap";
+import { SEOHead } from "@/components/SEOHead";
 
 const About = () => {
   return (
+  <>
+      <SEOHead
+        title="About OTNO | Height Safety Experts in Kenya"
+        description="Learn about OTNO Access Solutions — our safety philosophy, experience, and commitment to height safety across Kenya and East Africa."
+        canonicalPath="/about"
+      />
     <div>
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-card">
@@ -134,6 +141,7 @@ const About = () => {
         </div>
       </section>
     </div>
+  </>
   );
 };
 

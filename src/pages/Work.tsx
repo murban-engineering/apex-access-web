@@ -8,6 +8,7 @@ import workersHighrise2 from "@/assets/workers-highrise-2.jpg";
 import safetyWorkerPpe from "@/assets/safety-worker-ppe.jpg";
 import constructionWorkersRebar from "@/assets/construction-workers-rebar.jpg";
 import craneConstructionSite from "@/assets/crane-construction-site.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const Work = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -63,6 +64,12 @@ const Work = () => {
     activeCategory === "ALL" ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
+  <>
+      <SEOHead
+        title="Our Projects | Height Safety Work Across Kenya"
+        description="Browse OTNO Access Solutions' completed projects — scaffolding, rope access, and elevated platform operations across Kenya and East Africa."
+        canonicalPath="/work"
+      />
     <LazyMotion features={domAnimation}>
     <div className="min-h-screen bg-background">
       {/* Hero */}
@@ -223,6 +230,7 @@ const Work = () => {
       </section>
     </div>
   </LazyMotion>
+  </>
   );
 };
 

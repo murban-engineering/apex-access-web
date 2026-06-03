@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import { SERVICES } from "@/data/services";
 import workersHighriseScaffolding from "@/assets/workers-highrise-scaffolding.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const Services = () => {
   const services = SERVICES.map((s, i) => ({
@@ -12,6 +13,12 @@ const Services = () => {
   }));
 
   return (
+  <>
+      <SEOHead
+        title="Our Services | Scaffolding, Rope Access & Mobile Platforms"
+        description="Explore OTNO's height safety services: rope access, scaffolding, mobile access platforms, and netting & decking across Kenya."
+        canonicalPath="/services"
+      />
     <section className="bg-background">
       {/* Hero */}
       <div className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
@@ -81,6 +88,7 @@ const Services = () => {
         </div>
       </div>
     </section>
+  </>
   );
 };
 
