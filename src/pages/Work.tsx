@@ -64,6 +64,7 @@ const Work = () => {
     activeCategory === "ALL" ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
+  <>
       <SEOHead
         title="Our Projects | Height Safety Work Across Kenya"
         description="Browse OTNO Access Solutions' completed projects — scaffolding, rope access, and elevated platform operations across Kenya and East Africa."
@@ -229,6 +230,7 @@ const Work = () => {
       </section>
     </div>
   </LazyMotion>
+  </>
   );
 };
 

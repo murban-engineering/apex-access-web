@@ -68,6 +68,7 @@ const sectionAnim = {
 
 const Scaffolding = () => {
   return (
+  <>
       <SEOHead
         title="Scaffolding Services | Hire, Design & Erection Kenya"
         description="Professional scaffolding design, erection, hire, and compliance management for commercial and industrial projects in Kenya and East Africa."
@@ -122,6 +123,7 @@ const Scaffolding = () => {
       </section>
     </main>
   </LazyMotion>
+  </>
   );
 };
 

@@ -83,6 +83,7 @@ const sectionAnim = {
 
 const RopeAccess = () => {
   return (
+  <>
       <SEOHead
         title="Rope Access Services | Certified Work-at-Height Kenya"
         description="Certified rope access technicians for inspection, maintenance, and high-rise works. Safer, faster, cost-effective work-at-height solutions in Kenya."
@@ -133,6 +134,7 @@ const RopeAccess = () => {
       </section>
     </main>
   </LazyMotion>
+  </>
   );
 };
 

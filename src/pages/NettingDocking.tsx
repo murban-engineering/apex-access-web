@@ -59,6 +59,7 @@ const sectionAnim = {
 
 const NettingDocking = () => {
   return (
+  <>
       <SEOHead
         title="Netting & Decking | Safety Netting & Edge Protection Kenya"
         description="Safety netting, edge protection, and temporary decking systems for fall prevention on construction and industrial sites in Kenya."
@@ -195,6 +196,7 @@ const NettingDocking = () => {
       </section>
     </main>
   </LazyMotion>
+  </>
   );
 };
 

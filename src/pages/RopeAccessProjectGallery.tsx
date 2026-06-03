@@ -17,6 +17,7 @@ const RopeAccessProjectGallery = () => {
   }, [selectedIndustry]);
 
   return (
+  <>
       <SEOHead
         title="Rope Access Projects | Gallery & Case Studies Kenya"
         description="View our rope access project gallery — commercial, infrastructure, energy, marine, and industrial work-at-height projects across Kenya."
@@ -79,6 +80,7 @@ const RopeAccessProjectGallery = () => {
         </Card>
       </section>
     </main>
+  </>
   );
 };
 

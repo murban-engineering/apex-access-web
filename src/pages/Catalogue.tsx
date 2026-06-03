@@ -13,6 +13,7 @@ const Catalogue = () => {
       : catalogueItems.filter((item) => item.category === activeCategory);
 
   return (
+  <>
       <SEOHead
         title="Equipment Catalogue | Scaffolding Hire Kenya"
         description="Quality Kwik-stage scaffolding equipment available for hire. Browse our catalogue of scaffolding components for your project needs in Kenya."
@@ -140,6 +141,7 @@ const Catalogue = () => {
         </div>
       </section>
     </div>
+  </>
   );
 };
 

@@ -7,6 +7,7 @@ import { SEOHead } from "@/components/SEOHead";
 
 const MobileAccess = () => {
   return (
+  <>
       <SEOHead
         title="Mobile Access Platforms | EWP & Boom Lift Hire Kenya"
         description="EWP and boom lift hire with operator support for safe, efficient elevated access on construction and maintenance projects in Kenya."
@@ -61,6 +62,7 @@ const MobileAccess = () => {
         </div>
       </section>
     </main>
+  </>
   );
 };
 

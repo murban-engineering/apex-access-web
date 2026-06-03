@@ -10,6 +10,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
+  <>
       <SEOHead
         title="Page Not Found | OTNO Access Solutions"
         description="The page you are looking for could not be found. Return to OTNO Access Solutions for height safety services in Kenya."
@@ -24,6 +25,7 @@ const NotFound = () => {
         </a>
       </div>
     </div>
+  </>
   );
 };
 

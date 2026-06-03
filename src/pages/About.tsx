@@ -5,6 +5,7 @@ import { SEOHead } from "@/components/SEOHead";
 
 const About = () => {
   return (
+  <>
       <SEOHead
         title="About OTNO | Height Safety Experts in Kenya"
         description="Learn about OTNO Access Solutions — our safety philosophy, experience, and commitment to height safety across Kenya and East Africa."
@@ -140,6 +141,7 @@ const About = () => {
         </div>
       </section>
     </div>
+  </>
   );
 };
 

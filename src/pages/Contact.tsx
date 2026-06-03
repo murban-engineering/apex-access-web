@@ -23,6 +23,7 @@ const Contact = () => {
   };
 
   return (
+  <>
       <SEOHead
         title="Contact Us | OTNO Access Solutions Kenya"
         description="Get in touch with OTNO Access Solutions for scaffolding, rope access, and height safety services across Kenya and East Africa."
@@ -128,6 +129,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+  </>
   );
 };
 

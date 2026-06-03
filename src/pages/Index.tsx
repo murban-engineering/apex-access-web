@@ -118,6 +118,7 @@ const Index = () => {
   }, []);
 
   return (
+  <>
       <SEOHead
         title="OTNO Access Solutions | Height Safety Services in Kenya"
         description="Professional scaffolding, rope access, mobile access, and netting & docking services across Kenya and East Africa."
@@ -451,6 +452,7 @@ const Index = () => {
       </section>
     </div>
     </LazyMotion>
+  </>
   );
 };
 

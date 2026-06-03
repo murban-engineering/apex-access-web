@@ -13,6 +13,7 @@ const Services = () => {
   }));
 
   return (
+  <>
       <SEOHead
         title="Our Services | Scaffolding, Rope Access & Mobile Platforms"
         description="Explore OTNO's height safety services: rope access, scaffolding, mobile access platforms, and netting & decking across Kenya."
@@ -87,6 +88,7 @@ const Services = () => {
         </div>
       </div>
     </section>
+  </>
   );
 };
 
