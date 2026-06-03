@@ -3,6 +3,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { type FormEvent, useState } from "react";
 import { SERVICES } from "@/data/services";
 import constructionModern from "@/assets/construction-modern-skyscrapers.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -22,6 +23,11 @@ const Contact = () => {
   };
 
   return (
+      <SEOHead
+        title="Contact Us | OTNO Access Solutions Kenya"
+        description="Get in touch with OTNO Access Solutions for scaffolding, rope access, and height safety services across Kenya and East Africa."
+        canonicalPath="/contact"
+      />
     <div className="min-h-screen bg-background">
       {/* Hero with image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">

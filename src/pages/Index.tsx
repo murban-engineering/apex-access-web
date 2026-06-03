@@ -11,6 +11,7 @@ import constructionAerialImg from "@/assets/construction-aerial.jpg";
 import ropeAccessTeamImg from "@/assets/rope-access-team.jpg";
 import manNacelleImg from "@/assets/man-nacelle.jpg";
 import constructionRebarImg from "@/assets/construction-workers-rebar.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const motion = m;
 
@@ -117,6 +118,11 @@ const Index = () => {
   }, []);
 
   return (
+      <SEOHead
+        title="OTNO Access Solutions | Height Safety Services in Kenya"
+        description="Professional scaffolding, rope access, mobile access, and netting & docking services across Kenya and East Africa."
+        canonicalPath="/"
+      />
     <LazyMotion features={domAnimation}>
     <div className="min-h-screen">
       {/* Hero */}

@@ -20,6 +20,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import metallicStructure from "@/assets/metallic-structure.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const scaffoldingContent = {
   seo: {
@@ -67,6 +68,11 @@ const sectionAnim = {
 
 const Scaffolding = () => {
   return (
+      <SEOHead
+        title="Scaffolding Services | Hire, Design & Erection Kenya"
+        description="Professional scaffolding design, erection, hire, and compliance management for commercial and industrial projects in Kenya and East Africa."
+        canonicalPath="/services/scaffolding"
+      />
     <LazyMotion features={domAnimation}>
     <main className="bg-background text-foreground">
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">
