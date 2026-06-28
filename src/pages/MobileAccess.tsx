@@ -12,6 +12,16 @@ const MobileAccess = () => {
         title="Mobile Access Platforms | EWP & Boom Lift Hire Kenya"
         description="EWP and boom lift hire with operator support for safe, efficient elevated access on construction and maintenance projects in Kenya."
         canonicalPath="/services/mobile-access"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Mobile Access Platforms",
+          serviceType: "EWP & Boom Lift Hire",
+          areaServed: "Kenya",
+          provider: { "@type": "LocalBusiness", name: "OTNO Access Solutions Limited" },
+          description:
+            "EWP and boom lift hire with operator support for safe, efficient elevated access on construction and maintenance projects in Kenya.",
+        }}
       />
     <main className="bg-background text-foreground">
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-card">

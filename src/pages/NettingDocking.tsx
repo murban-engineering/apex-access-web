@@ -64,6 +64,16 @@ const NettingDocking = () => {
         title="Netting & Decking | Safety Netting & Edge Protection Kenya"
         description="Safety netting, edge protection, and temporary decking systems for fall prevention on construction and industrial sites in Kenya."
         canonicalPath="/services/netting-decking"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Netting & Decking",
+          serviceType: "Safety Netting & Edge Protection",
+          areaServed: "Kenya",
+          provider: { "@type": "LocalBusiness", name: "OTNO Access Solutions Limited" },
+          description:
+            "Safety netting, edge protection, and temporary decking systems for fall prevention on construction and industrial sites in Kenya.",
+        }}
       />
     <LazyMotion features={domAnimation}>
     <main className="bg-background text-foreground">

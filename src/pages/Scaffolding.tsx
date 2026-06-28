@@ -73,6 +73,16 @@ const Scaffolding = () => {
         title="Scaffolding Services | Hire, Design & Erection Kenya"
         description="Professional scaffolding design, erection, hire, and compliance management for commercial and industrial projects in Kenya and East Africa."
         canonicalPath="/services/scaffolding"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Scaffolding",
+          serviceType: "Scaffolding Design, Erection & Hire",
+          areaServed: "Kenya",
+          provider: { "@type": "LocalBusiness", name: "OTNO Access Solutions Limited" },
+          description:
+            "Scaffolding design, erection, hire, and compliance management for commercial and industrial projects in Kenya and East Africa.",
+        }}
       />
     <LazyMotion features={domAnimation}>
     <main className="bg-background text-foreground">
