@@ -19,6 +19,7 @@ const loadWork = () => import("./pages/Work");
 const loadAbout = () => import("./pages/About");
 const loadCatalogue = () => import("./pages/Catalogue");
 const loadContact = () => import("./pages/Contact");
+const loadPrivacyPolicy = () => import("./pages/PrivacyPolicy");
 
 const NotFound = lazy(loadNotFound);
 const ServicesPage = lazy(loadServicesPage);
@@ -31,6 +32,7 @@ const Work = lazy(loadWork);
 const About = lazy(loadAbout);
 const Catalogue = lazy(loadCatalogue);
 const Contact = lazy(loadContact);
+const PrivacyPolicy = lazy(loadPrivacyPolicy);
 
 const preloadRouteChunks = [
   loadServicesPage,
@@ -43,6 +45,7 @@ const preloadRouteChunks = [
   loadAbout,
   loadCatalogue,
   loadContact,
+  loadPrivacyPolicy,
   loadNotFound,
 ] as const;
 
@@ -103,6 +106,7 @@ const App = () => (
                 <Route path="/about" element={<About />} />
                 <Route path="/catalogue" element={<Catalogue />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

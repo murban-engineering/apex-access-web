@@ -14,3 +14,4 @@
 - [Work](/work): Selected past projects across Kenya.
 - [Catalogue](/catalogue): Equipment catalogue.
 - [Contact](/contact): Contact details and project enquiries.
+- [Privacy Policy](/privacy-policy): How OTNO collects, uses, and protects visitor information.
