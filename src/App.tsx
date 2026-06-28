@@ -19,6 +19,7 @@ const loadWork = () => import("./pages/Work");
 const loadAbout = () => import("./pages/About");
 const loadCatalogue = () => import("./pages/Catalogue");
 const loadContact = () => import("./pages/Contact");
+const loadPrivacyPolicy = () => import("./pages/PrivacyPolicy");
 
 const NotFound = lazy(loadNotFound);
 const ServicesPage = lazy(loadServicesPage);
@@ -31,6 +32,7 @@ const Work = lazy(loadWork);
 const About = lazy(loadAbout);
 const Catalogue = lazy(loadCatalogue);
 const Contact = lazy(loadContact);
+const PrivacyPolicy = lazy(loadPrivacyPolicy);
 
 const preloadRouteChunks = [
   loadServicesPage,
