@@ -54,7 +54,7 @@ const Footer = () => (
             &copy; {new Date().getFullYear()} OTNO ACCESS SOLUTION LIMITED. All rights reserved.
           </p>
           <div className="flex gap-8">
-            <Link to="/contact" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
+            <Link to="/privacy-policy" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
               Privacy Policy
             </Link>
           </div>
