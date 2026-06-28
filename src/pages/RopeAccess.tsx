@@ -88,6 +88,16 @@ const RopeAccess = () => {
         title="Rope Access Services | Certified Work-at-Height Kenya"
         description="Certified rope access technicians for inspection, maintenance, and high-rise works. Safer, faster, cost-effective work-at-height solutions in Kenya."
         canonicalPath="/services/rope-access"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Rope Access",
+          serviceType: "Industrial Rope Access & Work-at-Height",
+          areaServed: "Kenya",
+          provider: { "@type": "LocalBusiness", name: "OTNO Access Solutions Limited" },
+          description:
+            "Certified rope access technicians for inspection, maintenance, and high-rise works across Kenya.",
+        }}
       />
     <LazyMotion features={domAnimation}>
     <main className="bg-background text-foreground">

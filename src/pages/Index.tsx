@@ -147,9 +147,10 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            OTNO ACCESS
-            <br />
-            SOLUTION
+            OTNO ACCESS SOLUTIONS
+            <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 tracking-wide">
+              Height Safety Services in Kenya
+            </span>
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-white/80 font-light tracking-wide max-w-2xl mx-auto"

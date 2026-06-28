@@ -1,0 +1,16 @@
+# OTNO Access Solutions
+
+> OTNO Access Solutions is a Kenyan height-safety company providing rope access, scaffolding, mobile access platforms, and netting & decking services for commercial and industrial projects across Kenya and East Africa.
+
+## Pages
+
+- [Home](/): Overview of OTNO's height-safety services and featured projects.
+- [About](/about): Company background, safety philosophy, and operating coverage.
+- [Services](/services): Full list of height-safety services offered.
+- [Rope Access](/services/rope-access): Certified rope-access technicians for inspection and maintenance at height.
+- [Scaffolding](/services/scaffolding): Scaffolding design, erection, hire, and compliance.
+- [Mobile Access Platforms](/services/mobile-access): EWP and boom lift hire with operator support.
+- [Netting & Decking](/services/netting-decking): Safety netting, edge protection, and temporary decking.
+- [Work](/work): Selected past projects across Kenya.
+- [Catalogue](/catalogue): Equipment catalogue.
+- [Contact](/contact): Contact details and project enquiries.

@@ -33,8 +33,8 @@ const Services = () => {
         />
         <div className="container mx-auto px-6 relative z-20 py-32">
           <div className="max-w-2xl">
-            <h1 className="text-minimal text-muted-foreground mb-4">SERVICES</h1>
-            <h2 className="text-4xl md:text-6xl font-light text-architectural">What We Do</h2>
+            <p className="text-minimal text-muted-foreground mb-4">SERVICES</p>
+            <h1 className="text-4xl md:text-6xl font-light text-architectural">Height Safety Services Across Kenya</h1>
           </div>
         </div>
       </div>

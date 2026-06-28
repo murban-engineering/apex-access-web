@@ -25,12 +25,10 @@ const About = () => {
         />
         <div className="container mx-auto px-4 md:px-6 relative z-20 py-32">
           <div className="max-w-2xl">
-            <h1 className="text-minimal text-muted-foreground mb-3 md:mb-4">ABOUT</h1>
-            <h2 className="text-3xl md:text-6xl font-light text-architectural mb-8 md:mb-12">
-              Our Safety
-              <br />
-              Philosophy
-            </h2>
+            <p className="text-minimal text-muted-foreground mb-3 md:mb-4">ABOUT</p>
+            <h1 className="text-3xl md:text-6xl font-light text-architectural mb-8 md:mb-12">
+              About OTNO — Our Safety Philosophy
+            </h1>
             <div className="space-y-6 md:space-y-8">
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 OTNO ACCESS SOLUTION LIMITED was founded with a simple belief: every worker
