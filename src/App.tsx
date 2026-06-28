@@ -45,6 +45,7 @@ const preloadRouteChunks = [
   loadAbout,
   loadCatalogue,
   loadContact,
+  loadPrivacyPolicy,
   loadNotFound,
 ] as const;
 
